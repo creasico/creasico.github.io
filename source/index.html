@@ -1,5 +1,18 @@
 ---
-layout: home
+layout: base
 title: Home
 slug: home
 ---
+
+<div id="intro">
+  <video autoplay loop id="intro-video">
+    <source src="{{ 'asset/coffee.mp4' | prepend: site.baseurl }}" type="video/mp4">
+  </video>
+
+  <div class="intro-content">
+    <a class="intro-brand" href="{{ site.baseurl }}">
+      <img src="{{ 'asset/images/logo.svg' | prepend: site.baseurl }}" alt="{{ site.title }}">
+      <h2>{{ site.intro }}</h2>
+    </a>
+  </div>
+</div>
