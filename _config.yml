@@ -1,0 +1,54 @@
+# Site settings
+# -----------------------------------
+title:            Creasi.co
+author:           Fery Wardiyanto
+description:      "When creatifity meets caffeine."
+intro:            "Hold on! we're not ready to run yet."
+baseurl:          '/'
+url:              http://creasi.co/
+gravatar:         f1d26a5fe1c5ecc75c660c89ceb6d68e
+
+# RSS
+# -----------------------------------
+subscribe_rss:    atom.xml
+email:            hallo@creasi.co
+
+# Build settings
+# -----------------------------------
+markdown:         kramdown
+highlighter:      pygments
+permalink:        blog/:year/:month/:title.html
+# permalink:        pretty
+source:           source
+destination:      public
+host:             0.0.0.0
+encoding:         UTF-8
+
+# Plugins
+# -----------------------------------
+# emoji_dir: asset/images/emoji
+# image:
+#   source: resource/images
+#   output: resource/images
+#   presets:
+#     users:
+#       attr:
+#         class: user-portrait
+#         itemprop: image
+#       width: 350
+#     half:
+#       width: 400
+#       height: 400
+
+
+# Custom Variables
+# -----------------------------------
+# Social Account
+github_user: creasico
+twitter_user: creasico
+# googleplus_user: +ferywardiyanto
+# disqus_short_name: fa-octo
+# disqus_show_comment_count: false
+
+# Google Analytics
+# google_analytics_tracking_id: UA-51394056-1
