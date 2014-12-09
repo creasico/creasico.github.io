@@ -63,7 +63,7 @@ p {
 }
 
 #intro {
-  margin-top: -50px;
+  /*margin-top: -50px;*/
   height: 100%;
   text-align: center;
 }
@@ -78,9 +78,9 @@ video#intro-video {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  width: 100%;
-  height: auto;
-  z-index: -100;
+  width: auto;
+  height: 100%;
+  z-index: -1;
   background: #eee no-repeat;
   background-size: cover;
 }
