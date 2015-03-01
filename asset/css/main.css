@@ -76,8 +76,6 @@ video#intro-video {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
   z-index: -1;
   background: #eee no-repeat;
   background-size: cover;

@@ -3,9 +3,9 @@ $(document).ready(function () {
 
   var vidEl = $('#intro-video');
 
-  vidEl.on('loadedmetadata', videoScale);
-
-  $(window).on('resize', videoScale);
+  $(window)
+    .on('load', videoScale)
+    .on('resize', videoScale);
 
   function videoScale() {
     var wHeight = $(window).height(),
