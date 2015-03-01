@@ -3,7 +3,9 @@
 if (isset($_SERVER['HTTP_X_GITHUB_EVENT'])) {
 	`git pull`;
 
-	echo '<pre>'.print_r($_SERVER, true).'</pre>';
+	http_response_code(202);
+	echo 'Success!';
 } else {
-	echo 'Not allowed';
+	http_response_code(403);
+	echo 'Not allowed!';
 }
