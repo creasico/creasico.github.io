@@ -1,0 +1,14 @@
+image: ruby:2.3
+
+pages:
+    script:
+        - gem install jekyll
+        - jekyll build
+
+    artifacts:
+        paths:
+            - public
+
+    only:
+        - master
+
