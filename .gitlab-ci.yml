@@ -1,14 +1,18 @@
-image: ruby:2.3
+image: 'ruby:2.3'
+
+before_script:
+    - gem install jekyll
+
+stages:
+    - deploy
 
 pages:
+    stage: deploy
     script:
-        - gem install jekyll
         - jekyll build
-
     artifacts:
         paths:
             - public
-
     only:
         - master
 
