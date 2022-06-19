@@ -28,6 +28,7 @@
 
   <WeBelieves />
   <WhyChooseUs />
+  <OurWorkflows />
 </template>
 
 <script setup>
@@ -39,8 +40,4 @@ useHead({
   description: "CREASI.CO",
   url: "https://creasi.co/",
 });
-
-const name = ref("Syakirin Amin");
-
-const age = ref(22);
 </script>
