@@ -25,11 +25,19 @@
       />
     </div>
   </section>
+
+  <WeBelieves />
+  <WhyChooseUs />
 </template>
 
 <script setup>
 definePageMeta({
   layout: "app",
+});
+useHead({
+  title: "CREASI.CO | End-to-end Digital Services",
+  description: "CREASI.CO",
+  url: "https://creasi.co/",
 });
 
 const name = ref("Syakirin Amin");
