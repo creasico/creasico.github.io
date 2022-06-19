@@ -7,7 +7,7 @@
     </div>
 
     <button
-      class="flex items-center text-gray-500 hover:text-gray-700"
+      class="flex items-center xl:hidden text-gray-500 hover:text-gray-700"
       @click="isMenuOpen = !isMenuOpen"
     >
       <svg
