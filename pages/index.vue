@@ -29,6 +29,7 @@
   <WeBelieves />
   <WhyChooseUs />
   <OurWorkflows />
+  <Partners />
 </template>
 
 <script setup>
