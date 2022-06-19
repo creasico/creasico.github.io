@@ -1,7 +1,7 @@
 <template>
   <footer class="px-5 xl:px-0 mt-36 mb-16 max-w-7xl mx-auto">
     <div class="grid grid-cols-12 gap-6">
-      <div class="col-span-4">
+      <div class="col-span-12 xl:col-span-4">
         <div class="py-5">
           <img src="/creasico.png" alt="creasi.co" class="h-8" />
           <p class="text-[#676767] mt-5 flex flex-col">
@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div class="col-span-4">
+      <div class="col-span-12 xl:col-span-4">
         <div class="py-5">
           <h3 class="text-lg text-black font-bold">Marketing</h3>
           <div class="flex flex-col mt-5">
@@ -24,7 +24,7 @@
           </div>
         </div>
       </div>
-      <div class="col-span-4">
+      <div class="col-span-12 xl:col-span-4">
         <div class="flex flex-col">
           <a
             v-for="menu in menus"

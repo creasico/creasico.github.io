@@ -5,7 +5,7 @@
         <img
           :src="partner.image"
           :alt="partner.name"
-          class="h-28 object-cover"
+          class="h-14 xl:h-28 object-cover"
         />
       </div>
     </div>

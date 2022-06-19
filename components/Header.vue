@@ -6,7 +6,7 @@
       <img src="/creasico.png" alt="creasi.co" class="h-6" />
     </div>
 
-    <nav class="flex">
+    <nav class="hidden xl:flex">
       <!-- loop menus -->
       <a
         v-for="menu in menus"
