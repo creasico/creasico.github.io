@@ -1,8 +1,6 @@
 <template>
-  <section
-    class="max-w-7xl px-5 xl:px-0 mx-auto py-7 xl:py-44 flex items-center"
-  >
-    <div>
+  <section class="max-w-7xl px-5 xl:px-0 mx-auto py-7 xl:py-48 flex">
+    <div class="w-1/2">
       <div class="text-5xl font-extrabold flex flex-col">
         <span>End-to-end</span>
         <span>Digital Services . . .</span>
@@ -16,15 +14,14 @@
       </div>
     </div>
 
-    <div class="relative flex items-start">
-      <!-- make rounded blur color -->
+    <div class="relative w-1/2">
       <div
-        class="absolute top-0 -left-4 h-52 w-52 bg-[#FFE68C] rounded-full blur-3xl"
+        class="absolute -top-14 -right-16 h-80 w-80 bg-[#FFE68C] rounded-full blur-3xl"
       ></div>
       <img
-        src="/creasico.png"
-        alt="creasi.co"
-        class="absolute inset-0 object-cover w-full h-full"
+        src="../assets/images/saly-1.png"
+        alt="illustration"
+        class="absolute -top-14 right-16"
       />
     </div>
   </section>
