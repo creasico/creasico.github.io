@@ -1,5 +1,13 @@
 {
-  "private": true,
+  "author": {
+    "name": "Creasico",
+    "email": "creasico@gmail.com"
+  },
+  "license": "MIT",
+  "name": "creasico",
+  "version": "0.0.1",
+  "description": "End-to-end digital solution service",
+  "private": false,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
