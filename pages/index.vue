@@ -7,22 +7,14 @@
 </template>
 
 <script setup>
-definePageMeta({
-  layout: "app",
-});
-
 useHead({
-  title: "CREASI.CO | End-to-end Digital Services",
-  url: "https://creasi.co/",
+  title: "Creasi.CO",
 
   meta: [
     {
       name: "description",
-      content:
-        "Merupakan sebuah perusahaan yang bergerak dalam bidang jasa perancangan dan pengembangan perangkat lunak.",
+      content: "End-to-End Digital Solution Services",
     },
   ],
-
-  link: [{ rel: "icon", type: "image/png", href: "/creasico-mini.png" }],
 });
 </script>
