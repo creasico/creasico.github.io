@@ -2,7 +2,7 @@
   <Header />
 
   <main class="min-h-screen">
-    <slot />
+    <router-view :key="$route.path" />
   </main>
 
   <Footer />
