@@ -3,7 +3,7 @@
     class="max-w-7xl mx-auto px-5 xl:px-0 flex items-center justify-between"
   >
     <div class="py-5">
-      <img src="/creasico.png" alt="creasi.co" class="h-6" />
+      <MainLogo />
     </div>
 
     <button

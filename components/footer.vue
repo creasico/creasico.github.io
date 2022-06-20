@@ -3,7 +3,7 @@
     <div class="grid grid-cols-12 gap-6">
       <div class="col-span-12 xl:col-span-4">
         <div class="py-5">
-          <img src="/creasico.png" alt="creasi.co" class="h-8" />
+          <MainLogo />
           <p class="text-[#676767] mt-5 flex flex-col">
             <strong class="font-bold text-lg text-black"
               >PT. CREASI TEKNO SOLUSI</strong
