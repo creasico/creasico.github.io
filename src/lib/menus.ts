@@ -28,4 +28,4 @@ export const menus: Menus = [
     name: 'Kontak',
     link: '#',
   },
-];
+]
