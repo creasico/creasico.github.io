@@ -2,7 +2,9 @@
   <section class="max-w-7xl mx-auto mt-10 mb-14 xl:mb-36">
     <div class="block xl:flex">
       <div class="p-5 mb-14 xl:mb-0 w-full xl:w-1/3 bg-primary text-center">
-        <h1 class="text-3xl font-extrabold text-white">Our Workflows</h1>
+        <h1 class="text-3xl font-extrabold text-white">
+          Our Workflows
+        </h1>
       </div>
 
       <!-- workflows -->
@@ -21,7 +23,9 @@
         <div class="mt-12">
           <div class="flex items-center">
             <div class="h-1 w-8 xl:w-12 bg-black rounded-full mr-5"></div>
-            <div class="text-xl xl:text-2xl font-bold">Proposal & Deal</div>
+            <div class="text-xl xl:text-2xl font-bold">
+              Proposal & Deal
+            </div>
           </div>
           <div class="text-lg xl:text-xl mt-3">
             Pembuatan Proposal & Surat Perjanjian untuk sepakat.
@@ -42,7 +46,9 @@
         <div class="mt-12">
           <div class="flex items-center">
             <div class="h-1 w-8 xl:w-12 bg-black rounded-full mr-5"></div>
-            <div class="text-xl xl:text-2xl font-bold">Review & Evaluation</div>
+            <div class="text-xl xl:text-2xl font-bold">
+              Review & Evaluation
+            </div>
           </div>
           <!-- <div class="text-lg xl:text-xl mt-3">
             Fase Pengerjaan Jasa dan implementasi solusi dari kebutuhan usaha

@@ -1,16 +1,11 @@
 module.exports = {
-  content: [
-    "./components/**/*.{vue,js}",
-    "./layouts/**/*.{vue,js}",
-    "./pages/**/*.{vue,js}",
-    // "./nuxt.config.js",
-  ],
+  content: ['index.html', './src/**/*.{vue,ts,js}'],
   theme: {
     extend: {
       colors: {
-        primary: "#388370",
-        secondary: "#839F98",
+        primary: '#388370',
+        secondary: '#839F98',
       },
     },
   },
-};
+}

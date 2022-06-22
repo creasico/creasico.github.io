@@ -47,7 +47,7 @@
         class="absolute -top-14 -right-16 h-80 w-80 bg-[#FFE68C] rounded-full blur-3xl"
       ></div>
       <img
-        src="../assets/images/saly-1.png"
+        src="/images/saly-1.png"
         alt="illustration"
         class="absolute -top-14 right-16"
       />

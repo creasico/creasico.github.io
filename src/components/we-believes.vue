@@ -23,9 +23,7 @@
 
       <div class="mt-10 xl:mt-16 text-md text-white font-light">
         ikuti akun
-        <a href="//instagram.com/creasico" target="_blank" class="underline"
-          >@creasico</a
-        >
+        <a href="//instagram.com/creasico" target="_blank" class="underline">@creasico</a>
         di instragam
       </div>
     </div>

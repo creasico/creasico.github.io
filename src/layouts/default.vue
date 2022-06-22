@@ -2,7 +2,7 @@
   <Header />
 
   <main class="min-h-screen">
-    <router-view :key="$route.path" />
+    <RouterView />
   </main>
 
   <Footer />

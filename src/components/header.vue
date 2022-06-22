@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { menus } from '../lib/menus.js'
+
+const isMenuOpen = ref(false)
+</script>
+
 <template>
   <header
     class="max-w-7xl mx-auto px-5 xl:px-0 flex items-center justify-between"
@@ -29,17 +35,16 @@
       </svg>
     </button>
     <nav
+      class="fixed inset-0 backdrop-filter backdrop-blur-md bg-slate-200 bg-opacity-50 transition duration-700 ease-in-out"
       :class="{
         hidden: !isMenuOpen,
-        'fixed inset-0 backdrop-filter backdrop-blur-md bg-slate-200 bg-opacity-50': true,
-        'transition duration-700 ease-in-out': true,
       }"
     >
       <div class="py-20 px-5 flex flex-col items-start">
         <a
           v-for="menu in menus"
-          :href="menu.link"
           :key="menu.name"
+          :href="menu.link"
           class="px-4 py-2 text-black text-xl font-semibold hover:text-gray-700 hover:bg-gray-100 hover:underline transition duration-300 ease-out"
         >
           {{ menu.name }}
@@ -58,8 +63,8 @@
       <!-- loop menus -->
       <a
         v-for="menu in menus"
-        :href="menu.link"
         :key="menu.name"
+        :href="menu.link"
         class="px-4 py-2 text-black text-sm font-semibold hover:text-gray-700 hover:bg-gray-100 hover:underline transition duration-300 ease-out"
       >
         {{ menu.name }}
@@ -67,9 +72,3 @@
     </nav>
   </header>
 </template>
-
-<script setup>
-import { menus } from "~~/lib/menus";
-
-const isMenuOpen = ref(false);
-</script>
