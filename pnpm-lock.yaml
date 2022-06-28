@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config-vue': ^0.25.1
+  '@iconify/vue': ^3.2.1
   '@intlify/vite-plugin-vue-i18n': ^3.4.0
   '@types/markdown-it': ^12.2.3
   '@types/markdown-it-link-attributes': ^3.0.1
@@ -47,6 +48,7 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config-vue': 0.25.1_b5e7v2qnwxfo6hmiq56u52mz3e
+  '@iconify/vue': 3.2.1_vue@3.2.37
   '@intlify/vite-plugin-vue-i18n': 3.4.0_jg524lrp6mwbliyl7dcdb54k4a
   '@types/markdown-it': 12.2.3
   '@types/markdown-it-link-attributes': 3.0.1
@@ -1319,6 +1321,14 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@iconify/vue/3.2.1_vue@3.2.37:
+    resolution: {integrity: sha512-c4R6ZgFo1JrJ8aPMMgOPgfU7lBswihMGR+yWe/P4ZukC3kTkeT4+lkt9Pc/itVFMkwva/S/7u9YofmYv57fnNQ==}
+    peerDependencies:
+      vue: 3.x
+    dependencies:
+      vue: 3.2.37
     dev: true
 
   /@intlify/bundle-utils/2.2.2_vue-i18n@9.1.10:

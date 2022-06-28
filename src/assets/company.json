@@ -12,26 +12,31 @@
     {
       "name": "facebook",
       "url": "https://fb.me/creasico.id",
+      "icon": "feather:facebook",
       "enable": true
     },
     {
       "name": "instagram",
       "url": "https://ig.me/creasico",
+      "icon": "feather:instagram",
       "enable": false
     },
     {
       "name": "twitter",
       "url": "https://twitter.com/creasico",
+      "icon": "feather:twitter",
       "enable": false
     },
     {
       "name": "linkedin",
       "url": "https://linkedin.com/company/creasico",
+      "icon": "feather:linkedin",
       "enable": true
     },
     {
       "name": "github",
       "url": "https://github.com/creasico",
+      "icon": "feather:github",
       "enable": true
     }
   ]

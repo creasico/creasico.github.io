@@ -1,7 +1,9 @@
 <script lang="ts" setup>
+import { Icon } from '@iconify/vue'
 import company from '~/assets/company.json'
 
 const address = company.address_lines.join(', <br />')
+const socialLinks = computed(() => company.social_links.filter(social => social.enable))
 </script>
 
 <template>
@@ -12,8 +14,12 @@ const address = company.address_lines.join(', <br />')
 
     <strong class="block text-gray-300 my-3">{{ company.legal_name }}</strong>
     <address class="text-base" v-html="address"></address>
-    <div v-for="(link, i) of company.social_links" :key="i">
-      <a v-if="link.enable" :href="link.url">{{ link.name }}</a>
+    <div class="mt-5 flex flex-row space-x-2">
+      <a v-for="(link, i) of socialLinks" :key="i" :href="link.url" class="hover:text-gray-500">
+        <Icon
+          :key="i" :icon="link.icon" class="h-6 w-6"
+        />
+      </a>
     </div>
   </Widget>
 </template>
