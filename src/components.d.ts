@@ -8,6 +8,7 @@ declare module '@vue/runtime-core' {
     Colopon: typeof import('./components/widgets/colopon.vue')['default']
     HeroSection: typeof import('./components/sections/hero-section.vue')['default']
     MainLogo: typeof import('./components/main-logo.vue')['default']
+    NavbarMenu: typeof import('./components/widgets/navbar-menu.vue')['default']
     PageContent: typeof import('./components/page-content.vue')['default']
     PartnersSection: typeof import('./components/sections/partners-section.vue')['default']
     ReasoneSection: typeof import('./components/sections/reasone-section.vue')['default']
