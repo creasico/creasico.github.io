@@ -57,7 +57,10 @@ export default defineConfig({
   },
 
   plugins: [
-    vue(),
+    vue({
+      include: [/\.vue$/, /\.md$/],
+      reactivityTransform: true,
+    }),
 
     // https://github.com/hannoeru/vite-plugin-pages
     pages({
