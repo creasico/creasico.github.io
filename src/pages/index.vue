@@ -5,7 +5,7 @@ const { t } = useI18n()
 <template>
   <HeroSection />
   <WeBelieves />
-  <WhyChooseUs />
-  <OurWorkflows />
-  <Partners />
+  <ReasoneSection />
+  <WorkflowsSection />
+  <PartnersSection />
 </template>
