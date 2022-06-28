@@ -1,5 +1,48 @@
 <script setup lang="ts">
 import { menus } from '~/lib/menus'
+
+interface LinkMenu {
+  name: string
+  link: string
+}
+
+const aboutUs: Array<LinkMenu> = [
+  {
+    name: 'Company Profile',
+    link: '#',
+  },
+  {
+    name: 'Publications',
+    link: '#',
+  },
+  {
+    name: 'Privacy Policy',
+    link: '#',
+  },
+  {
+    name: 'Terms and Conditions',
+    link: '#',
+  },
+]
+
+const ourProducts: Array<LinkMenu> = [
+  {
+    name: 'Human Resource',
+    link: '#',
+  },
+  {
+    name: 'Accounting',
+    link: '#',
+  },
+  {
+    name: 'Customer Relationship',
+    link: '#',
+  },
+  {
+    name: 'Asset Management System',
+    link: '#',
+  },
+]
 </script>
 
 <template>
@@ -19,12 +62,12 @@ import { menus } from '~/lib/menus'
             </template>
 
             <a
-              v-for="menu in menus"
-              :key="menu.name"
-              :href="menu.link"
-              class="block mb-1"
+              v-for="about in aboutUs"
+              :key="about.name"
+              :href="about.link"
+              class="block mb-1 hover:text-gray-500"
             >
-              {{ menu.name }}
+              {{ about.name }}
             </a>
           </Widget>
 
@@ -36,12 +79,12 @@ import { menus } from '~/lib/menus'
             </template>
 
             <a
-              v-for="menu in menus"
-              :key="menu.name"
-              :href="menu.link"
-              class="block mb-1"
+              v-for="product in ourProducts"
+              :key="product.name"
+              :href="product.link"
+              class="block mb-1 hover:text-gray-500"
             >
-              {{ menu.name }}
+              {{ product.name }}
             </a>
           </Widget>
         </section>
