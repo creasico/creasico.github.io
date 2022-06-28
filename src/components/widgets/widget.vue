@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  noHeader: boolean
+  noHeader?: boolean
 }>()
 
 const noHeader = computed(() => !!props.noHeader)
