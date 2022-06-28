@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { menus } from '~/lib/menus.js'
+import links from '~/assets/nav-links.json'
 
+const { t } = useI18n()
+const menuLinks = links.filter(l => l.locations.includes('top-menu'))
 const isMenuOpen = ref(false)
 </script>
 
@@ -35,14 +37,9 @@ const isMenuOpen = ref(false)
     }"
   >
     <div class="py-20 px-5 flex flex-col items-start">
-      <a
-        v-for="menu in menus"
-        :key="menu.name"
-        :href="menu.link"
-        class="px-4 py-2 text-black text-xl font-semibold hover:text-gray-700 hover:bg-gray-100 hover:underline transition duration-300 ease-out"
-      >
-        {{ menu.name }}
-      </a>
+      <app-link v-for="link in menuLinks" :key="link.name" :to="link.path" class="px-4 py-2 text-black text-xl font-semibold hover:text-gray-700 hover:bg-gray-100 hover:underline transition duration-300 ease-out">
+        {{ t(link.name) }}
+      </app-link>
 
       <button
         class="mt-12 py-3 text-center border border-primary rounded-md font-semibold w-full"
@@ -55,13 +52,8 @@ const isMenuOpen = ref(false)
 
   <nav class="hidden xl:flex">
     <!-- loop menus -->
-    <a
-      v-for="menu in menus"
-      :key="menu.name"
-      :href="menu.link"
-      class="px-4 py-2 text-black text-sm font-semibold hover:text-gray-700 hover:bg-gray-100 hover:underline transition duration-300 ease-out"
-    >
-      {{ menu.name }}
-    </a>
+    <app-link v-for="link in menuLinks" :key="link.name" :to="link.path" class="px-4 py-2 text-black text-sm font-semibold hover:text-gray-700 hover:bg-gray-100 hover:underline transition duration-300 ease-out">
+      {{ t(link.name) }}
+    </app-link>
   </nav>
 </template>

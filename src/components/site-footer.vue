@@ -22,14 +22,9 @@ const productLinks = links.filter(l => l.locations.includes('widget-products'))
               </h3>
             </template>
 
-            <a
-              v-for="link in companyLinks"
-              :key="link.name"
-              :href="link.path"
-              class="block mb-1 hover:text-gray-500"
-            >
+            <app-link v-for="link in companyLinks" :key="link.name" :to="link.path" class="block mb-1 hover:text-gray-500">
               {{ t(link.name) }}
-            </a>
+            </app-link>
           </widget-base>
 
           <widget-base>
@@ -39,14 +34,9 @@ const productLinks = links.filter(l => l.locations.includes('widget-products'))
               </h3>
             </template>
 
-            <a
-              v-for="link in productLinks"
-              :key="link.name"
-              :href="link.path"
-              class="block mb-1 hover:text-gray-500"
-            >
+            <app-link v-for="link in productLinks" :key="link.name" :to="link.path" class="block mb-1 hover:text-gray-500">
               {{ t(link.name) }}
-            </a>
+            </app-link>
           </widget-base>
         </section>
       </div>

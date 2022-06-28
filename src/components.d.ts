@@ -5,6 +5,7 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AppLink: typeof import('./components/app-link.vue')['default']
     MainLogo: typeof import('./components/main-logo.vue')['default']
     NavbarMenu: typeof import('./components/navbar-menu.vue')['default']
     PageContent: typeof import('./components/page-content.vue')['default']
