@@ -3,7 +3,7 @@ import { ViteSSG } from 'vite-ssg'
 import autoRoutes from 'pages-generated'
 import { setupLayouts } from 'layouts-generated'
 
-import './assets/css/tailwind.css'
+import './assets/styles/main.css'
 import App from './app.vue'
 
 // https://github.com/antfu/vite-ssg
