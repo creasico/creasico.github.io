@@ -1,14 +1,10 @@
 <template>
-  <section class="container mx-auto py-32">
-    <div class="w-full flex items-center justify-center mx-auto">
-      <h1 class="text-3xl font-extrabold">
-        Why Choose Us
-      </h1>
-    </div>
+  <section-base class="flex-row justify-center">
+    <h1 class="text-3xl text-center block font-extrabold">
+      Why Choose Us
+    </h1>
 
-    <div
-      class="mt-16 grid grid-cols-12 gap-1 xl:gap-6 font-bold text-lg text-center"
-    >
+    <div class="mt-16 grid grid-cols-12 gap-1 xl:gap-6 font-bold text-lg text-center">
       <div class="why-list delay-75">
         Quality over everything
       </div>
@@ -28,7 +24,7 @@
         Fast and Flexible
       </div>
     </div>
-  </section>
+  </section-base>
 </template>
 
 <style lang="postcss" scoped>
