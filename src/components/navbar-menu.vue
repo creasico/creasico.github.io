@@ -7,10 +7,7 @@ const isMenuOpen = ref(false)
 </script>
 
 <template>
-  <button
-    class="flex items-center xl:hidden text-gray-500 hover:text-gray-700"
-    @click="isMenuOpen = !isMenuOpen"
-  >
+  <button class="flex items-center xl:hidden text-gray-500 hover:text-gray-700" @click="isMenuOpen = !isMenuOpen">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -30,21 +27,13 @@ const isMenuOpen = ref(false)
     </svg>
   </button>
 
-  <nav
-    class="fixed inset-0 backdrop-filter backdrop-blur-md bg-slate-200 bg-opacity-50 transition duration-700 ease-in-out"
-    :class="{
-      hidden: !isMenuOpen,
-    }"
-  >
+  <nav class="fixed inset-0 backdrop-filter backdrop-blur-md bg-slate-200 bg-opacity-50 transition duration-700 ease-in-out" :class="{ hidden: !isMenuOpen }">
     <div class="py-20 px-5 flex flex-col items-start">
       <app-link v-for="link in menuLinks" :key="link.name" :to="link.path" class="px-4 py-2 text-black text-xl font-semibold hover:text-gray-700 hover:bg-gray-100 hover:underline transition duration-300 ease-out">
         {{ t(link.name) }}
       </app-link>
 
-      <button
-        class="mt-12 py-3 text-center border border-primary rounded-md font-semibold w-full"
-        @click="isMenuOpen = !isMenuOpen"
-      >
+      <button class="mt-12 py-3 text-center border border-primary rounded-md font-semibold w-full" @click="isMenuOpen = !isMenuOpen">
         close
       </button>
     </div>
