@@ -1,49 +1,51 @@
 <script setup lang="ts">
-import { menus } from '../lib/menus'
-const copy = ref('Creasi.co')
-
-const telephone = ref('085325401177')
-const email = ref('creasico@gmail.com')
+import { menus } from '~/lib/menus'
 </script>
 
 <template>
-  <footer class="px-5 xl:px-0 mt-36 mb-16 max-w-7xl mx-auto">
-    <div class="grid grid-cols-12 gap-6">
-      <div class="col-span-12 xl:col-span-4">
-        <div class="py-5">
-          <MainLogo />
-          <p class="text-[#676767] mt-5 flex flex-col">
-            <strong class="font-bold text-lg text-black">PT. CREASI TEKNO SOLUSI</strong>
-            Perum Saputra Raya 2 Blok M No.1, <br />
-            Desa/Kelurahan Lebo, Kec. Warungasem, <br />
-            Kab. Batang, Jawa Tengah, 51252
-          </p>
-        </div>
-      </div>
+  <footer class="px-5 xl:px-0">
+    <div class="container mx-auto flex py-11">
+      <section class="flex-auto">
+        <Colopon />
+      </section>
 
-      <div class="col-span-12 xl:col-span-4">
-        <div class="py-5">
-          <h3 class="text-lg text-black font-bold">
-            Marketing
-          </h3>
-          <div class="flex flex-col mt-5">
-            <span class="text-[#676767]">{{ telephone }}</span>
-            <span class="text-[#676767]">{{ email }}</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-span-12 xl:col-span-4">
-        <div class="flex flex-col">
+      <section class="widgets flex flex-none">
+        <Widget>
+          <template #title>
+            <h3>Menu</h3>
+          </template>
+
           <a
             v-for="menu in menus"
             :key="menu.name"
             :href="menu.link"
-            class="text-black font-semibold hover:text-gray-700 hover:underline transition duration-300 ease-out mb-2"
+            class="block"
           >
             {{ menu.name }}
           </a>
-        </div>
-      </div>
+        </Widget>
+
+        <Widget>
+          <template #title>
+            <h3>Menu</h3>
+          </template>
+
+          <a
+            v-for="menu in menus"
+            :key="menu.name"
+            :href="menu.link"
+            class="block"
+          >
+            {{ menu.name }}
+          </a>
+        </Widget>
+      </section>
+    </div>
+
+    <div class="container mx-auto py-11">
+      <p class="text-center">
+        Copyright &copy; 2022 Creasi.CO | All Right Reserved
+      </p>
     </div>
   </footer>
 </template>
