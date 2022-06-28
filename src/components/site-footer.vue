@@ -8,12 +8,12 @@ const productLinks = links.filter(l => l.locations.includes('widget-products'))
 
 <template>
   <footer class="bg-gray-900 text-gray-400">
-    <div class="container mx-auto flex py-11 px-5 xl:px-0">
+    <div class="container mx-auto flex flex-col lg:flex-row gap-8 py-11 px-5 xl:px-0">
       <section class="flex-auto">
         <widget-colopon />
       </section>
 
-      <section class="widgets flex flex-none space-x-14">
+      <section class="widgets flex flex-none">
         <widget-base>
           <template #title>
             <h3 class="mb-5 text-lg text-gray-500">
@@ -40,7 +40,7 @@ const productLinks = links.filter(l => l.locations.includes('widget-products'))
       </section>
     </div>
 
-    <div class="container mx-auto py-11 px-5 xl:px-0">
+    <div class="container mx-auto py-8 px-5 xl:px-0">
       <p class="text-center">
         Copyright &copy; 2022 - PT. Creasi Tekno Solusi. All Right Reserved
       </p>
