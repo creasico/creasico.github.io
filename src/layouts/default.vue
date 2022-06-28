@@ -1,9 +1,9 @@
 <template>
-  <Header />
+  <site-header />
 
   <main class="min-h-screen">
-    <RouterView />
+    <router-view />
   </main>
 
-  <Footer />
+  <site-footer />
 </template>

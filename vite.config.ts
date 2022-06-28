@@ -8,10 +8,11 @@ import i18n from '@intlify/vite-plugin-vue-i18n'
 import sitemap from 'vite-ssg-sitemap'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
-import markdown from 'vite-plugin-md'
+import markdown, { meta } from 'vite-plugin-md'
 import { VitePWA as pwa } from 'vite-plugin-pwa'
 import pages from 'vite-plugin-pages'
 import layouts from 'vite-plugin-vue-layouts'
+// import matter from 'gray-matter'
 import mdAnchor from 'markdown-it-anchor'
 import mdLinkAttr from 'markdown-it-link-attributes'
 import mdPrism from 'markdown-it-prism'
@@ -62,24 +63,29 @@ export default defineConfig({
       reactivityTransform: true,
     }),
 
-    // https://github.com/hannoeru/vite-plugin-pages
-    pages({
-      extensions: ['vue', 'md'],
-    }),
-
-    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-    layouts(),
-
     // https://github.com/antfu/vite-plugin-md
     markdown({
-      wrapperComponent: 'page',
+      wrapperComponent: 'page-content',
       wrapperClasses: 'page-content entry-content',
       headEnabled: true,
+
+      frontmatterDefaults: {
+        locale: 'en',
+        layout: 'pages',
+      },
 
       // see: https://markdown-it.github.io/markdown-it/
       markdownItOptions: {
         quotes: '""\'\'',
       },
+
+      builders: [
+        meta({
+          metaProps: ['title', 'description', 'tags'],
+          routeProps: ['layout', 'locale'],
+          headProps: ['title'],
+        }),
+      ],
 
       markdownItSetup(md) {
         md.use(mdPrism)
@@ -101,6 +107,25 @@ export default defineConfig({
         })
       },
     }),
+
+    // https://github.com/hannoeru/vite-plugin-pages
+    pages({
+      extensions: ['vue', 'md'],
+      extendRoute(route) {
+        // route.meta = Object.assign({
+        //   layout: 'default',
+        // }, route.meta || {})
+
+        // console.log(route)
+        // if (typeof route.component === 'string' && route.component.endsWith('.md'))
+        //   console.log(route)
+
+        return route
+      },
+    }),
+
+    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+    layouts(),
 
     autoImport({
       dts: 'src/auto-imports.d.ts',

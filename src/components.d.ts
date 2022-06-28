@@ -6,14 +6,16 @@ import '@vue/runtime-core'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Colopon: typeof import('./components/widgets/colopon.vue')['default']
-    Footer: typeof import('./components/footer.vue')['default']
-    Header: typeof import('./components/header.vue')['default']
     HeroSection: typeof import('./components/hero-section.vue')['default']
     MainLogo: typeof import('./components/main-logo.vue')['default']
     OurWorkflows: typeof import('./components/our-workflows.vue')['default']
+    PageContent: typeof import('./components/page-content.vue')['default']
     Partners: typeof import('./components/partners.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SiteFooter: typeof import('./components/site-footer.vue')['default']
+    SiteHeader: typeof import('./components/site-header.vue')['default']
+    SiteSection: typeof import('./components/site-section.vue')['default']
     WeBelieves: typeof import('./components/we-believes.vue')['default']
     WhyChooseUs: typeof import('./components/why-choose-us.vue')['default']
     Widget: typeof import('./components/widgets/widget.vue')['default']
