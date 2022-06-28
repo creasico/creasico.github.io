@@ -2,7 +2,7 @@
   <section
     class="px-5 xl:px-0 py-28 xl:py-48 bg-gray-50"
   >
-    <div class="max-w-7xl mx-auto flex flex-col-reverse xl:flex-row">
+    <div class="container mx-auto flex flex-col-reverse xl:flex-row">
       <div class="w-full xl:w-1/2 ">
         <span class="text-gray-700">End-to-end Digital Solution</span>
         <p class="text-3xl xl:text-[2.8rem] font-extrabold leading-tight">

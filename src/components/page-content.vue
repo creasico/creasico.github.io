@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 const { frontmatter } = defineProps<{
   frontmatter: any
 }>()
@@ -7,8 +7,8 @@ const { frontmatter } = defineProps<{
 </script>
 
 <template>
-  <site-section>
+  <section-base>
     <h1>{{ frontmatter.title }}</h1>
     <slot />
-  </site-section>
+  </section-base>
 </template>
