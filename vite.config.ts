@@ -25,18 +25,6 @@ export default defineConfig({
     },
   },
 
-  optimizeDeps: {
-    include: [
-      'vue',
-      'vue-router',
-      '@vueuse/core',
-      // '@vueuse/head',
-    ],
-    exclude: [
-      'vue-demi',
-    ],
-  },
-
   // https://github.com/antfu/vite-ssg
   ssgOptions: {
     script: 'async',
@@ -133,7 +121,7 @@ export default defineConfig({
         'vue',
         'vue-router',
         'vue-i18n',
-        // 'vue/macros',
+        'vue/macros',
         '@vueuse/head',
         '@vueuse/core',
       ],

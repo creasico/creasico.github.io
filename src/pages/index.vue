@@ -3,9 +3,9 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <HeroSection />
-  <WeBelieves />
-  <ReasoneSection />
-  <WorkflowsSection />
-  <PartnersSection />
+  <section-hero />
+  <section-believes />
+  <section-reason />
+  <section-workflows />
+  <section-partners />
 </template>
