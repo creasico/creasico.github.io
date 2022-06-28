@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import { menus } from '../lib/menus.js'
+import { menus } from '~/lib/menus.js'
 
 const isMenuOpen = ref(false)
 </script>
 
 <template>
-  <header
-    class="max-w-7xl mx-auto px-5 xl:px-0 flex items-center justify-between"
-  >
+  <header class="max-w-7xl mx-auto px-5 xl:px-0 flex items-center justify-between">
     <div class="py-5">
-      <MainLogo />
+      <main-logo width="200" />
     </div>
 
     <button

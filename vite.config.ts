@@ -124,7 +124,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-pwa
     pwa({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'favicon.png', 'safari-pinned-tab.svg'],
+      includeAssets: ['favicon.ico', 'favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
         name: 'Creasi Admin',
         short_name: 'Creasi Admin',
