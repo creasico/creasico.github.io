@@ -6,3 +6,20 @@ home:
 
 button:
   back: Kambali
+
+nav-link:
+  home: Beranda
+  services: Layanan
+  about: Tentang
+  contact: Hubungi Kami
+  privacy: Privacy Policy
+  terms: Terms and Conditions
+
+  hris: Human Resource
+  accounting: accounting
+  crm: Customer Relationship
+  ams: Asset Management
+
+widgets:
+  company: Company
+  products: Our Products

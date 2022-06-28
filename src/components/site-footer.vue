@@ -1,48 +1,9 @@
 <script setup lang="ts">
-import { menus } from '~/lib/menus'
+import links from '~/assets/nav-links.json'
 
-interface LinkMenu {
-  name: string
-  link: string
-}
-
-const aboutUs: Array<LinkMenu> = [
-  {
-    name: 'Company Profile',
-    link: '#',
-  },
-  {
-    name: 'Publications',
-    link: '#',
-  },
-  {
-    name: 'Privacy Policy',
-    link: '#',
-  },
-  {
-    name: 'Terms and Conditions',
-    link: '#',
-  },
-]
-
-const ourProducts: Array<LinkMenu> = [
-  {
-    name: 'Human Resource',
-    link: '#',
-  },
-  {
-    name: 'Accounting',
-    link: '#',
-  },
-  {
-    name: 'Customer Relationship',
-    link: '#',
-  },
-  {
-    name: 'Asset Management System',
-    link: '#',
-  },
-]
+const { t } = useI18n()
+const companyLinks = links.filter(l => l.locations.includes('widget-company'))
+const productLinks = links.filter(l => l.locations.includes('widget-products'))
 </script>
 
 <template>
@@ -50,43 +11,43 @@ const ourProducts: Array<LinkMenu> = [
     <div class="max-w-7xl mx-auto px-5 xl:px-0">
       <div class="container mx-auto flex py-11">
         <section class="flex-auto">
-          <Colopon />
+          <widget-colopon />
         </section>
 
         <section class="widgets flex flex-none space-x-14">
-          <Widget>
+          <widget-base>
             <template #title>
               <h3 class="mb-5 text-lg text-gray-500">
-                About Us
+                {{ t('widgets.company') }}
               </h3>
             </template>
 
             <a
-              v-for="about in aboutUs"
-              :key="about.name"
-              :href="about.link"
+              v-for="link in companyLinks"
+              :key="link.name"
+              :href="link.path"
               class="block mb-1 hover:text-gray-500"
             >
-              {{ about.name }}
+              {{ t(link.name) }}
             </a>
-          </Widget>
+          </widget-base>
 
-          <Widget>
+          <widget-base>
             <template #title>
               <h3 class="mb-5 text-lg text-gray-500">
-                Our Products
+                {{ t('widgets.products') }}
               </h3>
             </template>
 
             <a
-              v-for="product in ourProducts"
-              :key="product.name"
-              :href="product.link"
+              v-for="link in productLinks"
+              :key="link.name"
+              :href="link.path"
               class="block mb-1 hover:text-gray-500"
             >
-              {{ product.name }}
+              {{ t(link.name) }}
             </a>
-          </Widget>
+          </widget-base>
         </section>
       </div>
 

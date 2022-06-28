@@ -1,2 +1,2 @@
-export { default as Colopon } from './colopon.vue'
-export { default as Widget } from './widget.vue'
+export { default as Colopon } from './widget-colopon.vue'
+export { default as Widget } from './widget-base.vue'

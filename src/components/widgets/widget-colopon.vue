@@ -7,7 +7,7 @@ const socialLinks = computed(() => company.social_links.filter(social => social.
 </script>
 
 <template>
-  <Widget>
+  <widget-base>
     <template #title>
       <main-logo width="200" />
     </template>
@@ -21,5 +21,5 @@ const socialLinks = computed(() => company.social_links.filter(social => social.
         />
       </a>
     </div>
-  </Widget>
+  </widget-base>
 </template>

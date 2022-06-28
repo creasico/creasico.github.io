@@ -6,3 +6,20 @@ home:
 
 button:
   back: Back
+
+nav-link:
+  home: Home
+  services: Services
+  about: About Us
+  contact: Contact Us
+  privacy: Privacy Policy
+  terms: Terms and Conditions
+
+  hris: Human Resource
+  accounting: accounting
+  crm: Customer Relationship
+  ams: Asset Management
+
+widgets:
+  company: Company
+  products: Our Products
