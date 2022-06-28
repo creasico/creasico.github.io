@@ -10,8 +10,8 @@ const address = company.address_lines.join(', <br />')
       <main-logo width="200" />
     </template>
 
-    <strong class="block">{{ company.legal_name }}</strong>
-    <address v-html="address"></address>
+    <strong class="block text-gray-300 my-3">{{ company.legal_name }}</strong>
+    <address class="text-base" v-html="address"></address>
     <div v-for="(link, i) of company.social_links" :key="i">
       <a v-if="link.enable" :href="link.url">{{ link.name }}</a>
     </div>
