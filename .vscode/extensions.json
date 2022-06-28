@@ -4,6 +4,6 @@
     "cpylua.language-postcss",
     "editorconfig.editorconfig",
     "lokalise.i18n-ally",
-    "vue.volar",
+    "vue.volar"
   ]
 }

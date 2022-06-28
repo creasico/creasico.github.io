@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-7xl mx-auto py-32">
+  <section class="container mx-auto py-32">
     <div class="w-full flex items-center justify-center mx-auto">
       <h1 class="text-3xl font-extrabold">
         Why Choose Us

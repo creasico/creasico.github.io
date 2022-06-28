@@ -5,6 +5,7 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AppLink: typeof import('./components/app-link.vue')['default']
     HeadingSection: typeof import('./components/heading-section.vue')['default']
     MainLogo: typeof import('./components/main-logo.vue')['default']
     NavbarMenu: typeof import('./components/navbar-menu.vue')['default']
@@ -20,7 +21,6 @@ declare module '@vue/runtime-core' {
     SiteFooter: typeof import('./components/site-footer.vue')['default']
     SiteHeader: typeof import('./components/site-header.vue')['default']
     SiteSection: typeof import('./components/site-section.vue')['default']
-    TopSection: typeof import('./components/top-section.vue')['default']
     WidgetBase: typeof import('./components/widgets/widget-base.vue')['default']
     WidgetColopon: typeof import('./components/widgets/widget-colopon.vue')['default']
   }

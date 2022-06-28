@@ -1,6 +1,6 @@
 <template>
   <section class="bg-primary">
-    <div class="my-5 max-w-7xl mx-auto py-24 px-5 xl:px-0">
+    <div class="my-5 container mx-auto py-24 px-5 xl:px-0">
       <div class="flex items-center mb-5">
         <div class="w-12 xl:w-28 h-1 mr-5 bg-white rounded-full"></div>
         <div class="font-extrabold text-white text-2xl xl:text-3xl">
