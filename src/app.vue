@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const router = useRouter()
+
 useHead({
   title: 'Creasi.CO',
   meta: [
@@ -11,6 +13,14 @@ useHead({
       href: '/favicon.svg',
     },
   ],
+})
+
+onMounted(() => {
+  if (sessionStorage.redirect) {
+    const redirect = sessionStorage.redirect
+    delete sessionStorage.redirect
+    router.push(redirect)
+  }
 })
 </script>
 
