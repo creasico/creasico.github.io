@@ -16,6 +16,7 @@ Desktop.ini
 # --------------------------
 .env.*
 .env
+.vite-ssg-temp
 dist
 node_modules
 
