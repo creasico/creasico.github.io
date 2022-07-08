@@ -1,9 +1,7 @@
-<script setup lang="ts">
-const props = defineProps<{
+<script lang="ts" setup>
+const { noHeader } = defineProps<{
   noHeader?: boolean
 }>()
-
-const noHeader = computed(() => !!props.noHeader)
 </script>
 
 <template>

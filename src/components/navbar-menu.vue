@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import links from '~/assets/nav-links.json'
 
 const { t } = useI18n()

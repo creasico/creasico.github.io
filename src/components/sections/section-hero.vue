@@ -15,14 +15,8 @@
       </div>
 
       <div class="hidden xl:block xl:relative w-full xl:w-1/2">
-        <div
-          class="absolute -top-14 -right-16 h-80 w-80 bg-[#FFE68C] rounded-full blur-3xl"
-        ></div>
-        <img
-          src="/images/saly-1.png"
-          alt="illustration"
-          class="absolute -top-14 right-16"
-        />
+        <div class="absolute -top-14 -right-16 h-80 w-80 bg-[#FFE68C] rounded-full blur-3xl"></div>
+        <img src="/images/saly-1.png" alt="illustration" class="absolute -top-14 right-16" />
       </div>
     </div>
   </section>

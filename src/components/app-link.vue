@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import type { RouterLinkProps } from 'vue-router'
 import { useLink } from 'vue-router'
 

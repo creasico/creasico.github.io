@@ -1,7 +1,8 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import links from '~/assets/nav-links.json'
 
 const { t } = useI18n()
+const year = new Date().getFullYear()
 const widgets = ['company', 'products'].map((widget) => {
   return {
     name: widget,
@@ -17,7 +18,7 @@ const widgets = ['company', 'products'].map((widget) => {
         <widget-colopon />
       </section>
 
-      <section class="widgets flex flex-none">
+      <section class="widgets flex flex-none w-full">
         <widget-base v-for="(widget, i) in widgets" :key="i">
           <template #title>
             <h3 class="mb-5 text-lg text-gray-500">
@@ -35,9 +36,7 @@ const widgets = ['company', 'products'].map((widget) => {
     </div>
 
     <div class="container mx-auto py-8 px-5 xl:px-0">
-      <p class="text-center">
-        Copyright &copy; 2022 - PT. Creasi Tekno Solusi. All Right Reserved
-      </p>
+      <p class="text-center" v-html="t('copyright', { year })" />
     </div>
   </footer>
 </template>

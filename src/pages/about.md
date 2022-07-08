@@ -1,6 +1,6 @@
 ---
 title: About Us
-description: About Creasi.CO
+description: Our Company Profile
 ---
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur sagittis, nisl nunc consectetur nisi, eu aliquam nisl nisi euismod nisl.
