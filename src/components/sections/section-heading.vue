@@ -6,8 +6,8 @@ const { title, description } = defineProps<{
 </script>
 
 <template>
-  <div id="heading" class="py-36 px-5 xl:px-0 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
+  <section id="heading" class="py-36 px-5 xl:px-0 bg-gray-50">
+    <div class="container mx-auto">
       <div class="flex flex-col">
         <span>Last updated on ...</span>
         <h1 class="text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
@@ -18,5 +18,5 @@ const { title, description } = defineProps<{
         </p> -->
       </div>
     </div>
-  </div>
+  </section>
 </template>
