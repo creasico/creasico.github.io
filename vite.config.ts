@@ -72,10 +72,14 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-md
     markdown({
       wrapperComponent: 'page-content',
-      wrapperClasses: 'page-content entry-content',
+      wrapperClasses: 'prose max-w-none',
       headEnabled: true,
+      style: {
+        baseStyle: 'github',
+      },
 
       frontmatterDefaults: {
+        container: 'wide',
         locale: 'en',
         layout: 'pages',
       },
@@ -88,7 +92,7 @@ export default defineConfig({
       builders: [
         meta({
           metaProps: ['title', 'description', 'tags'],
-          routeProps: ['layout', 'locale'],
+          routeProps: ['layout', 'locale', 'container'],
           headProps: ['title'],
         }),
       ],

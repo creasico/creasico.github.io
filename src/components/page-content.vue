@@ -3,15 +3,17 @@ const { frontmatter } = defineProps<{
   frontmatter: any
 }>()
 
-// console.log(frontmatter)
+const classList = {
+  'max-w-3xl': frontmatter.container === 'narrow',
+}
 </script>
 
 <template>
   <section-heading :title="frontmatter.title" :description="frontmatter.description" />
 
   <section-base>
-    <div class="max-w-3xl mx-auto prose">
+    <article class="mx-auto" :class="classList">
       <slot />
-    </div>
+    </article>
   </section-base>
 </template>

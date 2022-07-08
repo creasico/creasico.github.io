@@ -18,7 +18,7 @@ const widgets = ['company', 'products'].map((widget) => {
         <widget-colopon />
       </section>
 
-      <section class="widgets flex flex-none w-full">
+      <section class="widgets flex flex-none">
         <widget-base v-for="(widget, i) in widgets" :key="i">
           <template #title>
             <h3 class="mb-5 text-lg text-gray-500">
