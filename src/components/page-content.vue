@@ -11,9 +11,9 @@ const classList = {
 <template>
   <section-heading :title="frontmatter.title" :description="frontmatter.description" />
 
-  <section-base>
-    <article class="mx-auto" :class="classList">
+  <section class="px-5 lg:px-0 py-24">
+    <article class="container mx-auto" :class="classList">
       <slot />
     </article>
-  </section-base>
+  </section>
 </template>
