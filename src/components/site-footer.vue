@@ -2,8 +2,12 @@
 import links from '~/assets/nav-links.json'
 
 const { t } = useI18n()
-const companyLinks = links.filter(l => l.locations.includes('widget-company'))
-const productLinks = links.filter(l => l.locations.includes('widget-products'))
+const widgets = ['company', 'products'].map((widget) => {
+  return {
+    name: widget,
+    links: links.filter(l => l.locations.includes(`widget-${widget}`)),
+  }
+})
 </script>
 
 <template>
@@ -14,28 +18,18 @@ const productLinks = links.filter(l => l.locations.includes('widget-products'))
       </section>
 
       <section class="widgets flex flex-none">
-        <widget-base>
+        <widget-base v-for="(widget, i) in widgets" :key="i">
           <template #title>
             <h3 class="mb-5 text-lg text-gray-500">
-              {{ t('widgets.company') }}
+              {{ t(`widgets.${widget.name}`) }}
             </h3>
           </template>
 
-          <app-link v-for="link in companyLinks" :key="link.name" :to="link.path" class="block mb-1 hover:text-gray-500">
-            {{ t(link.name) }}
-          </app-link>
-        </widget-base>
-
-        <widget-base>
-          <template #title>
-            <h3 class="mb-5 text-lg text-gray-500">
-              {{ t('widgets.products') }}
-            </h3>
+          <template v-for="link in widget.links" :key="link.name">
+            <app-link v-if="link.enable" :to="link.path" class="block mb-1 hover:text-gray-500">
+              {{ t(link.name) }}
+            </app-link>
           </template>
-
-          <app-link v-for="link in productLinks" :key="link.name" :to="link.path" class="block mb-1 hover:text-gray-500">
-            {{ t(link.name) }}
-          </app-link>
         </widget-base>
       </section>
     </div>

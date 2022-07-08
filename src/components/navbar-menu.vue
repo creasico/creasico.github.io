@@ -15,17 +15,21 @@ const isMenuOpen = ref(false)
 
       <nav class="hidden lg:flex gap-8">
         <!-- loop menus -->
-        <div v-for="link in menuLinks" :key="link.name" role="navigation" class="box-border relative border-b-2 border-transparent hover:border-black">
-          <app-link :to="link.path" class="px-4 lg:px-0 py-3 block text-black text-sm font-semibold hover:text-gray-700 transition duration-300 ease-out">
-            {{ t(link.name) }}
-          </app-link>
-
-          <div v-if="Array.isArray(link.children) && link.children.length > 0" class="hidden">
-            <app-link v-for="sub in link.children" :key="sub.name" :to="sub.path" class="px-4 lg:px-0 py-3 block text-black text-sm font-semibold hover:text-gray-700 transition duration-300 ease-out">
-              {{ t(sub.name) }}
+        <template v-for="link in menuLinks" :key="link.name">
+          <div v-if="link.enable" role="navigation" class="box-border relative border-b-2 border-transparent hover:border-black">
+            <app-link :to="link.path" class="px-4 lg:px-0 py-3 block text-black text-sm font-semibold hover:text-gray-700 transition duration-300 ease-out">
+              {{ t(link.name) }}
             </app-link>
+
+            <div v-if="Array.isArray(link.children) && link.children.length > 0" class="hidden">
+              <template v-for="sub in link.children" :key="sub.name">
+                <app-link v-if="sub.enable" :to="sub.path" class="px-4 lg:px-0 py-3 block text-black text-sm font-semibold hover:text-gray-700 transition duration-300 ease-out">
+                  {{ t(sub.name) }}
+                </app-link>
+              </template>
+            </div>
           </div>
-        </div>
+        </template>
       </nav>
 
       <!-- cta -->
