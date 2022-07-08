@@ -142,8 +142,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
-        name: 'Creasi Admin',
-        short_name: 'Creasi Admin',
+        name: 'Creasi.CO',
+        short_name: 'Creasi.CO',
         theme_color: '#ffffff',
         icons: [
           {
@@ -157,10 +157,10 @@ export default defineConfig({
             type: 'image/png',
           },
           {
-            src: '/pwa-512x512.png',
+            src: '/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png',
-            purpose: 'any maskable',
+            purpose: 'maskable',
           },
         ],
       },
