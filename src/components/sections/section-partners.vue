@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { partners } from '~/lib/partners'
+import partners from '~/assets/partners.json'
 </script>
 
 <template>
