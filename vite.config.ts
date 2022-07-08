@@ -17,11 +17,29 @@ import mdAnchor from 'markdown-it-anchor'
 import mdLinkAttr from 'markdown-it-link-attributes'
 import mdPrism from 'markdown-it-prism'
 
+// import postcssImport from 'postcss-import'
+import tailwind from 'tailwindcss'
+import tailwindNesting from 'tailwindcss/nesting'
+import autoprefixer from 'autoprefixer'
+
+import tailwindConfig from './tailwind.config'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
       '~/': `${resolve(__dirname, 'src')}/`,
+    },
+  },
+
+  css: {
+    postcss: {
+      plugins: [
+        // postcssImport(),
+        tailwind(tailwindConfig),
+        tailwindNesting(),
+        autoprefixer(),
+      ],
     },
   },
 
