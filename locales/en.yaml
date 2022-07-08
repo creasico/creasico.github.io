@@ -10,6 +10,7 @@ button:
 nav-link:
   home: Home
   services: Services
+  services-sub: Sub Menu of Services
   about: About Us
   contact: Contact Us
   privacy: Privacy Policy
