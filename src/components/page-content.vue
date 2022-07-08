@@ -7,11 +7,9 @@ const { frontmatter } = defineProps<{
 </script>
 
 <template>
-  <site-section>
-    <heading-section :title="frontmatter.title" :description="frontmatter.description" />
+  <heading-section :title="frontmatter.title" :description="frontmatter.description" />
 
-    <div class="max-w-7xl mx-auto px-5 xl:px-0 my-12">
-      <slot />
-    </div>
-  </site-section>
+  <section-base>
+    <slot />
+  </section-base>
 </template>

@@ -7,7 +7,7 @@ const { t } = useI18n()
   <site-header />
 
   <main class="min-h-screen">
-    <site-section>
+    <section-base>
       <router-view />
 
       <div>
@@ -15,7 +15,7 @@ const { t } = useI18n()
           {{ t('button.back') }}
         </button>
       </div>
-    </site-section>
+    </section-base>
   </main>
 
   <site-footer />
