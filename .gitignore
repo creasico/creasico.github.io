@@ -19,6 +19,8 @@ Desktop.ini
 .vite-ssg-temp
 dist
 node_modules
+src/auto-imports.d.ts
+src/components.d.ts
 
 # But Keep these
 # --------------------------
