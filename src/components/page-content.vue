@@ -10,6 +10,8 @@ const { frontmatter } = defineProps<{
   <section-heading :title="frontmatter.title" :description="frontmatter.description" />
 
   <section-base>
-    <slot />
+    <div class="max-w-3xl mx-auto prose">
+      <slot />
+    </div>
   </section-base>
 </template>

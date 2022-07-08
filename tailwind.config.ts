@@ -2,6 +2,10 @@ import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: ['index.html', './src/**/*.{vue,ts,js}'],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+  ],
   theme: {
     extend: {
       colors: {
