@@ -72,7 +72,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-md
     markdown({
       wrapperComponent: 'page-content',
-      wrapperClasses: 'prose max-w-none',
+      wrapperClasses: 'hentry',
       headEnabled: true,
       style: {
         baseStyle: 'github',
@@ -96,6 +96,8 @@ export default defineConfig({
           headProps: ['title'],
         }),
       ],
+
+      excerpt: true,
 
       markdownItSetup(md) {
         md.use(mdPrism)

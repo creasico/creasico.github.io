@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config-vue': ^0.25.2
+  '@fontsource/nunito': ^4.5.9
+  '@fontsource/work-sans': ^4.5.10
   '@iconify/vue': ^3.2.1
   '@intlify/vite-plugin-vue-i18n': ^3.4.0
   '@tailwindcss/forms': ^0.5.2
@@ -51,6 +53,8 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config-vue': 0.25.2_4x5o4skxv6sl53vpwefgt23khm
+  '@fontsource/nunito': 4.5.9
+  '@fontsource/work-sans': 4.5.10
   '@iconify/vue': 3.2.1_vue@3.2.37
   '@intlify/vite-plugin-vue-i18n': 3.4.0_ok2vr3izc5tvtuuot2yw6handq
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.5
@@ -1317,6 +1321,14 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@fontsource/nunito/4.5.9:
+    resolution: {integrity: sha512-HlCPb5MSCSEx5KhIYsIU6JqlOtvfFnTT2RB0Gcz3Pdht9rkShEYaYKVvlgYQV03+Eom8HUAYQJcDT5gaRbm6AQ==}
+    dev: true
+
+  /@fontsource/work-sans/4.5.10:
+    resolution: {integrity: sha512-Qocfv97QO8WRZxV0xoeFhDypXaqGedAGlpHi2CXOfcPKyYOMlXfgzm3hWhw+t+4qGJfVRzqEvNMAnbL5Gwjgmw==}
     dev: true
 
   /@humanwhocodes/config-array/0.9.5:

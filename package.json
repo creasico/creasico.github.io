@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config-vue": "^0.25.2",
+    "@fontsource/nunito": "^4.5.9",
+    "@fontsource/work-sans": "^4.5.10",
     "@iconify/vue": "^3.2.1",
     "@intlify/vite-plugin-vue-i18n": "^3.4.0",
     "@tailwindcss/forms": "^0.5.2",
