@@ -4,7 +4,3 @@
 @import '@fontsource/nunito/700-italic.css';
 @import '@fontsource/work-sans/700.css';
 @import '@fontsource/work-sans/700-italic.css';
-
-.hentry {
-  @apply prose max-w-none;
-}

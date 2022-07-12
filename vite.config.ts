@@ -71,7 +71,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-md
     markdown({
       wrapperComponent: 'page-content',
-      wrapperClasses: 'hentry',
+      wrapperClasses: 'prose max-w-none',
       headEnabled: true,
       style: {
         baseStyle: 'github',

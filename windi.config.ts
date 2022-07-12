@@ -1,11 +1,15 @@
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-  content: ['index.html', './src/**/*.{vue,ts,js}'],
+  extract: {
+    include: ['index.html', 'src/**/*.{vue,html,js,ts}'],
+    exclude: ['node_modules', '.git'],
+  },
   plugins: [
     require('windicss/plugin/typography'),
     require('windicss/plugin/forms'),
   ],
+  safelist: ['prose', 'prose-sm', 'max-w-none'],
   theme: {
     extend: {
       colors: {
