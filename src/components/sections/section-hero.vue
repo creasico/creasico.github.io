@@ -3,7 +3,7 @@
     <div class="container mx-auto flex flex-col-reverse xl:flex-row">
       <div class="w-full xl:w-1/2 ">
         <span class="text-gray-700">End-to-end Digital Solution</span>
-        <p class="text-3xl xl:text-[2.8rem] font-extrabold leading-tight">
+        <p class="font-heading text-3xl xl:text-[2.8rem] font-extrabold leading-tight">
           We Craft Digital Solution for<br />
           Your Business Needs
         </p>
