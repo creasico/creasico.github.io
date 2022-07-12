@@ -1,0 +1,14 @@
+@import '@fontsource/nunito/400.css';
+@import '@fontsource/nunito/400-italic.css';
+@import '@fontsource/nunito/700.css';
+@import '@fontsource/nunito/700-italic.css';
+@import '@fontsource/work-sans/700.css';
+@import '@fontsource/work-sans/700-italic.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hentry {
+  @apply prose max-w-none;
+}
