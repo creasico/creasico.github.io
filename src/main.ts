@@ -3,6 +3,9 @@ import { ViteSSG } from 'vite-ssg'
 import autoRoutes from 'pages-generated'
 import { setupLayouts } from 'layouts-generated'
 
+import 'virtual:windi-devtools'
+
+import 'virtual:windi.css'
 import './style.css'
 import App from './app.vue'
 

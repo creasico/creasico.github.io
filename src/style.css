@@ -5,10 +5,6 @@
 @import '@fontsource/work-sans/700.css';
 @import '@fontsource/work-sans/700-italic.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .hentry {
   @apply prose max-w-none;
 }

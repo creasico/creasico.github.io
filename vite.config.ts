@@ -6,6 +6,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import i18n from '@intlify/vite-plugin-vue-i18n'
 import sitemap from 'vite-ssg-sitemap'
+import windicss from 'vite-plugin-windicss'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import markdown, { meta } from 'vite-plugin-md'
@@ -18,11 +19,9 @@ import mdLinkAttr from 'markdown-it-link-attributes'
 import mdPrism from 'markdown-it-prism'
 
 // import postcssImport from 'postcss-import'
-import tailwind from 'tailwindcss'
-import tailwindNesting from 'tailwindcss/nesting'
-import autoprefixer from 'autoprefixer'
-
-import tailwindConfig from './tailwind.config'
+// import tailwind from 'tailwindcss'
+// import tailwindNesting from 'tailwindcss/nesting'
+// import autoprefixer from 'autoprefixer'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -32,16 +31,16 @@ export default defineConfig({
     },
   },
 
-  css: {
-    postcss: {
-      plugins: [
-        // postcssImport(),
-        tailwind(tailwindConfig),
-        tailwindNesting(),
-        autoprefixer(),
-      ],
-    },
-  },
+  // css: {
+  //   postcss: {
+  //     plugins: [
+  //       // postcssImport(),
+  //       // tailwind(tailwindConfig),
+  //       // tailwindNesting(),
+  //       autoprefixer(),
+  //     ],
+  //   },
+  // },
 
   // https://github.com/antfu/vite-ssg
   ssgOptions: {
@@ -119,6 +118,8 @@ export default defineConfig({
         })
       },
     }),
+
+    windicss(),
 
     // https://github.com/hannoeru/vite-plugin-pages
     pages({
