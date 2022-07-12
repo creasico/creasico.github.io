@@ -3,10 +3,10 @@ import links from '~/assets/nav-links.json'
 
 const { t } = useI18n()
 const year = new Date().getFullYear()
-const widgets = ['company', 'products'].map((widget) => {
+const widgets = ['company'].map((name) => {
   return {
-    name: widget,
-    links: links.filter(l => l.locations.includes(`widget-${widget}`)),
+    name,
+    links: links.filter(l => l.locations.includes(`widget-${name}`)),
   }
 })
 </script>
@@ -27,7 +27,7 @@ const widgets = ['company', 'products'].map((widget) => {
           </template>
 
           <template v-for="link in widget.links" :key="link.name">
-            <app-link v-if="link.enable" :to="link.path" class="block mb-1 hover:text-gray-500">
+            <app-link v-if="link.enable" :to="link.path" class="block mb-1 heading-2 hover:text-gray-500">
               {{ t(link.name) }}
             </app-link>
           </template>
@@ -36,7 +36,7 @@ const widgets = ['company', 'products'].map((widget) => {
     </div>
 
     <div class="container mx-auto py-8 px-5 xl:px-0">
-      <p class="text-center" v-html="t('copyright', { year })" />
+      <p class="text-center text-sm text-gray-500" v-html="t('copyright', { year })" />
     </div>
   </footer>
 </template>
