@@ -16,7 +16,7 @@
     "useDefineForClassFields": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["esnext", "dom"],
+    "lib": ["ESNext", "DOM"],
     "typeRoots": ["./src"],
     "types": [
       "vitest",
