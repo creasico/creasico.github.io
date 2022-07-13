@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import links from '~/assets/nav-links.json'
 
-const { t } = useI18n()
+const { t, locale, availableLocales } = useI18n()
 const year = new Date().getFullYear()
 const widgets = ['company'].map((name) => {
   return {
@@ -9,19 +9,23 @@ const widgets = ['company'].map((name) => {
     links: links.filter(l => l.locations.includes(`widget-${name}`)),
   }
 })
+
+const toggleLocale = (lang: string) => {
+  locale.value = lang
+}
 </script>
 
 <template>
   <footer class="bg-gray-900 text-gray-400">
-    <div class="container mx-auto flex flex-col lg:flex-row gap-8 py-11 px-5 xl:px-0">
-      <section class="flex-auto">
+    <section class="container mx-auto flex flex-col lg:flex-row gap-8 py-11 px-5 xl:px-0">
+      <div class="flex-auto">
         <widget-colopon />
-      </section>
+      </div>
 
-      <section class="widgets flex flex-none">
+      <div class="widgets flex flex-none">
         <widget-base v-for="(widget, i) in widgets" :key="i">
           <template #title>
-            <h3 class="mb-5 text-lg text-gray-500">
+            <h3 class="mb-5 font-semibold text-lg text-gray-500">
               {{ t(`widgets.${widget.name}`) }}
             </h3>
           </template>
@@ -32,11 +36,19 @@ const widgets = ['company'].map((name) => {
             </app-link>
           </template>
         </widget-base>
-      </section>
-    </div>
+      </div>
+    </section>
 
-    <div class="container mx-auto py-8 px-5 xl:px-0">
-      <p class="text-center text-sm text-gray-500" v-html="t('copyright', { year })" />
-    </div>
+    <section class="container mx-auto py-8 px-5 xl:px-0 text-sm text-gray-500 flex">
+      <div class="mx-4 flex-grow">
+        <p v-html="t('copyright', { year })" />
+      </div>
+
+      <div class="mx-4 flex gap-3">
+        <button v-for="(lang, i) in availableLocales" :key="i" :class="{ 'text-gray-400': locale === lang }" @click="toggleLocale(lang)">
+          {{ lang.toUpperCase() }}
+        </button>
+      </div>
+    </section>
   </footer>
 </template>
