@@ -13,15 +13,9 @@ import markdown, { meta } from 'vite-plugin-md'
 import { VitePWA as pwa } from 'vite-plugin-pwa'
 import pages from 'vite-plugin-pages'
 import layouts from 'vite-plugin-vue-layouts'
-// import matter from 'gray-matter'
 import mdAnchor from 'markdown-it-anchor'
 import mdLinkAttr from 'markdown-it-link-attributes'
 import mdPrism from 'markdown-it-prism'
-
-// import postcssImport from 'postcss-import'
-// import tailwind from 'tailwindcss'
-// import tailwindNesting from 'tailwindcss/nesting'
-// import autoprefixer from 'autoprefixer'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,17 +24,6 @@ export default defineConfig({
       '~/': `${resolve(__dirname, 'src')}/`,
     },
   },
-
-  // css: {
-  //   postcss: {
-  //     plugins: [
-  //       // postcssImport(),
-  //       // tailwind(tailwindConfig),
-  //       // tailwindNesting(),
-  //       autoprefixer(),
-  //     ],
-  //   },
-  // },
 
   // https://github.com/antfu/vite-ssg
   ssgOptions: {
