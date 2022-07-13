@@ -1,16 +1,27 @@
 <script lang="ts" setup>
 const router = useRouter()
+const { locale } = useI18n()
 
 useHead({
   title: 'Creasi.CO',
+  htmlAttrs: {
+    lang: locale,
+  },
   meta: [
-    { name: 'description', content: 'End-to-End Digital Solution' },
+    {
+      name: 'description',
+      content: 'End-to-End Digital Solution',
+    },
+    {
+      rel: 'msapplication-TileColor',
+      content: '#388370',
+    },
   ],
   link: [
     {
-      rel: 'icon',
-      type: 'image/svg+xml',
-      href: '/favicon.svg',
+      rel: 'mask-icon',
+      color: '#388370',
+      href: '/safari-pinned-tab.svg',
     },
   ],
 })

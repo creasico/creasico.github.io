@@ -7,7 +7,7 @@
           We Craft Digital Solution for<br />
           Your Business Needs
         </p>
-        <div class="mt-8   flex space-x-4">
+        <div class="mt-8 flex space-x-4">
           <!-- cta -->
           <a href="#" class="px-6 py-1 bg-gray-800 text-white hover:opacity-90 ">Button Text</a>
           <a href="#" class="px-6 py-1 bg-gray-400 text-gray-900 hover:opacity-90 ">Button Text</a>
