@@ -1,27 +1,45 @@
 <script lang="ts" setup>
+import { Icon } from '@iconify/vue'
 import links from '~/assets/nav-links.json'
 
+interface MenuLink {
+  name: string
+  path: string
+  locations: string[]
+  enable: boolean
+  hasChildren: boolean
+  children?: MenuLink[]
+}
+
+const emit = defineEmits(['menuToggle'])
+
 const { t } = useI18n()
-const menuLinks = links.filter(l => l.locations.includes('top-menu'))
 const isMenuOpen = ref(false)
+const menuLinks = links.filter(l => l.locations.includes('top-menu')).map((l) => {
+  return Object.assign({
+    hasChildren: Array.isArray(l.children) && l.children.length > 0,
+  }, l) as MenuLink
+})
+
+const openMenu = (e: Event) => {
+  isMenuOpen.value = !isMenuOpen.value
+  emit('menuToggle', isMenuOpen.value, e)
+}
 </script>
 
 <template>
-  <div class="container mx-auto flex">
-    <div class="flex flex-grow items-center justify-between">
-      <router-link to="/" class="py-4 leading-none">
-        <main-logo width="200" />
-      </router-link>
+  <div class="flex flex-grow justify-end relative transition duration-300 ease-out">
+    <nav class="fixed lg:static top-20 left-0 lg:flex w-full lg:w-auto gap-8 <lg:border-t-1 border-gray-300" :class="{ hidden: !isMenuOpen }" :aria-expanded="isMenuOpen">
+      <!-- loop menus -->
+      <template v-for="link in menuLinks" :key="link.name">
+        <router-link v-if="link.enable" v-slot="{ href, isActive, navigate }" :to="link.path" custom>
+          <div v-if="link.enable" class="<lg:container <lg:mx-auto box-border relative border-b-1 lg:border-b-2 border-gray-300 lg:border-transparent hover:border-black" :class="{ 'lg:border-primary': isActive }">
+            <a :href="href" class="relative flex items-center justify-between py-3 px-4 lg:p-0 font-semibold" :class="{ 'text-primary': isActive }" @click="(e) => { openMenu(e); navigate(e) }">
+              <span>{{ t(link.name) }}</span>
+              <Icon v-if="link.hasChildren" icon="fe:arrow-down" />
+            </a>
 
-      <nav class="hidden lg:flex gap-8">
-        <!-- loop menus -->
-        <template v-for="link in menuLinks" :key="link.name">
-          <div v-if="link.enable" role="navigation" class="box-border relative border-b-2 border-transparent hover:border-black transition duration-300 ease-out">
-            <app-link :to="link.path" class="px-4 lg:px-0 py-3 block text-black font-bold hover:text-gray-700">
-              {{ t(link.name) }}
-            </app-link>
-
-            <div v-if="Array.isArray(link.children) && link.children.length > 0" class="hidden">
+            <div v-if="link.hasChildren" class="hidden">
               <template v-for="sub in link.children" :key="sub.name">
                 <app-link v-if="sub.enable" :to="sub.path" class="px-4 lg:px-0 py-3 block text-black font-semibold hover:text-gray-700 transition duration-300 ease-out">
                   {{ t(sub.name) }}
@@ -29,43 +47,12 @@ const isMenuOpen = ref(false)
               </template>
             </div>
           </div>
-        </template>
-      </nav>
+        </router-link>
+      </template>
+    </nav>
 
-      <!-- cta -->
-      <a href="#" class="px-6 py-2 bg-gray-800 text-white hover:opacity-90 ">Button Text</a>
-    </div>
-
-    <button class="flex flex-none items-center lg:hidden text-gray-500 hover:text-gray-700" @click="isMenuOpen = !isMenuOpen">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="feather feather-align-right"
-      >
-        <line x1="21" y1="10" x2="7" y2="10"></line>
-        <line x1="21" y1="6" x2="3" y2="6"></line>
-        <line x1="21" y1="14" x2="3" y2="14"></line>
-        <line x1="21" y1="18" x2="7" y2="18"></line>
-      </svg>
+    <button class="z-2 flex flex-none items-center lg:hidden text-gray-500 hover:text-gray-700" @click="openMenu">
+      <Icon :icon="isMenuOpen ? 'fe:close' : 'fe:bar'" width="40" />
     </button>
   </div>
-
-  <nav class="fixed inset-0 backdrop-filter backdrop-blur-md bg-slate-200 bg-opacity-50 transition duration-700 ease-in-out" :class="{ hidden: !isMenuOpen }">
-    <div class="py-20 px-5 flex flex-col items-start">
-      <app-link v-for="link in menuLinks" :key="link.name" :to="link.path" class="px-4 py-2 text-black text-xl font-semibold hover:text-gray-700 hover:bg-gray-100 hover:underline transition duration-300 ease-out">
-        {{ t(link.name) }}
-      </app-link>
-
-      <button class="mt-12 py-3 text-center border border-primary rounded-md font-semibold w-full" @click="isMenuOpen = !isMenuOpen">
-        close
-      </button>
-    </div>
-  </nav>
 </template>
