@@ -13,7 +13,7 @@
     "children": [
       {
         "name": "nav-link.services-sub",
-        "path": "/privacy-policy",
+        "path": "#",
         "enable": true
       }
     ]
@@ -27,14 +27,14 @@
   },
   {
     "name": "nav-link.contact",
-    "path": "#",
-    "locations": ["top-menu"],
+    "path": "/contact",
+    "locations": ["top-menu", "widget-company"],
     "enable": true,
     "children": []
   },
   {
     "name": "nav-link.privacy",
-    "path": "/privacy-policy",
+    "path": "/privacy",
     "locations": ["widget-company"],
     "enable": true
   },
@@ -42,7 +42,7 @@
     "name": "nav-link.terms",
     "path": "/terms",
     "locations": ["widget-company"],
-    "enable": true
+    "enable": false
   },
   {
     "name": "nav-link.hris",
