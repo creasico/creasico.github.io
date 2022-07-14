@@ -10,6 +10,7 @@
     "watch": "vite build --watch"
   },
   "dependencies": {
+    "@gtm-support/vue-gtm": "^1.6.0",
     "@vueuse/core": "^8.9.2",
     "@vueuse/head": "^0.7.6",
     "vue": "^3.2.37",

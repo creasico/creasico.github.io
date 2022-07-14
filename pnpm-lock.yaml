@@ -4,6 +4,7 @@ specifiers:
   '@antfu/eslint-config-vue': ^0.25.2
   '@fontsource/nunito': ^4.5.9
   '@fontsource/work-sans': ^4.5.10
+  '@gtm-support/vue-gtm': ^1.6.0
   '@iconify/vue': ^3.2.1
   '@intlify/vite-plugin-vue-i18n': ^3.4.0
   '@types/markdown-it': ^12.2.3
@@ -43,6 +44,7 @@ specifiers:
   workbox-window: ^6.5.3
 
 dependencies:
+  '@gtm-support/vue-gtm': 1.6.0_vue@3.2.37
   '@vueuse/core': 8.9.2_vue@3.2.37
   '@vueuse/head': 0.7.6_vue@3.2.37
   vue: 3.2.37
@@ -1326,6 +1328,24 @@ packages:
   /@fontsource/work-sans/4.5.10:
     resolution: {integrity: sha512-Qocfv97QO8WRZxV0xoeFhDypXaqGedAGlpHi2CXOfcPKyYOMlXfgzm3hWhw+t+4qGJfVRzqEvNMAnbL5Gwjgmw==}
     dev: true
+
+  /@gtm-support/core/1.4.0:
+    resolution: {integrity: sha512-eiAiEdW7DdzDs45pdi+MF/6+OThMZAwwQeMQNcbE0wEGHvbIB/mZ1PiBq4qK7IYDscBKDT/PdnAacY7P/zHIjw==}
+    dev: false
+
+  /@gtm-support/vue-gtm/1.6.0_vue@3.2.37:
+    resolution: {integrity: sha512-Mp814G5hM/KrwiSRl5VJEljGcjyn5I/Wv78RsFpJUKp0W4F8cGh+SmbBAauUOBWmrhIA2OVgsKh7PwTplaf0Dw==}
+    peerDependencies:
+      vue: ^3.0.0
+    peerDependenciesMeta:
+      vue-router:
+        optional: true
+    dependencies:
+      '@gtm-support/core': 1.4.0
+      vue: 3.2.37
+    optionalDependencies:
+      vue-router: 4.1.2_vue@3.2.37
+    dev: false
 
   /@humanwhocodes/config-array/0.9.5:
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}
