@@ -1,6 +1,8 @@
 <script lang="ts" setup>
+import type { UserFrontmatter } from '~/types'
+
 const { frontmatter } = defineProps<{
-  frontmatter: any
+  frontmatter: UserFrontmatter
 }>()
 
 const classList = {
