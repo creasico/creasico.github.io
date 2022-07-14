@@ -1,7 +1,9 @@
 copyright: Copyright &copy; {year} - PT. Creasi Tekno Solusi.
 
 errors:
-  not-found: Not Found
+  not-found:
+    title: Not Found
+    description: Oops! Page that you're looking for not found in our server.
 
 home:
   greeting: Hello World

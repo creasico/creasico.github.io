@@ -6,16 +6,14 @@ const { t } = useI18n()
 <template>
   <site-header />
 
-  <main class="min-h-screen">
-    <section-base>
+  <main class="min-h-screen flex items-center justify-center">
+    <section class="container">
       <router-view />
 
-      <div>
-        <button class="text-sm m-3 mt-8" @click="router.back()">
-          {{ t('button.back') }}
-        </button>
-      </div>
-    </section-base>
+      <button class="text-sm m-3 mt-8" @click="router.back()">
+        {{ t('button.back') }}
+      </button>
+    </section>
   </main>
 
   <site-footer />

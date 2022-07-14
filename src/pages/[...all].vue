@@ -3,9 +3,11 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <section-base>
-    {{ t('errors.not-found') }}
-  </section-base>
+  <h1 class="font-heading font-light text-7xl leading-relaxed">
+    {{ t('errors.not-found.title') }}
+  </h1>
+
+  <p>{{ t('errors.not-found.description') }}</p>
 </template>
 
 <route lang="yaml">

@@ -1,7 +1,9 @@
 copyright: Copyright &copy; {year} - PT. Creasi Tekno Solusi
 
 errors:
-  not-found: Halaman Tidak Ditemukan
+  not-found:
+    title: Halaman Tidak Ditemukan
+    description: Waduh! Halaman yang Anda cari tidak ada di server kami.
 
 home:
   greeting: Halo Dunia
