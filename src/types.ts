@@ -5,5 +5,7 @@ import type { Frontmatter } from 'vite-plugin-md'
 export type UserModule = (ctx: ViteSSGContext) => void
 
 export interface UserFrontmatter extends Frontmatter {
-  container: 'wide' | 'narrow'
+  container?: 'wide' | 'narrow'
+  layout?: string
+  locale?: 'id' | 'en'
 }
