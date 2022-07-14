@@ -4,7 +4,7 @@
       Why Choose Us
     </h1>
 
-    <div class="mt-16 grid grid-cols-12 gap-1 xl:gap-6 font-bold text-lg text-center">
+    <div class="mt-16 grid grid-cols-12 gap-1 lg:gap-6 font-bold text-lg text-center">
       <div class="why-list delay-75">
         Quality over everything
       </div>
@@ -29,6 +29,6 @@
 
 <style lang="postcss" scoped>
 .why-list {
-  @apply px-5 xl:p-5 col-span-12 xl:col-span-4 mb-5 xl:mb-16  hover:text-primary hover:scale-110 cursor-pointer hover:animate-bounce transition duration-700 ease-in-out;
+  @apply px-5 lg:p-5 col-span-12 xl:col-span-4 mb-5 xl:mb-16  hover:text-primary hover:scale-110 cursor-pointer hover:animate-bounce transition duration-700 ease-in-out;
 }
 </style>
