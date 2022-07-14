@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const router = useRouter()
+const route = useRoute()
 const { locale } = useI18n()
 const redirect = sessionStorage.getItem('site-redirect')
 
@@ -13,6 +14,15 @@ if (redirect) {
   sessionStorage.removeItem('site-redirect')
   router.push(redirect)
 }
+
+const title = computed(() => {
+  // console.log(route.meta)
+  return route.meta.title
+})
+
+useTitle(title, {
+  titleTemplate: '%s - Creasi.CO',
+})
 
 useHead({
   htmlAttrs: {
@@ -35,5 +45,9 @@ useHead({
 </script>
 
 <template>
+  <site-header />
+
   <router-view />
+
+  <site-footer />
 </template>

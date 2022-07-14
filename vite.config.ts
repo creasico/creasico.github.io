@@ -65,7 +65,7 @@ export default defineConfig({
       frontmatterDefaults: {
         container: 'wide',
         locale: 'id',
-        layout: 'pages',
+        layout: 'default',
       },
 
       // see: https://markdown-it.github.io/markdown-it/
@@ -75,7 +75,7 @@ export default defineConfig({
 
       builders: [
         meta({
-          routeProps: ['layout', 'locale', 'container'],
+          routeProps: ['layout', 'locale', 'container', 'title', 'description'],
         }),
       ],
 
@@ -104,7 +104,11 @@ export default defineConfig({
     pages({
       extensions: ['vue', 'md'],
       extendRoute: (route: RouteRecord) => {
-        console.log(route) // eslint-disable-line no-console
+        route.meta = Object.assign({
+          locale: 'id',
+          layout: 'default',
+        }, route.meta)
+        // console.log(route) // eslint-disable-line no-console
         return route
       },
     }),

@@ -6,7 +6,7 @@ const { t } = useI18n()
   <section-heading title="Contact Us" />
 
   <section-base>
-    {{ t('errors.not-found') }}
+    {{ t('errors.not-found.title') }}
   </section-base>
 </template>
 
