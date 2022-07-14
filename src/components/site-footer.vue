@@ -11,6 +11,7 @@ const widgets = ['company'].map((name) => {
 })
 
 const toggleLocale = (lang: string) => {
+  sitePreference.value.locale = lang
   locale.value = lang
 }
 </script>

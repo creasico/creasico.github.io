@@ -1,4 +1,4 @@
-copyright: Copyright &copy; {year} - PT. Creasi Tekno Solusi. All Right Reserved
+copyright: Copyright &copy; {year} - PT. Creasi Tekno Solusi
 
 errors:
   not-found: Halaman Tidak Ditemukan
@@ -12,16 +12,16 @@ button:
 nav-link:
   home: Beranda
   services: Layanan
-  about: Tentang
+  about: Tentang Kami
   contact: Hubungi Kami
-  privacy: Privacy Policy
-  terms: Terms and Conditions
+  privacy: Kebijakan Privasi
+  terms: Syarat dan Ketentuan
 
   hris: Human Resource
-  accounting: accounting
+  accounting: Accounting
   crm: Customer Relationship
   ams: Asset Management
 
 widgets:
-  company: Company
-  products: Our Products
+  company: Perusahaan
+  products: Produk Kami

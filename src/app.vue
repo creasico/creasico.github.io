@@ -1,17 +1,24 @@
 <script lang="ts" setup>
 const router = useRouter()
 const { locale } = useI18n()
+const redirect = sessionStorage.getItem('site-redirect')
+
+if (!sitePreference.value.locale)
+  sitePreference.value.locale = locale.value
+
+if (locale.value !== sitePreference.value.locale)
+  locale.value = sitePreference.value.locale
+
+if (redirect) {
+  sessionStorage.removeItem('site-redirect')
+  router.push(redirect)
+}
 
 useHead({
-  title: 'Creasi.CO',
   htmlAttrs: {
     lang: locale,
   },
   meta: [
-    {
-      name: 'description',
-      content: 'End-to-End Digital Solution',
-    },
     {
       rel: 'msapplication-TileColor',
       content: '#388370',
@@ -25,16 +32,8 @@ useHead({
     },
   ],
 })
-
-onMounted(() => {
-  if (sessionStorage.redirect) {
-    const redirect = sessionStorage.redirect
-    delete sessionStorage.redirect
-    router.push(redirect)
-  }
-})
 </script>
 
 <template>
-  <RouterView />
+  <router-view />
 </template>
