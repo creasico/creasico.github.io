@@ -1,14 +1,15 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  is?: 'header' | 'footer' | 'section'
+const { title, centeredTitle = false } = defineProps<{
+  title?: string
+  centeredTitle?: boolean
 }>()
-
-const is = computed(() => props.is || 'section')
 </script>
 
 <template>
   <section class="px-5 xl:px-0">
-    <div class="container mx-auto py-11">
+    <div class="container mx-auto py-16">
+      <h3 v-if="!!title" class="font-heading text-4xl font-extrabold leading-tight mb-11" :class="{ 'text-center': centeredTitle }" v-html="title" />
+
       <slot />
     </div>
   </section>
