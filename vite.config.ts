@@ -16,6 +16,7 @@ import layouts from 'vite-plugin-vue-layouts'
 import mdAnchor from 'markdown-it-anchor'
 import mdLinkAttr from 'markdown-it-link-attributes'
 import mdPrism from 'markdown-it-prism'
+import type { RouteRecord } from 'vue-router'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -55,14 +56,15 @@ export default defineConfig({
     markdown({
       wrapperComponent: 'page-content',
       wrapperClasses: 'prose max-w-none',
-      headEnabled: true,
+      // headEnabled: true,
+      excerpt: true,
       style: {
         baseStyle: 'github',
       },
 
       frontmatterDefaults: {
         container: 'wide',
-        locale: 'en',
+        locale: 'id',
         layout: 'pages',
       },
 
@@ -73,13 +75,9 @@ export default defineConfig({
 
       builders: [
         meta({
-          metaProps: ['title', 'description', 'tags'],
           routeProps: ['layout', 'locale', 'container'],
-          headProps: ['title'],
         }),
       ],
-
-      excerpt: true,
 
       markdownItSetup(md) {
         md.use(mdPrism)
@@ -102,29 +100,26 @@ export default defineConfig({
       },
     }),
 
-    windicss(),
-
     // https://github.com/hannoeru/vite-plugin-pages
     pages({
       extensions: ['vue', 'md'],
-      extendRoute(route) {
-        // route.meta = Object.assign({
-        //   layout: 'default',
-        // }, route.meta || {})
-
-        // console.log(route)
-        // if (typeof route.component === 'string' && route.component.endsWith('.md'))
-        //   console.log(route)
-
+      extendRoute: (route: RouteRecord) => {
+        console.log(route) // eslint-disable-line no-console
         return route
       },
     }),
+
+    windicss(),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
     layouts(),
 
     autoImport({
       dts: 'src/auto-imports.d.ts',
+      dirs: [
+        'src/composables',
+        'src/store',
+      ],
       imports: [
         'vue',
         'vue-router',
@@ -133,7 +128,6 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
       ],
-      vueTemplate: true,
     }),
 
     // https://github.com/antfu/unplugin-vue-components

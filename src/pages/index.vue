@@ -9,3 +9,9 @@ const { t } = useI18n()
   <section-workflows />
   <section-partners />
 </template>
+
+<route lang="yaml">
+name: home
+meta:
+  title: Home
+</route>

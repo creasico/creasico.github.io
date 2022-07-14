@@ -3,13 +3,14 @@ const { t } = useI18n()
 </script>
 
 <template>
+  <section-heading title="Contact Us" />
+
   <section-base>
     {{ t('errors.not-found') }}
   </section-base>
 </template>
 
 <route lang="yaml">
-name: 404
 meta:
-  layout: errors
+  title: Contact Us
 </route>
