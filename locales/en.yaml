@@ -29,28 +29,30 @@ sections:
     title: Our Services
     description: null
   values:
-    title: Our Values
+    title: Why Choose Us?
     description: null
   cta:
     title: Ready to grow with Us?
     description: >-
       We offer comprehensive solutions from design, development, production and
       continous support to ensure realization of our customer' business needs
+  partners:
+    title: 'Trusted By '
 services:
   consultation:
-    title: Consultation
+    title: Konsultasi
     description: >-
       Kami menawarkan layanan konsultasi sebagai tahap awal dari solusi yang
       akan kami kembangkan.
   development:
-    title: Software Development
+    title: Pengembangan
     description: >-
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
       dignissimos totam eos suscipit praesentium inventore, placeat tempore at,
       laboriosam consequuntur itaque! Qui minima voluptas sit sed, laboriosam
       corporis dolorem et.
   maintenance:
-    title: Maintenance
+    title: Perawatan
     description: >-
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
       dignissimos totam eos suscipit praesentium inventore, placeat tempore at,

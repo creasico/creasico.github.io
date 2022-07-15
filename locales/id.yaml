@@ -20,7 +20,7 @@ nav-link:
   ams: Asset Management
 sections:
   we-do:
-    title: What We Do?
+    title: Apa yang Kami Lakukan?
     description: >-
       Kami menawarkan solusi menyeluruh mulai dari perancangan, pengembangan,
       produksi dan dukungan berkelanjutan untuk memastikan terwujudnya kebutuhan
@@ -29,14 +29,16 @@ sections:
     title: Layanan Kami
     description: null
   values:
-    title: Our Values
+    title: Kenapa Memilih Kami?
     description: null
   cta:
-    title: Ready to grow with Us?
+    title: Siap berkembang bersama Kami?
     description: >-
       Kami menawarkan solusi menyeluruh mulai dari perancangan, pengembangan,
       produksi dan dukungan berkelanjutan untuk memastikan terwujudnya kebutuhan
       bisnis setiap customer kami.
+  partners:
+    title: Dipercaya Oleh
 services:
   consultation:
     title: Consultation
@@ -44,7 +46,7 @@ services:
       Kami menawarkan layanan konsultasi sebagai tahap awal dari solusi yang
       akan kami kembangkan.
   development:
-    title: Software Development
+    title: Development
     description: >-
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
       dignissimos totam eos suscipit praesentium inventore, placeat tempore at,
