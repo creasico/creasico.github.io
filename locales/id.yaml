@@ -41,24 +41,20 @@ sections:
     title: Dipercaya Oleh
 services:
   consultation:
-    title: Consultation
+    title: Konsultasi
     description: >-
-      Kami menawarkan layanan konsultasi sebagai tahap awal dari solusi yang
+      Menawarkan layanan fase konsultasi sebagai tahap awal dari solusi yang
       akan kami kembangkan.
   development:
-    title: Development
+    title: Pengembangan
     description: >-
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-      dignissimos totam eos suscipit praesentium inventore, placeat tempore at,
-      laboriosam consequuntur itaque! Qui minima voluptas sit sed, laboriosam
-      corporis dolorem et.
+      Memastikan keberhasilan produk yang dikembangkan berdasarkan kebutuhan
+      pelanggan.
   maintenance:
-    title: Maintenance
+    title: Perawatan
     description: >-
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-      dignissimos totam eos suscipit praesentium inventore, placeat tempore at,
-      laboriosam consequuntur itaque! Qui minima voluptas sit sed, laboriosam
-      corporis dolorem et.
+      Menyediakan layanan dukungan untuk penggunaan produk dan memastikan bahwa
+      sistem dapat berjalan sesuai dengan yang diharapkan.
 values:
   c:
     title: Customer Oriented

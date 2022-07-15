@@ -40,24 +40,18 @@ sections:
     title: 'Trusted By '
 services:
   consultation:
-    title: Konsultasi
+    title: Consultation
     description: >-
-      Kami menawarkan layanan konsultasi sebagai tahap awal dari solusi yang
-      akan kami kembangkan.
+      Offer organized consulting phase as part of whole development cycle.
   development:
-    title: Pengembangan
+    title: Development
     description: >-
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-      dignissimos totam eos suscipit praesentium inventore, placeat tempore at,
-      laboriosam consequuntur itaque! Qui minima voluptas sit sed, laboriosam
-      corporis dolorem et.
+      Ensure the successful product development based on customer needs.
   maintenance:
-    title: Perawatan
+    title: Maintenance
     description: >-
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-      dignissimos totam eos suscipit praesentium inventore, placeat tempore at,
-      laboriosam consequuntur itaque! Qui minima voluptas sit sed, laboriosam
-      corporis dolorem et.
+      Provide support services for application usage and ensures the system can
+      run as expected.
 values:
   c:
     title: Customer Oriented
