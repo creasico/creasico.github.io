@@ -9,7 +9,7 @@ const { t } = useI18n()
 const services = {
   consultation: 'icon-park-twotone:guide-board',
   development: 'icon-park-twotone:brain',
-  maintenance: 'icon-park-twotone:headset-one',
+  maintenance: 'icon-park-twotone:swimming-ring',
 }
 </script>
 
