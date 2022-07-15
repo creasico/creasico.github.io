@@ -12,7 +12,7 @@ const socialLinks = social_links.filter(social => social.enable)
 
   <section-base>
     <div class="flex <lg:flex-col gap-9 relative z-10">
-      <div class="flex-initial transition-all ease-in-out w-[70%]">
+      <div class="flex-initial transition-all ease-in-out w-full lg:w-[70%]">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15842.516296447946!2d109.72345205!3d-6.934859049999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0a5a5356e861d8f!2sPT.%20Creasi%20Tekno%20Solusi!5e0!3m2!1sen!2sid!4v1657915051047!5m2!1sen!2sid"
           class="w-full h-[500px]"
