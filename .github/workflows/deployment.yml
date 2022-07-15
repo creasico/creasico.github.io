@@ -41,7 +41,7 @@ jobs:
 
     - name: Deploy
       # if: github.event_name == 'push' && github.ref == 'refs/heads/source'
-      uses: JamesIves/github-pages-deploy-action@4.3.4
+      uses: JamesIves/github-pages-deploy-action@4
       with:
         token: ${{ secrets.PAT }}
         dry-run: true
