@@ -39,11 +39,15 @@ export default defineConfig({
   // https://github.com/vitest-dev/vitest
   test: {
     include: ['test/**/*.test.ts'],
-    environment: 'jsdom',
-    globals: true,
+    environment: 'happy-dom',
     deps: {
-      inline: ['@vue', 'vue-demi'],
+      inline: ['@vue', '@vueuse', 'vue-demi'],
     },
+  },
+
+  ssr: {
+    // TODO: workaround until they support native ESM
+    noExternal: ['workbox-window', /vue-i18n/],
   },
 
   plugins: [
@@ -132,6 +136,7 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
       ],
+      vueTemplate: true,
     }),
 
     // https://github.com/antfu/unplugin-vue-components
