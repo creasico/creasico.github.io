@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const router = useRouter()
 const { locale } = useI18n()
-const menuOpened = toRef(sitePreference.value, 'menuOpened')
+const menuOpened = toRef(sitePreference.value, 'menuOpened', false)
 const bodyClass = computed(() => menuOpened.value ? 'overflow-hidden' : '')
 
 onMounted(() => {
