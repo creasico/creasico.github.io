@@ -1,28 +1,18 @@
 <script lang="ts" setup>
 const router = useRouter()
-const route = useRoute()
 const { locale } = useI18n()
 const redirect = sessionStorage.getItem('site-redirect')
-
-if (!sitePreference.value.locale)
-  sitePreference.value.locale = locale.value
-
-if (locale.value !== sitePreference.value.locale)
-  locale.value = sitePreference.value.locale
 
 if (redirect) {
   sessionStorage.removeItem('site-redirect')
   router.push(redirect)
 }
 
-const title = computed(() => {
-  // console.log(route.meta)
-  return route.meta.title
-})
+if (!sitePreference.value.locale)
+  sitePreference.value.locale = locale.value
 
-useTitle(title, {
-  titleTemplate: '%s - Creasi.CO',
-})
+if (locale.value !== sitePreference.value.locale)
+  locale.value = sitePreference.value.locale
 
 useHead({
   htmlAttrs: {
@@ -47,7 +37,7 @@ useHead({
 <template>
   <site-header />
 
-  <router-view />
+  <router-view :route="$route" />
 
   <site-footer />
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <section-hero />
+  <section-heading title="We Craft Digital Solution for Your Business" />
   <section-believes />
   <section-reason />
   <section-workflows />

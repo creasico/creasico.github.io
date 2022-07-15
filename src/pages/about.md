@@ -1,6 +1,7 @@
 ---
 title: About Us
 description: Our Company Profile
+image: https://via.placeholder.com/400x300
 container: narrow
 ---
 

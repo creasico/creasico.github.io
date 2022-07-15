@@ -11,7 +11,7 @@ const classList = {
 </script>
 
 <template>
-  <section-heading :title="frontmatter.title" :description="frontmatter.description" />
+  <section-heading :title="frontmatter.title" :description="frontmatter.description" :image="frontmatter.image" />
 
   <section class="px-4 py-24">
     <article class="container mx-auto" :class="classList">
