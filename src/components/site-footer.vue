@@ -18,7 +18,7 @@ const toggleLocale = (lang: string) => {
 
 <template>
   <footer class="bg-dark-800 text-gray-500">
-    <section class="container mx-auto flex flex-col lg:flex-row gap-8 py-11">
+    <section class="container transition-all mx-auto flex flex-col lg:flex-row gap-8 py-11">
       <div class="flex-auto">
         <widget-colopon />
       </div>
@@ -38,7 +38,7 @@ const toggleLocale = (lang: string) => {
       </div>
     </section>
 
-    <section class="container mx-auto py-8 <lg:pb-3 px-0 lg:px-4 text-sm text-gray-400 flex <lg:flex-col font-bold">
+    <section class="container transition-all mx-auto py-8 <lg:pb-3 px-0 lg:px-4 text-sm text-gray-400 flex <lg:flex-col font-bold">
       <div class="flex-grow <lg:text-center">
         <p v-html="t('copyright', { year })" />
       </div>

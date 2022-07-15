@@ -12,7 +12,7 @@ useTitle(title, {
 </script>
 
 <template>
-  <main class="min-h-screen pt-20 overflow-hidden">
+  <main class="pt-20 overflow-hidden">
     <router-view :key="$route.fullPath" :route="$route" />
   </main>
 </template>

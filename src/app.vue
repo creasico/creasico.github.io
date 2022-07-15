@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 const router = useRouter()
 const { locale } = useI18n()
+const menuOpened = toRef(sitePreference.value, 'menuOpened')
+const bodyClass = computed(() => menuOpened.value ? 'overflow-hidden' : '')
 
 onMounted(() => {
   const redirect = sessionStorage.getItem('site-redirect')
@@ -21,6 +23,9 @@ useHead({
   htmlAttrs: {
     lang: locale,
   },
+  bodyAttrs: {
+    class: bodyClass,
+  },
   meta: [
     {
       rel: 'msapplication-TileColor',
@@ -38,7 +43,7 @@ useHead({
 </script>
 
 <template>
-  <site-header />
+  <site-header :menu-opened="menuOpened" />
 
   <router-view :route="$route" />
 

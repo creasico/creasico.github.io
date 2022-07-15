@@ -1,5 +1,9 @@
 <template>
-  <section-heading title="We Craft Digital Solution for Your Business" />
+  <section-heading title="We Craft Digital Solution<br />for Your Business">
+    <template #default="{ title }">
+      <h1 class="leading-tight font-heading font-bold text-6xl text-gray-800" v-html="title" />
+    </template>
+  </section-heading>
 
   <section-services />
 

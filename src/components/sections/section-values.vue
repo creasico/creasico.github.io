@@ -24,9 +24,9 @@ const values = {
         <Icon :id="`icon-${key}`" :icon="icon" width="46" class="flex-none text-primary" style="stroke-width: 1px;" />
 
         <div class="flex flex-col gap-2">
-          <h2 class="font-bold font-heading leading-5 text-lg">
+          <h3 class="font-bold font-heading leading-5 text-lg">
             {{ t(`values.${key}.title`) }}
-          </h2>
+          </h3>
           <p class="text-gray-500">
             {{ t(`values.${key}.description`) }}
           </p>

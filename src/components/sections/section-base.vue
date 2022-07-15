@@ -6,9 +6,9 @@ const { title, centeredTitle = false } = defineProps<{
 </script>
 
 <template>
-  <section class="px-4">
-    <div class="container mx-auto py-20">
-      <h1 v-if="!!title" class="font-heading text-4xl font-bold leading-tight mb-11" :class="{ 'text-center': centeredTitle }" v-html="title" />
+  <section class="">
+    <div class="container transition-all mx-auto py-20 px-4">
+      <h2 v-if="!!title" class="font-heading text-4xl font-bold leading-tight mb-11" :class="{ 'text-center': centeredTitle }" v-html="title" />
 
       <slot />
     </div>
