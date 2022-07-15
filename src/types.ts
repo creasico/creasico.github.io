@@ -8,4 +8,5 @@ export interface UserFrontmatter extends Frontmatter {
   container?: 'wide' | 'narrow'
   layout?: string
   locale?: 'id' | 'en'
+  showCTA?: boolean
 }

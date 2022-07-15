@@ -1,5 +1,6 @@
 ---
 title: Kebijakan Privasi
+showCTA: false
 ---
 
 Creasico (selanjutnya disebut “Kami”) memiliki komitmen tinggi terhadap perlindungan data Anda. Kami bertanggung jawab untuk menegakkan prinsip-prinsip pengurusan data dengan integritas yang penuh, dimana Kami selalu menjadikan keamanan data Anda menjadi prioritas utama Kami. Untuk itu, keamanan data Anda (serta data lainnya yang Anda percayakan kepada Kami) adalah hal yang terpenting untuk Kami.

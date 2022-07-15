@@ -5,6 +5,8 @@ const { frontmatter } = defineProps<{
   frontmatter: UserFrontmatter
 }>()
 
+const showCTA = computed(() => typeof frontmatter.showCTA === 'boolean' ? frontmatter.showCTA : true)
+
 const classList = {
   'lg:max-w-3xl': frontmatter.container === 'narrow',
 }
@@ -18,4 +20,6 @@ const classList = {
       <slot />
     </article>
   </section>
+
+  <section-cta v-if="showCTA" />
 </template>
