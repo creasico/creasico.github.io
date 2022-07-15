@@ -2,7 +2,7 @@
 const route = useRoute()
 
 const title = computed(() => {
-  console.log(route.meta) // eslint-disable-line no-console
+  // console.log(route.meta) // eslint-disable-line no-console
   return route.meta.title
 })
 

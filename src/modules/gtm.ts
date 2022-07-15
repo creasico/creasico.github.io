@@ -11,7 +11,8 @@ export const install: UserModule = ({ app, isClient, router, routes }) => {
     vueRouter: router,
   })
 
-  console.log(routes) // eslint-disable-line no-console
+  if (import.meta.env.DEV)
+    console.log(routes) // eslint-disable-line no-console
 
   router.afterEach((to) => {
     const tag = useGtm()
