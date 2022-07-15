@@ -23,3 +23,26 @@ const classList = {
 
   <section-cta v-if="showCTA" />
 </template>
+
+<style lang="postcss">
+.prose {
+  .header-anchor {
+    text-decoration: none;
+    left: -2rem;
+    display: inline-block;
+    line-height: inherit;
+    visibility: hidden;
+    margin-left: .5rem;
+  }
+
+  h1, h2, h3, h4 {
+    scroll-margin-top: 80px;
+    position: relative;
+
+    &:hover .header-anchor {
+      /* display: block; */
+      visibility: visible;
+    }
+  }
+}
+</style>
