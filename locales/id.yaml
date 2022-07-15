@@ -7,6 +7,8 @@ home:
   greeting: Halo Dunia
 button:
   back: Kambali
+  choose-locale: Pilih bahasa {lang}
+  socmed: '{name} kami'
 nav-link:
   home: Beranda
   services: Layanan

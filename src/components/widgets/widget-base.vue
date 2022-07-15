@@ -6,7 +6,7 @@ const { noHeader } = defineProps<{
 
 <template>
   <div class="mx-4">
-    <header v-if="!noHeader" class="text-bold">
+    <header v-if="!noHeader" class="mb-5 font-bold text-lg text-gray-400">
       <slot name="title" />
     </header>
 

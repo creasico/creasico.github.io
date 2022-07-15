@@ -51,7 +51,7 @@ const openMenu = (e: Event) => {
       </template>
     </nav>
 
-    <button class="z-2 flex flex-none items-center lg:hidden text-gray-500 hover:text-gray-700" @click="openMenu">
+    <button aria-label="Menu" class="z-2 flex flex-none items-center lg:hidden text-gray-500 hover:text-gray-700" @click="openMenu">
       <Icon :icon="isMenuOpen ? 'fe:close' : 'fe:bar'" width="40" />
     </button>
   </div>
