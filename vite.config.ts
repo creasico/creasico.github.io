@@ -45,10 +45,10 @@ export default defineConfig({
     },
   },
 
-  ssr: {
-    // TODO: workaround until they support native ESM
-    noExternal: ['workbox-window', /vue-i18n/],
-  },
+  // ssr: {
+  //   // TODO: workaround until they support native ESM
+  //   noExternal: ['workbox-window', /vue-i18n/],
+  // },
 
   plugins: [
     vue({
