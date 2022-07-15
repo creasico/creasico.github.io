@@ -1,0 +1,43 @@
+{
+  "legal_name": "PT. Creasi Tekno Solusi",
+  "address_lines": [
+    "Perum Saputra Raya 2 Blok M No.1",
+    "Kel. Lebo, Kec. Warungasem, 51252",
+    "Kab. Batang, Jawa Tengah"
+  ],
+  "email": "hello@creasi.co",
+  "whatsapp": "+62 853 2540-1177",
+  "phone": "+62 (285) 3971-021",
+  "social_links": [
+    {
+      "name": "facebook",
+      "url": "https://fb.me/creasico.id",
+      "icon": "feather:facebook",
+      "enable": true
+    },
+    {
+      "name": "instagram",
+      "url": "https://ig.me/creasico",
+      "icon": "feather:instagram",
+      "enable": false
+    },
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/creasico",
+      "icon": "feather:twitter",
+      "enable": false
+    },
+    {
+      "name": "linkedin",
+      "url": "https://linkedin.com/company/creasico",
+      "icon": "feather:linkedin",
+      "enable": true
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/creasico",
+      "icon": "feather:github",
+      "enable": true
+    }
+  ]
+}

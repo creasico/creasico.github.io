@@ -1,0 +1,102 @@
+copyright: Copyright &copy; {year} - PT. Creasi Tekno Solusi.
+errors:
+  not-found:
+    title: Not Found
+    description: Oops! Page that you're looking for not found in our server.
+home:
+  greeting: Hello World
+button:
+  back: Back
+  choose-locale: Choose language {lang}
+  socmed: our {name}
+nav-link:
+  home: Home
+  services: Services
+  services-sub: Sub Menu of Services
+  about: About Us
+  contact: Contact Us
+  privacy: Privacy Policy
+  terms: Terms and Conditions
+  hris: Human Resource
+  accounting: accounting
+  crm: Customer Relationship
+  ams: Asset Management
+sections:
+  we-do:
+    title: What We Do?
+    description: >-
+      We offer comprehensive solutions from design, development, production and
+      continous support to ensure realization of our customer' business needs
+  service:
+    title: Our Services
+    description: null
+  values:
+    title: Why Choose Us?
+    description: null
+  cta:
+    title: Ready to grow with Us?
+    description: >-
+      We offer comprehensive solutions from design, development, production and
+      continous support to ensure realization of our customer' business needs
+  partners:
+    title: 'Trusted By '
+services:
+  consultation:
+    title: Consultation
+    description: >-
+      Offer organized consulting phase as part of whole development cycle.
+  development:
+    title: Development
+    description: >-
+      Ensure the successful product development based on customer needs.
+  maintenance:
+    title: Maintenance
+    description: >-
+      Provide support services for application usage and ensures the system can
+      run as expected.
+values:
+  c:
+    title: Customer Oriented
+    description: >-
+      Kami mendengarkan keinginan customer dan melihat dari sudut pandang
+      customer, mempersiapkan segala kebutuhan mereka dengan menawarkan produk
+      dan layanan terbaik.
+  r:
+    title: Respect and Trust
+    description: >-
+      Kami menghargai semua individu dan memperlakukan mereka dengan martabat
+      dan profesionalisme. Pada dasarnya kesuksesan setiap bisnis tidak lepas
+      dari faktor saling percaya dan bisa dipercaya.
+  e:
+    title: Enthusiasm
+    description: >-
+      Antusias dalam menyikapi setiap proses, mengubah kendala menjadi sebuah
+      peluang dan tantangan, terpacu untuk terus meningkatkan keahlian dan
+      pengalaman setiap individu di perusahaan kami.
+  a:
+    title: Absolute Integrity
+    description: >-
+      Kami membangun kepercayaan terhadap antar individu dalam perusahaan kami
+      maupun dengan mitra kami, memastikan bahwa setiap perkataan, tindakan dan
+      apapun yang kami hasilkan dapat dipertanggungjawabkan.
+  s:
+    title: Simplicity
+    description: >-
+      Berusaha untuk menyederhanakan dan meningkatkan proses, prosedur dan
+      aktivitas secara terus-menerus. Memastikan bahwa setiap solusi yang kami
+      tawarkan dapat digunakan dan bermanfaat bagi setiap skala bisnis.
+  i:
+    title: Innovative
+    description: >-
+      Berpikir kritis dalam menghadapi setiap perkembangan teknologi dan mampu
+      mengubah setiap tantangan menjadi sebuah inovasi yang membawa manfaat
+      berkelanjutan.
+  co:
+    title: Collaborative
+    description: >-
+      Kami percaya bahwa pengembangkan dan mempertahankan hubungan kerja yang
+      kolaboratif dan efektif adalah hal penting dalam menciptakan ekosistem
+      bisnis yang lebih baik.
+widgets:
+  company: Company
+  products: Our Products

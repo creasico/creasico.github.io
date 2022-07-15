@@ -1,0 +1,72 @@
+[
+  {
+    "name": "nav-link.home",
+    "path": "/",
+    "locations": ["top-menu"],
+    "enable": true
+  },
+  {
+    "name": "nav-link.services",
+    "path": "#",
+    "locations": ["top-menu"],
+    "enable": false,
+    "children": [
+      {
+        "name": "nav-link.services-sub",
+        "path": "#",
+        "enable": true
+      }
+    ]
+  },
+  {
+    "name": "nav-link.about",
+    "path": "/about",
+    "locations": ["top-menu", "widget-company"],
+    "enable": true,
+    "children": []
+  },
+  {
+    "name": "nav-link.contact",
+    "path": "/contact",
+    "locations": ["top-menu", "widget-company"],
+    "enable": true,
+    "children": []
+  },
+  {
+    "name": "nav-link.privacy",
+    "path": "/privacy",
+    "locations": ["widget-company"],
+    "enable": true
+  },
+  {
+    "name": "nav-link.terms",
+    "path": "/terms",
+    "locations": ["widget-company"],
+    "enable": false
+  },
+  {
+    "name": "nav-link.hris",
+    "path": "#",
+    "locations": ["widget-products"],
+    "enable": true
+  },
+  {
+    "name": "nav-link.accounting",
+    "path": "#",
+    "locations": ["widget-products"],
+    "enable": true
+  },
+  {
+    "name": "nav-link.crm",
+    "path": "#",
+    "locations": ["widget-products"],
+    "enable": true
+  },
+  {
+    "name": "nav-link.ams",
+    "path": "#",
+    "locations": ["widget-products"],
+    "enable": true,
+    "children": []
+  }
+]
