@@ -15,6 +15,9 @@ export const createApp = ViteSSG(
   {
     routes: setupLayouts(autoRoutes),
     base: import.meta.env.BASE_URL,
+    scrollBehavior() {
+      return { top: 0 }
+    },
   },
   (ctx) => {
     // install all modules under `modules/`
