@@ -1,0 +1,50 @@
+name: GitHub Page
+
+on:
+  pull_request:
+    branches:
+      - source
+  push:
+    branches:
+      - source
+    # paths:
+    #   - .github/workflows/deployment.yml
+    #   - src/pages/*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up pnpm
+      uses: pnpm/action-setup@v2.2.1
+
+    - name: Setup Node.JS
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16.x'
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Generate pages
+      env:
+        BASE_URL: https://creasi.co/
+        VITE_GTM_ID: GTM-5ZV8MSJ
+      run: |
+        pnpm build
+        cp .gitignore dist/
+
+    - name: Deploy
+      # if: github.event_name == 'push' && github.ref == 'refs/heads/source'
+      uses: JamesIves/github-pages-deploy-action@4.3.4
+      with:
+        token: ${{ secrets.PAT }}
+        dry-run: true
+        commit-message: 'build: generate github pages'
+        branch: master
+        folder: dist
