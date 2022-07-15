@@ -1,6 +1,11 @@
 {
   "name": "web",
   "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "14.x || 16.x"
+  },
+  "packageManager": "pnpm@7.5.0",
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite",
