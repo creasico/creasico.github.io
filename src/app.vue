@@ -1,12 +1,15 @@
 <script lang="ts" setup>
 const router = useRouter()
 const { locale } = useI18n()
-const redirect = sessionStorage.getItem('site-redirect')
 
-if (redirect) {
-  sessionStorage.removeItem('site-redirect')
-  router.push(redirect)
-}
+onMounted(() => {
+  const redirect = sessionStorage.getItem('site-redirect')
+
+  if (redirect) {
+    sessionStorage.removeItem('site-redirect')
+    router.push(redirect)
+  }
+})
 
 if (!sitePreference.value.locale)
   sitePreference.value.locale = locale.value
