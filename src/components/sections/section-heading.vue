@@ -7,7 +7,7 @@ const { title, description, postedAt } = defineProps<{
 </script>
 
 <template>
-  <section id="heading" class="py-36 px-5 bg-gray-50">
+  <section id="heading" class="py-36 px-4 bg-gray-50">
     <div class="container mx-auto">
       <div class="flex flex-col">
         <span v-if="!!postedAt">Last updated on {{ postedAt }}</span>

@@ -18,7 +18,7 @@ const toggleLocale = (lang: string) => {
 
 <template>
   <footer class="bg-gray-900 text-gray-400">
-    <section class="container mx-auto flex flex-col lg:flex-row gap-8 py-11 px-4">
+    <section class="container mx-auto flex flex-col lg:flex-row gap-8 py-11">
       <div class="flex-auto">
         <widget-colopon />
       </div>
@@ -40,12 +40,12 @@ const toggleLocale = (lang: string) => {
       </div>
     </section>
 
-    <section class="container mx-auto py-8 px-4 text-sm text-gray-500 flex">
-      <div class="mx-4 flex-grow">
+    <section class="container mx-auto py-8 px-0 lg:px-4 text-sm text-gray-500 flex <lg:flex-col <lg:gap-y-3 font-bold">
+      <div class="flex-grow <lg:text-center">
         <p v-html="t('copyright', { year })" />
       </div>
 
-      <div class="mx-4 flex gap-3">
+      <div class="flex gap-3 justify-center">
         <button v-for="(lang, i) in availableLocales" :key="i" :class="{ 'text-gray-400': locale === lang }" @click="toggleLocale(lang)">
           {{ lang.toUpperCase() }}
         </button>

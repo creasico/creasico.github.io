@@ -6,14 +6,14 @@ const { frontmatter } = defineProps<{
 }>()
 
 const classList = {
-  'max-w-3xl': frontmatter.container === 'narrow',
+  'lg:max-w-3xl': frontmatter.container === 'narrow',
 }
 </script>
 
 <template>
   <section-heading :title="frontmatter.title" :description="frontmatter.description" />
 
-  <section class="px-5 lg:px-0 py-24">
+  <section class="px-4 py-24">
     <article class="container mx-auto" :class="classList">
       <slot />
     </article>
