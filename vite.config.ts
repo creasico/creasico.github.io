@@ -87,11 +87,9 @@ export default defineConfig({
         md.use(mdPrism)
 
         md.use(mdAnchor, {
-          permalink: true,
-          // permalinkBefore: true,
-          permalinkSymbol: '🔗',
-          permalinkSpace: false,
-          permalinkAttrs: () => ({ 'aria-hidden': true }),
+          permalink: mdAnchor.permalink.ariaHidden({
+            renderAttrs: () => ({ 'aria-hidden': 'true' }),
+          }),
         })
 
         md.use(mdLinkAttr, {
