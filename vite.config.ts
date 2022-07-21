@@ -32,7 +32,15 @@ export default defineConfig({
     formatting: 'minify',
     onFinished() {
       // https://github.com/jbaubree/vite-ssg-sitemap
-      sitemap()
+      sitemap({
+        hostname: process.env.BASE_URL,
+        exclude: ['/index', '/404'],
+        robots: [
+          { userAgent: '*', allow: '/' },
+          { userAgent: '*', disallow: ['/assets', '/images', '/.*'] },
+          { userAgent: 'Googlebot-Image', disallow: '/' },
+        ],
+      })
     },
   },
 
