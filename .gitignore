@@ -24,4 +24,6 @@ src/components.d.ts
 
 # But Keep these
 # --------------------------
+!.env.*.example
+!.env.example
 !.gitkeep
