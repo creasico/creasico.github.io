@@ -36,7 +36,7 @@ useHead({
     {
       rel: 'mask-icon',
       color: '#388370',
-      href: '/safari-pinned-tab.svg',
+      href: '/assets/safari-pinned-tab.svg',
     },
   ],
 })

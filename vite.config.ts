@@ -33,11 +33,11 @@ export default defineConfig({
     onFinished() {
       // https://github.com/jbaubree/vite-ssg-sitemap
       sitemap({
-        hostname: process.env.BASE_URL,
+        hostname: process.env.BASE_URL || 'http://localhost',
         exclude: ['/index', '/404'],
         robots: [
           { userAgent: '*', allow: '/' },
-          { userAgent: '*', disallow: ['/assets', '/images', '/.*'] },
+          { userAgent: '*', disallow: ['/assets', '/images', '/CNAME', '/.nojekyll'] },
           { userAgent: 'Googlebot-Image', disallow: '/' },
         ],
       })
@@ -157,24 +157,24 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-pwa
     pwa({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'favicon.svg', 'safari-pinned-tab.svg'],
+      includeAssets: ['favicon.ico', 'assets/favicon.svg', 'assets/safari-pinned-tab.svg'],
       manifest: {
         name: 'Creasi.CO',
         short_name: 'Creasi.CO',
         theme_color: '#ffffff',
         icons: [
           {
-            src: '/icon-192x192.png',
+            src: '/assets/icon-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/icon-512x512.png',
+            src: '/assets/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
           {
-            src: '/icon-512x512.png',
+            src: '/assets/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
