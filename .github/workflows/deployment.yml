@@ -7,11 +7,11 @@ on:
   push:
     branches:
       - source
-    # paths:
-    #   - .github/workflows/deployment.yml
-    #   - locales/*
-    #   - public/*
-    #   - src/*
+    paths:
+      - .github/workflows/deployment.yml
+      - locales/*
+      - public/*
+      - src/*
 
 jobs:
   build:
@@ -48,5 +48,4 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         # dry-run: true
         commit-message: 'build: generate github pages'
-        branch: master
         folder: dist
