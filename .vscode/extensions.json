@@ -4,6 +4,7 @@
     "editorconfig.editorconfig",
     "lokalise.i18n-ally",
     "vue.volar",
-    "voorjaar.windicss-intellisense"
+    "voorjaar.windicss-intellisense",
+    "mikestead.dotenv"
   ]
 }
