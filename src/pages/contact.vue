@@ -22,7 +22,7 @@ const socialLinks = social_links.filter(social => social.enable)
 
       <div class="flex flex-grow flex-col gap-2 text-lg">
         <div class="flex gap-5">
-          <Icon icon="ic:baseline-maps-home-work" width="1.4rem" />
+          <icon icon="ic:baseline-maps-home-work" width="1.4rem" />
 
           <div>
             <address class="text-sm not-italic" v-html="address" />
@@ -30,12 +30,12 @@ const socialLinks = social_links.filter(social => social.enable)
         </div>
 
         <div class="flex gap-5">
-          <Icon icon="ic:baseline-alternate-email" width="1.4rem" />
+          <icon icon="ic:baseline-alternate-email" width="1.4rem" />
           <a :href="`mailto:${email}`">{{ email }}</a>
         </div>
 
         <div class="flex gap-5">
-          <Icon icon="ic:baseline-whatsapp" width="1.4rem" />
+          <icon icon="ic:baseline-whatsapp" width="1.4rem" />
           <a :href="`https://wa.me/${whatsapp.replace(/[\s\-\+]/g, '')}`">{{ whatsapp }}</a>
         </div>
       </div>

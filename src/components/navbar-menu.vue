@@ -31,7 +31,7 @@ const menuLinks = links.filter(l => l.locations.includes('top-menu')).map(link =
           <div v-if="link.enable" class="select-none <lg:container <lg:mx-auto box-border relative border-b-1 lg:border-b-2 border-gray-300 lg:border-transparent hover:border-black" :class="{ 'lg:border-primary': isActive }">
             <a :href="href" class="relative flex items-center justify-between py-3 px-4 lg:p-0 font-semibold" :class="{ 'text-primary': isActive }" @click="navigate">
               <span>{{ t(link.name) }}</span>
-              <Icon v-if="link.hasChildren" icon="fe:arrow-down" />
+              <icon v-if="link.hasChildren" icon="fe:arrow-down" />
             </a>
 
             <div v-if="link.hasChildren" class="hidden">
@@ -47,7 +47,7 @@ const menuLinks = links.filter(l => l.locations.includes('top-menu')).map(link =
     </nav>
 
     <button aria-label="Menu" class="z-2 flex flex-none items-center lg:hidden text-gray-500 hover:text-gray-700" @click="menuToggle">
-      <Icon :icon="menuOpened ? 'fe:close' : 'fe:bar'" width="40" />
+      <icon :icon="menuOpened ? 'fe:close' : 'fe:bar'" width="40" />
     </button>
   </div>
 </template>

@@ -29,7 +29,7 @@ const services = {
 
         <div class="flex flex-col xl:grid grid-cols-3 gap-6">
           <div v-for="[key, icon] in Object.entries(services)" :key="key" class="p-6 lg:pt-4 xl:p-8 xl:pt-6 flex xl:flex-col gap-4 bg-gray-100 rounded-lg shadow-md">
-            <Icon :id="`icon-${key}`" :icon="icon" width="46" class="flex-none text-primary" />
+            <icon :id="`icon-${key}`" :icon="icon" width="46" class="flex-none text-primary" />
 
             <div class="flex flex-col gap-2">
               <h4 class="font-bold leading-5 text-lg">

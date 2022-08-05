@@ -21,7 +21,7 @@ const socialLinks = company.social_links.filter(social => social.enable)
 
     <div class="mt-5 flex flex-row space-x-4">
       <a v-for="(link, i) of socialLinks" :key="i" :href="link.url" target="_blank" :aria-label="t('button.socmed', { name: link.name })" class="hover:text-gray-400">
-        <Icon :icon="link.icon" class="h-6 w-6" />
+        <icon :icon="link.icon" class="h-6 w-6" />
       </a>
     </div>
   </widget-base>
