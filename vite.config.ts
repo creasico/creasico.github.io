@@ -4,7 +4,7 @@
 import { resolve } from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import i18n from '@intlify/vite-plugin-vue-i18n'
+import { vueI18n as i18n } from '@intlify/vite-plugin-vue-i18n'
 import sitemap from 'vite-ssg-sitemap'
 import windicss from 'vite-plugin-windicss'
 import autoImport from 'unplugin-auto-import/vite'
