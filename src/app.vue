@@ -26,12 +26,12 @@ useHead({
   bodyAttrs: {
     class: bodyClass,
   },
-  meta: [
-    {
-      rel: 'msapplication-TileColor',
-      content: '#388370',
-    },
-  ],
+  // meta: [
+  //   {
+  //     rel: 'msapplication-TileColor',
+  //     content: '#388370',
+  //   },
+  // ],
   link: [
     {
       rel: 'mask-icon',
