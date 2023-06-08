@@ -1,10 +1,10 @@
 /// <reference types="vitest" />
 /// <reference types="vite-ssg" />
 
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { vueI18n as i18n } from '@intlify/vite-plugin-vue-i18n'
+import i18n from '@intlify/unplugin-vue-i18n/vite'
 import sitemap from 'vite-ssg-sitemap'
 import windicss from 'vite-plugin-windicss'
 import autoImport from 'unplugin-auto-import/vite'
@@ -89,10 +89,11 @@ export default defineConfig(({ mode }) => {
       },
     },
 
-    // ssr: {
-    //   // TODO: workaround until they support native ESM
-    //   noExternal: ['workbox-window', /vue-i18n/],
-    // },
+    ssr: {
+      // TODO: workaround until they support native ESM
+      // link: https://github.com/antfu/vite-ssg/issues/286#issuecomment-1285885878
+      noExternal: [/vue-i18n/],
+    },
 
     plugins: [
       vue({
