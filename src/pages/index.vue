@@ -21,4 +21,5 @@
 name: home
 meta:
   title: Home
+  description: We Craft Digital Solution for Your Business
 </route>

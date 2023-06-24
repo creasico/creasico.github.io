@@ -117,7 +117,8 @@ export default defineConfig(({ mode }) => {
 
         builders: [
           meta({
-            routeProps: ['layout', 'locale', 'container', 'title', 'description'],
+            metaProps: ['title', 'description', 'tags'],
+            routeMetaProps: ['layout', 'locale', 'container', 'title', 'description'],
           }),
         ],
 
