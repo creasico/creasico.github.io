@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue'
-import { address_lines, email, social_links, whatsapp } from '~/assets/company.json'
+import { address_lines, email, whatsapp } from '~/assets/company.json'
 
 const { t } = useI18n()
 const address = address_lines.join(', <br />')
-const socialLinks = social_links.filter(social => social.enable)
+// const socialLinks = social_links.filter(social => social.enable)
 </script>
 
 <template>
