@@ -13,7 +13,7 @@ interface MenuLink {
 
 const { t } = useI18n()
 const menuOpened = toRef(sitePreference.value, 'menuOpened')
-const menuToggle = () => {
+function menuToggle() {
   sitePreference.value.menuOpened = !menuOpened.value
 }
 

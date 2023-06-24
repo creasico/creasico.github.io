@@ -1,4 +1,6 @@
 import { defineConfig } from 'windicss/helpers'
+import typography from 'windicss/plugin/typography'
+import forms from 'windicss/plugin/forms'
 
 export default defineConfig({
   extract: {
@@ -6,8 +8,8 @@ export default defineConfig({
     exclude: ['node_modules', '.git'],
   },
   plugins: [
-    require('windicss/plugin/typography'),
-    require('windicss/plugin/forms'),
+    typography(),
+    forms,
   ],
   safelist: ['prose', 'prose-sm', 'max-w-none'],
   theme: {
