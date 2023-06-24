@@ -16,15 +16,11 @@
     "useDefineForClassFields": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["ESNext", "DOM"],
+    "lib": ["ESNext", "DOM", "WebWorker"],
     "typeRoots": ["./src"],
     "types": [
-      "vitest",
       "vite/client",
-      "vue/ref-macros",
-      "vite-plugin-pages/client",
-      "vite-plugin-pwa/client",
-      "vite-plugin-vue-layouts/client"
+      "vue/ref-macros"
     ],
     "paths": {
       "~/*": ["src/*"]
