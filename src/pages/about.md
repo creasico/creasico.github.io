@@ -1,7 +1,7 @@
 ---
 title: About Us
 description: Our Company Profile
-image: https://via.placeholder.com/400x300
+image: public/images/saly-1.png
 container: narrow
 ---
 
