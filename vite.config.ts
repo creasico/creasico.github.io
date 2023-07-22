@@ -18,7 +18,7 @@ import type { RouteRecord } from 'vue-router'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, '.', ['FIREBASE', 'PROJECT'])
+  const env = loadEnv(mode, '.', [])
   const FIREBASE_CONFIG = {
     projetId: env.PROJECT_ID,
     appId: env.FIREBASE_APP_ID,
@@ -65,7 +65,7 @@ export default defineConfig(({ mode }) => {
       onFinished() {
         // https://github.com/jbaubree/vite-ssg-sitemap
         sitemap({
-          hostname: process.env.BASE_URL || 'http://localhost',
+          hostname: env.BASE_URL || 'http://localhost',
           exclude: ['/index', '/404'],
           robots: [
             { userAgent: '*', allow: '/' },
