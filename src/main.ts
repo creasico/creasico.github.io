@@ -1,7 +1,6 @@
 import { ViteSSG } from 'vite-ssg'
-
-import autoRoutes from 'pages-generated'
-import { setupLayouts } from 'layouts-generated'
+import { routes } from 'vue-router/auto/routes'
+import { setupLayouts } from 'virtual:generated-layouts'
 
 import 'virtual:windi-devtools'
 
@@ -13,7 +12,7 @@ import type { UserModule } from './types'
 export const createApp = ViteSSG(
   App,
   {
-    routes: setupLayouts(autoRoutes),
+    routes: setupLayouts(routes),
     base: import.meta.env.BASE_URL,
     scrollBehavior() {
       return { top: 0 }

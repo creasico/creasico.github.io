@@ -1,8 +1,8 @@
-@import '@fontsource/nunito/400.css';
-@import '@fontsource/nunito/400-italic.css';
-@import '@fontsource/nunito/700.css';
-@import '@fontsource/nunito/700-italic.css';
-@import '@fontsource/work-sans/300.css';
-@import '@fontsource/work-sans/300-italic.css';
-@import '@fontsource/work-sans/700.css';
-@import '@fontsource/work-sans/700-italic.css';
+@import '@fontsource/nunito/latin-400.css';
+@import '@fontsource/nunito/latin-400-italic.css';
+@import '@fontsource/nunito/latin-700.css';
+@import '@fontsource/nunito/latin-700-italic.css';
+@import '@fontsource/work-sans/latin-300.css';
+@import '@fontsource/work-sans/latin-300-italic.css';
+@import '@fontsource/work-sans/latin-700.css';
+@import '@fontsource/work-sans/latin-700-italic.css';
