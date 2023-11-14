@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { title, description, date } = defineProps<{
-  title: string
+  title?: string
   description?: string
   date?: string
   image?: string
