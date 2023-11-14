@@ -58,12 +58,16 @@ export default defineConfig(({ mode }) => {
       FIREBASE_CONFIG: JSON.stringify(FIREBASE_CONFIG),
     },
 
-    // https://github.com/antfu/vite-ssg
+    /**
+     * @see https://github.com/antfu/vite-ssg
+     */
     ssgOptions: {
       script: 'async',
       formatting: 'minify',
       onFinished() {
-        // https://github.com/jbaubree/vite-ssg-sitemap
+        /**
+         * @see https://github.com/jbaubree/vite-ssg-sitemap
+         */
         sitemap({
           hostname: env.BASE_URL || 'http://localhost',
           exclude: ['/index', '/404'],
@@ -76,7 +80,9 @@ export default defineConfig(({ mode }) => {
       },
     },
 
-    // https://github.com/vitest-dev/vitest
+    /**
+     * @see https://github.com/vitest-dev/vitest
+     */
     test: {
       include: ['test/**/*.test.ts'],
       environment: 'happy-dom',
@@ -87,8 +93,10 @@ export default defineConfig(({ mode }) => {
     },
 
     ssr: {
-      // TODO: workaround until they support native ESM
-      // link: https://github.com/antfu/vite-ssg/issues/286#issuecomment-1285885878
+      /**
+       * TODO: workaround until they support native ESM
+       * @link https://github.com/antfu/vite-ssg/issues/286#issuecomment-1285885878
+       */
       noExternal: [/vue-i18n/],
     },
 
@@ -98,7 +106,9 @@ export default defineConfig(({ mode }) => {
         reactivityTransform: true,
       }),
 
-      // https://github.com/antfu/vite-plugin-md
+      /**
+       * @see https://github.com/antfu/vite-plugin-md
+       */
       markdown({
         wrapperComponent: 'page-content',
         wrapperClasses: 'prose max-w-none',
@@ -110,17 +120,19 @@ export default defineConfig(({ mode }) => {
 
         frontmatterDefaults: routeMeta,
 
-        // see: https://markdown-it.github.io/markdown-it/
-        markdownItOptions: {
-          quotes: '""\'\'',
-        },
-
         builders: [
           meta({
             metaProps: ['title', 'description', 'tags'],
             routeMetaProps: ['layout', 'locale', 'container', 'title', 'description'],
           }),
         ],
+
+        /**
+         * @see https://markdown-it.github.io/markdown-it/
+         */
+        markdownItOptions: {
+          quotes: '""\'\'',
+        },
 
         markdownItSetup(md) {
           md.use(mdPrism)
@@ -141,7 +153,9 @@ export default defineConfig(({ mode }) => {
         },
       }),
 
-      // https://github.com/hannoeru/vite-plugin-pages
+      /**
+       * @see https://github.com/hannoeru/vite-plugin-pages
+       */
       pages({
         extensions: ['vue', 'md'],
         extendRoute: (route: RouteRecord) => {
@@ -153,10 +167,14 @@ export default defineConfig(({ mode }) => {
 
       windicss(),
 
-      // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+      /**
+       * @see https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+       */
       layouts(),
 
-      // https://github.com/antfu/unplugin-auto-import
+      /**
+       * @see https://github.com/antfu/unplugin-auto-import
+       */
       autoImport({
         dts: 'src/auto-imports.d.ts',
         dirs: [
@@ -174,7 +192,9 @@ export default defineConfig(({ mode }) => {
         vueTemplate: true,
       }),
 
-      // https://github.com/antfu/unplugin-vue-components
+      /**
+       * @see https://github.com/antfu/unplugin-vue-components
+       */
       components({
         // allow auto load markdown components under `./src/components/`
         extensions: ['vue', 'md'],
@@ -183,7 +203,9 @@ export default defineConfig(({ mode }) => {
         dts: 'src/components.d.ts',
       }),
 
-      // https://github.com/antfu/vite-plugin-pwa
+      /**
+       * @see https://github.com/antfu/vite-plugin-pwa
+       */
       pwa({
         registerType: 'autoUpdate',
         includeAssets: ['favicon.ico', 'assets/favicon.svg', 'assets/safari-pinned-tab.svg'],
