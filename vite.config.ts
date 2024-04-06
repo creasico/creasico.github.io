@@ -173,24 +173,13 @@ export default defineConfig(({ mode }) => {
         wrapperClasses: 'prose max-w-none',
         headEnabled: true,
         excerpt: true,
-        // style: {
-        //   baseStyle: 'github',
-        // },
-
-        // frontmatterDefaults: routeMeta,
-
-        // builders: [
-        //   meta({
-        //     metaProps: ['title', 'description', 'tags'],
-        //     routeMetaProps: ['layout', 'locale', 'container', 'title', 'description'],
-        //   }),
-        // ],
 
         /**
          * @see https://markdown-it.github.io/markdown-it/
          */
         markdownItOptions: {
-          quotes: '""\'\'',
+          html: true,
+          typographer: true,
         },
 
         markdownItSetup(md) {

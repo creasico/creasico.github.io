@@ -7,21 +7,21 @@ Creasico (selanjutnya disebut “Kami”) memiliki komitmen tinggi terhadap perl
 
 Kebijakan privasi ini (selanjutnya disebut “Kebijakan”) mengatur tentang cara Kami mengumpulkan dan menggunakan data Anda dalam Layanan Kami. Dengan menggunakan Layanan Kami, Anda telah menyetujui dan terikat dengan hal-hal yang telah terdapat dalam Kebijakan ini. Oleh karena itu, Kami berharap Anda membaca Kebijakan ini untuk memastikan bahwa Anda mengerti bagaimana cara Kami menangani data Anda.
 
-**Cara mengumpulkan data Anda**
+<h2>Cara mengumpulkan data Anda</h2>
 
 Jika Anda tidak login ke akun Creasico, kami menyimpan informasi yang kami kumpulkan dengan ID unik yang terikat ke browser, aplikasi, atau perangkat yang sedang Anda gunakan. Jika Anda login, kami juga mengumpulkan informasi yang kami simpan di akun Creasico Anda, yang kami anggap sebagai informasi pribadi.
 
 Saat Anda membuat akun Creasico, Anda memberikan informasi pribadi yang mencakup nama dan sandi kepada Kami. Anda juga dapat memilih untuk menambahkan nomor telepon atau informasi pembayaran ke akun Anda. Meskipun Anda tidak login ke akun Creasico, Anda dapat memilih untuk memberi Kami informasi — seperti alamat email yang akan menerima kabar terkini terkait layanan terbaru kami. Kami juga mengumpulkan konten yang Anda buat, upload, atau terima dari pengguna lain saat menggunakan layanan Kami.
 
-**Informasi yang Kami kumpulkan saat Anda menggunakan layanan Kami**
+<h2>Informasi yang Kami kumpulkan saat Anda menggunakan layanan Kami</h2>
 
-**Aplikasi, browser, dan perangkat**
+<h3>Aplikasi, browser, dan perangkat</h3>
 
 Informasi yang kami kumpulkan meliputi ID unik, jenis dan pengaturan browser, jenis dan setelan perangkat, sistem operasi, informasi jaringan seluler yang mencakup nama operator dan nomor telepon, serta nomor versi aplikasi. Kami juga mengumpulkan informasi tentang interaksi aplikasi, browser, dan perangkat Anda dengan layanan kami, mencakup alamat IP, laporan kerusakan, aktivitas sistem, serta waktu, tanggal, dan URL perujuk permintaan Anda.
 
 Kami mengumpulkan informasi ini saat layanan Creasico di perangkat Anda menghubungi server kami — misalnya, saat Anda menginstal aplikasi dari Play Store atau saat pemeriksaan layanan untuk update otomatis. Jika Anda menggunakan perangkat Android yang dilengkapi aplikasi Creasico, perangkat Anda akan menghubungi server Creasico secara berkala untuk memberikan informasi tentang perangkat Anda dan hubungan ke layanan kami. Informasi ini mencakup hal-hal seperti jenis perangkat Anda, nama operator, laporan kerusakan, dan aplikasi yang telah Anda instal.
 
-**Aktivitas Anda**
+<h3>Aktivitas Anda</h3>
 
 Kami mengumpulkan informasi tentang aktivitas Anda di layanan kami. Informasi aktivitas yang kami kumpulkan dapat meliputi:
 
@@ -31,7 +31,7 @@ Kami mengumpulkan informasi tentang aktivitas Anda di layanan kami. Informasi ak
 - Orang yang berkomunikasi dengan Anda atau berbagi konten dengan Anda
 - Aktivitas di situs dan aplikasi pihak ketiga yang menggunakan layanan kami
 
-**Informasi lokasi Anda**
+<h3>Informasi lokasi Anda</h3>
 
 Kami mengumpulkan informasi tentang lokasi Anda saat Anda menggunakan layanan kami. Lokasi Anda dapat ditentukan dengan berbagai tingkat akurasi menggunakan:
 
@@ -42,35 +42,35 @@ Kami mengumpulkan informasi tentang lokasi Anda saat Anda menggunakan layanan ka
 
 Jenis data lokasi yang kami kumpulkan bergantung pada perangkat dan pengaturan akun Anda. Misalnya, Anda dapat mengaktifkan atau menonaktifkan lokasi perangkat Android menggunakan aplikasi pengaturan perangkat.Kami menggunakan berbagai teknologi untuk mengumpulkan dan menyimpan informasi, termasuk cookie, penyimpanan lokal, seperti penyimpanan web browser atau cache data aplikasi, database, dan log server.
 
-**Penggunaan data Anda**
+<h2>Penggunaan data Anda</h2>
 
 Kami menggunakan informasi yang kami kumpulkan dari semua layanan kami untuk tujuan berikut:
 
-**Menyediakan layanan kami**
+<h3>Menyediakan layanan kami</h3>
 
 Kami menggunakan informasi Anda untuk memberikan layanan kami, seperti memproses istilah yang Anda telusuri untuk menampilkan hasil atau membantu Anda membagikan konten dengan menyarankan penerima dari kontak Anda.
 
-**Memelihara dan meningkatkan layanan kami**
+<h3>Memelihara dan meningkatkan layanan kami</h3>
 
 Kami juga menggunakan informasi Anda untuk memastikan layanan kami bekerja dengan semestinya, seperti melacak atau memecahkan masalah yang Anda laporkan kepada kami. Kami menggunakan informasi Anda untuk membuat peningkatan pada layanan kami — misalnya, dengan memahami istilah penelusuran mana yang paling sering salah dieja dapat membantu kami meningkatkan fitur periksa ejaan di seluruh layanan kami.
 
-**Mengembangkan layanan baru**
+<h3>Mengembangkan layanan baru</h3>
 
 Kami menggunakan informasi yang kami kumpulkan untuk membantu kami mengembangkan layanan baru. Misalnya, dengan memahami cara orang memperbarui profile, membantu kami merancang dan meluncurkan Creasico Account.
 
-**Menyediakan layanan yang dipersonalisasi, termasuk konten**
+<h3>Menyediakan layanan yang dipersonalisasi, termasuk konten</h3>
 
 Kami menggunakan informasi yang kami kumpulkan untuk melakukan kustomisasi layanan kami terhadap Anda, termasuk memberi rekomendasi, konten yang dipersonalisasi, dan hasil pencarian yang disesuaikan.
 
-**Mengukur performa**
+<h3>Mengukur performa</h3>
 
 Kami menggunakan data analisis dan pengukuran untuk memahami cara layanan kami digunakan. Misalnya, kami menganalisis data tentang kunjungan Anda ke situs kami untuk melakukan sesuatu seperti mengoptimalkan desain produk.
 
-**Berkomunikasi dengan Anda**
+<h3>Berkomunikasi dengan Anda</h3>
 
 Kami menggunakan informasi yang kami kumpulkan, seperti alamat email Anda, untuk berinteraksi langsung dengan Anda.
 
-**Melindungi Creasico, pengguna kami, dan publik**
+<h3>Melindungi Creasico, pengguna kami, dan publik</h3>
 
 Kami menggunakan informasi untuk membantu meningkatkan keamanan dan keandalan layanan kami. Ini termasuk mendeteksi, mencegah, dan menanggapi penipuan, penyalahgunaan, risiko keamanan, dan masalah teknis yang dapat membahayakan Creasico, pengguna kami, atau publik.
 
@@ -80,7 +80,7 @@ Kami mungkin menggabungkan informasi yang kami kumpulkan di layanan kami di selu
 
 Kami akan meminta persetujuan Anda sebelum menggunakan informasi Anda untuk tujuan yang tidak tercakup dalam Kebijakan Privasi ini.
 
-**Pembagian data kepada pihak ketiga**
+<h2>Pembagian data kepada pihak ketiga</h2>
 
 Kami tidak akan menjual, menyewakan, atau menyebarkan data Anda tanpa izin dari Anda kecuali ditentukan lain dalam Kebijakan ini. Kami hanya akan mengungkapkan data Anda kepada pihak ketiga atas izin Anda atau jika diperlukan untuk mengakomodir kebutuhan penggunaan Produk Anda.
 
@@ -88,7 +88,7 @@ Jika anda memberikan izin kepada Kami untuk mengungkapkan data Anda kepada pihak
 
 Kami mungkin mengungkapkan data Anda tanpa persetujuan Anda untuk mematuhi perintah pengadilan atau putusan badan pemerintah yang sah atau peraturan yang berlaku. Kemudian apabila memungkinkan dan diperbolehkan, Kami akan memberitahu Anda apabila Kami mengungkapkan data Anda.
 
-**Penggunaan Cookies**
+<h2>Penggunaan Cookies</h2>
 
 Cookies merupakan berkas teks yang ditempatkan di komputer Anda untuk kepentingan pencatatan. Kami menggunakan cookies untuk membantu Kami memberikan Anda kemudahan dalam menggunakan Produk. Cookies tidak dapat digunakan untuk menjalankan program atau mengirim virus ke komputer Anda.
 
@@ -96,15 +96,15 @@ Cookies akan mencatat data Anda seperti data yang Anda simpan ke Situs atau Prod
 
 Sebagai tambahan, pihak lainnya juga dapat menganalisa data untuk Kami, seperti Google Analytics. Mereka dapat mengumpulkan data Anda yang tidak dapat diidentifikasi sebagai pribadi tentang aktivitas online Anda saat Anda menggunakan Produk Kami atau mengakses Situs.
 
-**Keamanan Data**
+<h2>Keamanan Data</h2>
 
 Untuk melindungi data Anda, kami selalu berusaha meningkatkan keamanan data Anda dengan menggunakan teknologi terbaru dan mematuhi peraturan yang berlaku untuk memenuhi harapan pihak terkait, dan untuk memastikan peningkatan kualitas yang berkelanjutan. Selanjutnya, Kami menjadikan perlindungan data Anda sebagai prioritas Kami dengan menggunakan standar tertinggi untuk mengamankan data Anda.
 
-**Kontak**
+<h2>Kontak</h2>
 
 Apabila Anda ingin mengajukan keluhan tentang data Anda atau Anda memiliki pertanyaan lain mengenai privasi atau keamanan data Anda silahkan menghubungi Kami melalui email: [policy@creasi.co](mailto:policy@creasi.co) 
 
-**Perubahan Kebijakan**
+<h2>Perubahan Kebijakan</h2>
 
 Kebijakan ini berlaku untuk semua layanan yang ditawarkan oleh Creasico (PT Creasi Tekno Solusi) dan afiliasinya, termasuk Jurnal, Talenta, Klikpajak dan add-on atau layanan situs pihak ketiga. Kebijakan ini tidak berlaku pada layanan yang memiliki kebijakan privasi terpisah yang tidak tergabung dalam Kebijakan Privasi ini.
 
