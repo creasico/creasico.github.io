@@ -10,7 +10,7 @@ const socialLinks = company.social_links.filter(social => social.enable)
 <template>
   <widget-base>
     <template #title>
-      <main-logo width="150" theme="secondary" />
+      <site-logo width="150" theme="secondary" />
     </template>
 
     <p class="block font-bold leading-snug text-gray-300 my-3">

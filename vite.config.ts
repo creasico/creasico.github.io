@@ -6,8 +6,7 @@ import sitemap from 'vite-ssg-sitemap'
 import windicss from 'vite-plugin-windicss'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
-import markdown from 'vite-plugin-md'
-import meta from '@yankeeinlondon/meta-builder'
+import markdown from 'unplugin-vue-markdown/vite'
 import { VitePWA as pwa } from 'vite-plugin-pwa'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import router from 'unplugin-vue-router/vite'
@@ -31,10 +30,10 @@ export default defineConfig(({ mode }) => {
     authDomain: `${env.PROJECT_ID}.firebaseapp.com`,
   }
 
-  const routeMeta: Record<string, any> = {
-    locale: 'id',
-    layout: 'default',
-  }
+  // const routeMeta: Record<string, any> = {
+  //   locale: 'id',
+  //   layout: 'default',
+  // }
 
   return {
     resolve: {
@@ -105,7 +104,6 @@ export default defineConfig(({ mode }) => {
     plugins: [
       vue({
         include: [/\.vue$/, /\.md$/],
-        reactivityTransform: true,
       }),
 
       /**
@@ -175,18 +173,18 @@ export default defineConfig(({ mode }) => {
         wrapperClasses: 'prose max-w-none',
         headEnabled: true,
         excerpt: true,
-        style: {
-          baseStyle: 'github',
-        },
+        // style: {
+        //   baseStyle: 'github',
+        // },
 
-        frontmatterDefaults: routeMeta,
+        // frontmatterDefaults: routeMeta,
 
-        builders: [
-          meta({
-            metaProps: ['title', 'description', 'tags'],
-            routeMetaProps: ['layout', 'locale', 'container', 'title', 'description'],
-          }),
-        ],
+        // builders: [
+        //   meta({
+        //     metaProps: ['title', 'description', 'tags'],
+        //     routeMetaProps: ['layout', 'locale', 'container', 'title', 'description'],
+        //   }),
+        // ],
 
         /**
          * @see https://markdown-it.github.io/markdown-it/

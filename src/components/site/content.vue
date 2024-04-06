@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-import type { UserFrontmatter } from '~/types'
+import type { PageFrontmatter } from '~/types'
 
 const { frontmatter } = defineProps<{
-  frontmatter: UserFrontmatter
+  frontmatter: PageFrontmatter
+  excerpt: string
 }>()
 
 const showCTA = computed(() => typeof frontmatter.showCTA === 'boolean' ? frontmatter.showCTA : true)

@@ -1,5 +1,5 @@
 import { ViteSSG } from 'vite-ssg'
-import { routes } from 'vue-router/auto/routes'
+import { routes } from 'vue-router/auto-routes'
 import { setupLayouts } from 'virtual:generated-layouts'
 
 import 'virtual:windi-devtools'

@@ -1,7 +1,7 @@
 ---
 title: About Us
 description: Our Company Profile
-image: public/images/saly-1.png
+image: /images/saly-1.png
 container: narrow
 ---
 
@@ -11,11 +11,11 @@ Pada Mei 2022 CREASI.CO telah resmi terdaftar sebagai Perseroan Perorangan berna
 
 Lahir sebagai perusahaan yang mengubah ide menjadi sebuah teknologi yang inovatif dan terjangkau melalui produk dan layanan yang mencerminkan visi kami dengan mengkombinasikan pengetahuan mendalam dan pengalaman kami selama bertahun-tahun.
 
-## Visi
+**Visi**
 
 Menjadi perusahaan jasa layanan teknologi informasi yang terintegrasi
 
-## Misi
+**Misi**
 
 * Menyajikan solusi layanan bisnis menyeluruh dan terintegrasi melalui teknologi informasi
 * Menjadi mitra terpercaya dalam menghadirkan solusi tata kelola digital sebagai bagian dari perkembangan usaha

@@ -36,9 +36,9 @@ const menuLinks = links.filter(l => l.locations.includes('top-menu')).map(link =
 
             <div v-if="link.hasChildren" class="hidden">
               <template v-for="sub in link.children" :key="sub.name">
-                <app-link v-if="sub.enable" :to="sub.path" class="px-4 lg:px-0 py-3 block text-black font-semibold hover:text-gray-700 transition duration-300 ease-out">
+                <site-link v-if="sub.enable" :to="sub.path" class="px-4 lg:px-0 py-3 block text-black font-semibold hover:text-gray-700 transition duration-300 ease-out">
                   {{ t(sub.name) }}
-                </app-link>
+                </site-link>
               </template>
             </div>
           </div>

@@ -30,9 +30,9 @@ function toggleLocale(lang: string) {
           </template>
 
           <template v-for="link in widget.links" :key="link.name">
-            <app-link v-if="link.enable" :to="link.path" class="block mb-1 heading-2 leading-7 hover:text-gray-400">
+            <site-link v-if="link.enable" :to="link.path" class="block mb-1 heading-2 leading-7 hover:text-gray-400">
               {{ t(link.name) }}
-            </app-link>
+            </site-link>
           </template>
         </widget-base>
       </div>

@@ -1,5 +1,10 @@
 {
-  "include": ["*.config.ts", "src/**/*.ts", "src/**/*.vue"],
+  "include": [
+    "*.config.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue"
+  ],
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "dist",
@@ -21,8 +26,7 @@
     "lib": ["ESNext", "DOM", "WebWorker"],
     "typeRoots": ["./src"],
     "types": [
-      "vite/client",
-      "vue/ref-macros"
+      "vite/client"
     ],
     "paths": {
       "~/*": ["src/*"]
