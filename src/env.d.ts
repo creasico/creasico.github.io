@@ -9,6 +9,7 @@
 
 interface ImportMetaEnv {
   VITE_GTM_ID: string
+  VITE_PROJECT_ID: string
 }
 
 declare interface Window {

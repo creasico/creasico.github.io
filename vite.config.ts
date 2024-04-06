@@ -21,13 +21,13 @@ import mdPrism from 'markdown-it-prism'
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', ['BASE', 'FIREBASE', 'VITE'])
   const FIREBASE_CONFIG = {
-    projetId: env.PROJECT_ID,
+    projetId: env.VITE_PROJECT_ID,
     appId: env.FIREBASE_APP_ID,
     apiKey: env.FIREBASE_API_KEY,
     messagingSenderId: env.FIREBASE_MESSAGING_SENDER_ID,
     measurementId: env.FIREBASE_MEASUREMENT_ID,
-    storageBucket: `${env.PROJECT_ID}.appspot.com`,
-    authDomain: `${env.PROJECT_ID}.firebaseapp.com`,
+    storageBucket: `${env.VITE_PROJECT_ID}.appspot.com`,
+    authDomain: `${env.VITE_PROJECT_ID}.firebaseapp.com`,
   }
 
   // const routeMeta: Record<string, any> = {
