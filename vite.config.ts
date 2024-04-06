@@ -19,7 +19,7 @@ import mdPrism from 'markdown-it-prism'
  * @see https://vitejs.dev/config/
  */
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, '.', [])
+  const env = loadEnv(mode, '.', ['BASE', 'FIREBASE', 'VITE'])
   const FIREBASE_CONFIG = {
     projetId: env.PROJECT_ID,
     appId: env.FIREBASE_APP_ID,
