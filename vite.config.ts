@@ -73,7 +73,6 @@ export default defineConfig(({ mode }) => {
           hostname: env.BASE_URL || 'http://localhost',
           exclude: ['/index', '/404'],
           robots: [
-            { userAgent: '*', allow: '/' },
             { userAgent: '*', disallow: ['/assets', '/images', '/CNAME', '/.nojekyll'] },
             { userAgent: 'Googlebot-Image', disallow: '/' },
           ],
