@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import type { RouterLinkProps } from 'vue-router'
 import { useLink } from 'vue-router'
 
-const props: RouterLinkProps = defineProps<{
+const props: SiteLinkProps = defineProps<{
   to: string
 }>()
 
