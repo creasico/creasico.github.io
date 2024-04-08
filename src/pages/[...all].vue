@@ -1,14 +1,12 @@
 <script lang="ts" setup>
 import { useGtm } from '@gtm-support/vue-gtm'
 
-const { all } = defineProps<{
-  all: string[]
-}>()
+const route = useRoute()
 
 useGtm()?.trackEvent({
   event: 'Page not found',
   category: 'error',
-  action: `/${all.join('/')}`,
+  action: route.path,
 })
 
 const { t } = useI18n()

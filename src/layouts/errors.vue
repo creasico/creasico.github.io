@@ -5,7 +5,7 @@ const { t } = useI18n()
 <template>
   <main class="min-h-screen flex items-center justify-center">
     <section class="container">
-      <router-view />
+      <router-view :key="$route.fullPath" :route="$route" />
 
       <button class="text-sm m-3 mt-8" @click="$router.back()">
         {{ t('button.back') }}
