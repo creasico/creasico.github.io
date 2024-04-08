@@ -4,7 +4,6 @@ import { address_lines, email, whatsapp } from '~/assets/company.json'
 
 const { t } = useI18n()
 const address = address_lines.join(', <br />')
-// const socialLinks = social_links.filter(social => social.enable)
 </script>
 
 <template>
@@ -42,11 +41,6 @@ const address = address_lines.join(', <br />')
     </div>
   </section-base>
 </template>
-
-<route lang="yaml">
-meta:
-  title: Contact Us
-</route>
 
 <i18n lang="yaml">
 id:

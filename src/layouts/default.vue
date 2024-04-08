@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-const route = useRoute()
+// const route = useRoute()
+// const title = computed(() => route.meta.title)
 
-const title = computed(() => {
-  // console.log(route.meta) // eslint-disable-line no-console
-  return route.meta.title
-})
+// useHead({
+//   title: () => route.meta.title,
+// })
 
-useTitle(title, {
-  titleTemplate: '%s - Creasi.CO',
-})
+// onMounted(() => {
+//   logger(route.meta)
+// })
 </script>
 
 <template>

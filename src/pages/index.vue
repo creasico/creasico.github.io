@@ -21,12 +21,6 @@ const { t } = useI18n()
   <section-cta />
 </template>
 
-<route lang="yaml">
-name: home
-meta:
-  title: Home
-</route>
-
 <i18n lang="yaml">
 id:
   title: Beranda

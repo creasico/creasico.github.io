@@ -1,10 +1,23 @@
 <script lang="ts" setup>
-const { title, description, date } = defineProps<{
-  title?: string
+import type { Meta } from '@unhead/vue'
+
+const { title, description, date, image } = defineProps<{
+  title: string
   description?: string
   date?: string
   image?: string
 }>()
+
+const meta: Meta[] = []
+
+if (description) {
+  meta.push({
+    name: 'description',
+    content: description,
+  })
+}
+
+useHead({ title, meta })
 </script>
 
 <template>
