@@ -45,17 +45,17 @@ useHead({
     {
       rel: 'icon',
       type: 'image/svg+xml',
-      href: '%schemaOrg.host/assets/favicon.svg',
+      href: '/assets/favicon.svg',
     },
     {
       rel: 'apple-touch-icon',
       type: 'image/svg+xml',
-      href: '%schemaOrg.host/icon-192x192.png',
+      href: '/icon-192x192.png',
     },
     {
       rel: 'mask-icon',
       color: '#388370',
-      href: '%schemaOrg.host/assets/safari-pinned-tab.svg',
+      href: '/assets/safari-pinned-tab.svg',
     },
   ],
 })
