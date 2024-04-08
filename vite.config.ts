@@ -2,6 +2,9 @@ import { resolve } from 'node:path'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import i18n from '@intlify/unplugin-vue-i18n/vite'
+import unhead from '@unhead/addons/vite'
+import { SchemaOrgResolver, schemaAutoImports } from '@unhead/schema-org/vue'
+import { unheadVueComposablesImports } from '@unhead/vue'
 import sitemap from 'vite-ssg-sitemap'
 import windicss from 'vite-plugin-windicss'
 import autoImport from 'unplugin-auto-import/vite'
@@ -56,7 +59,8 @@ export default defineConfig(({ mode }) => {
     // },
 
     define: {
-      FIREBASE_CONFIG: JSON.stringify(FIREBASE_CONFIG),
+      'FIREBASE_CONFIG': JSON.stringify(FIREBASE_CONFIG),
+      'import.meta.env.BASE_URL': JSON.stringify(env.BASE_URL),
     },
 
     /**
@@ -129,6 +133,11 @@ export default defineConfig(({ mode }) => {
       }),
 
       /**
+       * @see https://unhead.unjs.io
+       */
+      unhead(),
+
+      /**
        * @see https://github.com/antfu/unplugin-auto-import
        */
       autoImport({
@@ -138,10 +147,13 @@ export default defineConfig(({ mode }) => {
           'src/store',
         ],
         imports: [
-          '@vueuse/head',
           '@vueuse/core',
           'vue-i18n',
+          unheadVueComposablesImports,
           VueRouterAutoImports,
+          {
+            '@unhead/schema-org': schemaAutoImports,
+          },
           {
             // add any other imports you were relying on
             'vue-router/auto': ['useLink'],
@@ -162,6 +174,9 @@ export default defineConfig(({ mode }) => {
         extensions: ['vue', 'md'],
         // allow auto import and register components used in markdown
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+        resolvers: [
+          SchemaOrgResolver(),
+        ],
       }),
 
       /**

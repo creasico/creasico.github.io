@@ -11,11 +11,6 @@ const showCTA = computed(() => typeof frontmatter.showCTA === 'boolean' ? frontm
 const classList = {
   'lg:max-w-3xl': frontmatter.container === 'narrow',
 }
-onMounted(() => {
-  useTitle(frontmatter.title, {
-    titleTemplate: '%s - Creasi.CO',
-  })
-})
 </script>
 
 <template>

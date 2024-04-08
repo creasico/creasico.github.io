@@ -20,23 +20,42 @@ if (locale.value !== sitePreference.value.locale)
   locale.value = sitePreference.value.locale
 
 useHead({
+  titleTemplate: '%s - %site.name',
+  templateParams: {
+    schemaOrg: {
+      host: import.meta.env.BASE_URL,
+    },
+    site: {
+      name: 'Creasi.CO',
+    },
+  },
   htmlAttrs: {
     lang: locale,
   },
   bodyAttrs: {
     class: bodyClass,
   },
-  // meta: [
-  //   {
-  //     rel: 'msapplication-TileColor',
-  //     content: '#388370',
-  //   },
-  // ],
+  meta: [
+    {
+      property: 'og:site_name',
+      content: '%site.name',
+    },
+  ],
   link: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      href: '%schemaOrg.host/assets/favicon.svg',
+    },
+    {
+      rel: 'apple-touch-icon',
+      type: 'image/svg+xml',
+      href: '%schemaOrg.host/icon-192x192.png',
+    },
     {
       rel: 'mask-icon',
       color: '#388370',
-      href: '/assets/safari-pinned-tab.svg',
+      href: '%schemaOrg.host/assets/safari-pinned-tab.svg',
     },
   ],
 })
