@@ -1,19 +1,13 @@
 {
-  "include": [
-    "*.config.ts",
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.vue"
-  ],
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "dist",
-    "module": "esnext",
-    "target": "esnext",
+    "module": "ESNext",
+    "target": "ESNext",
     "jsx": "preserve",
     "strict": true,
     "sourceMap": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "skipLibCheck": true,
     "declaration": true,
     "resolveJsonModule": true,
@@ -32,5 +26,19 @@
       "~/*": ["src/*"]
     }
   },
+  "exclude": [
+    ".github",
+    "build",
+    "node_modules",
+    "vendor",
+    "**/*.js",
+    "**/*.cjs"
+  ],
+  "include": [
+    "*.config.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue"
+  ],
   "vueCompilerOptions": {}
 }
