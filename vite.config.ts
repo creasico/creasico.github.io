@@ -112,34 +112,6 @@ export default defineConfig(({ command, mode }) => {
       }),
 
       /**
-       * @see https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-       */
-      layouts(),
-
-      /**
-       * @see https://github.com/antfu/vite-plugin-windicss
-       */
-      windicss({
-        safelist: 'prose prose-sm m-auto text-left',
-        preflight: {
-          enableAll: true,
-        },
-      }),
-
-      /**
-       * @see https://github.com/posva/unplugin-vue-router
-       */
-      router({
-        dts: 'src/typed-router.d.ts',
-        extensions: ['.vue', '.md'],
-      }),
-
-      /**
-       * @see https://unhead.unjs.io
-       */
-      unhead(),
-
-      /**
        * @see https://github.com/antfu/unplugin-auto-import
        */
       autoImport({
@@ -182,7 +154,35 @@ export default defineConfig(({ command, mode }) => {
       }),
 
       /**
-       * @see https://github.com/antfu/vite-plugin-md
+       * @see https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+       */
+      layouts(),
+
+      /**
+       * @see https://unhead.unjs.io
+       */
+      unhead(),
+
+      /**
+       * @see https://github.com/posva/unplugin-vue-router
+       */
+      router({
+        dts: 'src/typed-router.d.ts',
+        extensions: ['.vue', '.md'],
+      }),
+
+      /**
+       * @see https://github.com/antfu/vite-plugin-windicss
+       */
+      windicss({
+        safelist: 'prose prose-sm m-auto text-left',
+        preflight: {
+          enableAll: true,
+        },
+      }),
+
+      /**
+       * @see https://github.com/unplugin/unplugin-vue-markdown
        */
       markdown({
         wrapperComponent: 'site-content',
@@ -248,7 +248,9 @@ export default defineConfig(({ command, mode }) => {
         },
       }),
 
-      // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
+      /**
+       * @see https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
+       */
       i18n({
         runtimeOnly: true,
         compositionOnly: true,
