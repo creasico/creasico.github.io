@@ -1,7 +1,7 @@
 import { resolve } from 'node:path'
 import i18n from '@intlify/unplugin-vue-i18n/vite'
 import unhead from '@unhead/addons/vite'
-import { schemaAutoImports, SchemaOrgResolver } from '@unhead/schema-org/vue'
+import { SchemaOrgResolver } from '@unhead/schema-org/vue'
 import { unheadVueComposablesImports } from '@unhead/vue'
 import vue from '@vitejs/plugin-vue'
 import mdAnchor from 'markdown-it-anchor'
@@ -112,7 +112,7 @@ export default defineConfig(({ command, mode }) => {
       }),
 
       /**
-       * @see https://github.com/antfu/unplugin-auto-import
+       * @see https://unplugin.unjs.io/showcase/unplugin-auto-import.html
        */
       autoImport({
         dts: 'src/auto-imports.d.ts',
@@ -125,9 +125,6 @@ export default defineConfig(({ command, mode }) => {
           'vue-i18n',
           unheadVueComposablesImports,
           VueRouterAutoImports,
-          {
-            '@unhead/schema-org': schemaAutoImports,
-          },
           {
             // add any other imports you were relying on
             'vue-router/auto': ['useLink'],

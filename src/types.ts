@@ -1,6 +1,5 @@
 import type { Frontmatter } from 'unplugin-vue-markdown/types'
 import type { ViteSSGContext } from 'vite-ssg'
-import 'vue-router'
 
 export type UserModule = (ctx: ViteSSGContext) => void
 

@@ -14,7 +14,12 @@ const classList = {
 </script>
 
 <template>
-  <section-heading :title="frontmatter.title" :description="frontmatter.description" :image="frontmatter.image" />
+  <section-heading
+    v-if="frontmatter.title"
+    :title="frontmatter.title"
+    :description="frontmatter.description"
+    :image="frontmatter.image"
+  />
 
   <section class="px-4 py-24">
     <article class="container mx-auto relative z-10" :class="classList">

@@ -25,7 +25,7 @@ const height = computed(() => {
   if (square.value)
     return width.value
 
-  return props.height || null
+  return props.height
 })
 
 const primaryColor = '#388370'
