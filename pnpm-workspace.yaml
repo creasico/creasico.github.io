@@ -5,6 +5,5 @@ trustPolicy: no-downgrade
 packages: []
 
 onlyBuiltDependencies:
-  - cypress
   - esbuild
   - simple-git-hooks

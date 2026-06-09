@@ -24,7 +24,7 @@ const menuLinks = links.filter(l => l.locations.includes('top-menu')).map(link =
 </script>
 
 <template>
-  <div class="flex flex-grow justify-end relative transition duration-300 ease-out">
+  <div class="flex grow justify-end relative transition duration-300 ease-out">
     <nav class="fixed lg:static top-20 left-0 lg:flex w-full lg:w-auto gap-8 <lg:border-t-1 border-gray-300" :class="{ hidden: !menuOpened }" :aria-expanded="menuOpened">
       <!-- loop menus -->
       <template v-for="link in menuLinks" :key="link.name">

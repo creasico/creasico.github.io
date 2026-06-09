@@ -197,7 +197,7 @@ export default defineConfig(({ command, mode }) => {
           })
 
           md.use(mdLinkAttr, {
-            matcher: (link: string) => link.match(/^(https?:\/\/|\/\/)/),
+            matcher: (link: string) => /^(?:https?:\/\/|\/\/)/.test(link),
             attrs: {
               target: '_blank',
               rel: 'noopener',
@@ -207,7 +207,7 @@ export default defineConfig(({ command, mode }) => {
       }),
 
       /**
-       * @see https://github.com/antfu/vite-plugin-pwa
+       * @see https://github.com/vite-pwa/vite-plugin-pwa
        */
       pwa({
         registerType: 'autoUpdate',

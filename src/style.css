@@ -11,22 +11,11 @@
 @source inline('max-w-none');
 
 @theme {
-  --font-body: 'Nunito', sans-serif;
-  --font-display: 'Work Sans', sans-serif;
+  --default-font-family: 'Nunito';
+  --font-heading: 'Work Sans', sans-serif;
 
   --color-primary: #388370;
   --color-primary-light-1: #b9c6c3;
   --color-primary-light-2: #bfbfbf;
   --color-secondary: #839f98;
-}
-
-@layer base {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-display);
-  }
 }

@@ -40,7 +40,7 @@ function toggleLocale(lang: string) {
     </section>
 
     <section class="container transition-all mx-auto py-8 <lg:pb-3 px-0 lg:px-4 text-sm text-gray-400 flex <lg:flex-col font-bold">
-      <div class="flex-grow <lg:text-center">
+      <div class="grow <lg:text-center">
         <p v-html="t('copyright', { year })" />
       </div>
 

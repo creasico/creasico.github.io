@@ -28,7 +28,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           cache: pnpm
-          node-version: 18.x
+          node-version: lts/*
 
       - name: Generate pages
         env:
