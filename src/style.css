@@ -6,3 +6,27 @@
 @import '@fontsource/work-sans/latin-300-italic.css';
 @import '@fontsource/work-sans/latin-700.css';
 @import '@fontsource/work-sans/latin-700-italic.css';
+
+@import 'tailwindcss' source('.');
+@source inline('max-w-none');
+
+@theme {
+  --font-body: 'Nunito', sans-serif;
+  --font-display: 'Work Sans', sans-serif;
+
+  --color-primary: #388370;
+  --color-primary-light-1: #b9c6c3;
+  --color-primary-light-2: #bfbfbf;
+  --color-secondary: #839f98;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+}

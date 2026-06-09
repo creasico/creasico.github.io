@@ -1,5 +1,6 @@
 import { resolve } from 'node:path'
 import i18n from '@intlify/unplugin-vue-i18n/vite'
+import tailwindcss from '@tailwindcss/vite'
 import { SchemaOrgResolver } from '@unhead/schema-org/vue'
 import { unheadVueComposablesImports } from '@unhead/vue'
 import { Unhead as unhead } from '@unhead/vue/vite'
@@ -13,7 +14,6 @@ import markdown from 'unplugin-vue-markdown/vite'
 import { defineConfig, loadEnv } from 'vite'
 import { VitePWA as pwa } from 'vite-plugin-pwa'
 import layouts from 'vite-plugin-vue-layouts'
-import windicss from 'vite-plugin-windicss'
 import sitemap from 'vite-ssg-sitemap'
 import { VueRouterAutoImports } from 'vue-router/unplugin'
 import router from 'vue-router/vite'
@@ -103,13 +103,33 @@ export default defineConfig(({ command, mode }) => {
        * TODO: workaround until they support native ESM
        * @link https://github.com/antfu/vite-ssg/issues/286#issuecomment-1285885878
        */
-      noExternal: mode === 'development' ? ['vue-router', /vue-i18n/] : [],
+      noExternal: mode === 'development' ? ['vue-router'] : [/vue-i18n/],
     },
 
     plugins: [
       vue({
         include: [/\.vue$/, /\.md$/],
       }),
+
+      /**
+       * @see https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+       */
+      layouts(),
+
+      /**
+       * @see https://unhead.unjs.io
+       */
+      unhead(),
+
+      /**
+       * @see https://router.vuejs.org/file-based-routing/configuration.html
+       */
+      router({
+        dts: './src/route-map.d.ts',
+        extensions: ['.vue', '.md'],
+      }),
+
+      tailwindcss(),
 
       /**
        * @see https://unplugin.unjs.io/showcase/unplugin-auto-import.html
@@ -136,7 +156,7 @@ export default defineConfig(({ command, mode }) => {
       }),
 
       /**
-       * @see https://github.com/antfu/unplugin-vue-components
+       * @see https://unplugin.unjs.io/showcase/unplugin-vue-components.html
        */
       components({
         dts: 'src/components.d.ts',
@@ -151,35 +171,7 @@ export default defineConfig(({ command, mode }) => {
       }),
 
       /**
-       * @see https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-       */
-      layouts(),
-
-      /**
-       * @see https://unhead.unjs.io
-       */
-      unhead(),
-
-      /**
-       * @see https://router.vuejs.org/file-based-routing/configuration.html
-       */
-      router({
-        dts: 'src/route-map.d.ts',
-        extensions: ['.vue', '.md'],
-      }),
-
-      /**
-       * @see https://github.com/antfu/vite-plugin-windicss
-       */
-      windicss({
-        safelist: 'prose prose-sm m-auto text-left',
-        preflight: {
-          enableAll: true,
-        },
-      }),
-
-      /**
-       * @see https://github.com/unplugin/unplugin-vue-markdown
+       * @see https://unplugin.unjs.io/showcase/unplugin-vue-markdown.html
        */
       markdown({
         wrapperComponent: 'site-content',
