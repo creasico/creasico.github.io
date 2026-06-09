@@ -1,24 +1,51 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # Generic
+# --------------------------
 Thumbs.db
 Desktop.ini
 .DS_Store
-._
-_.*
-*.cache
-*.log
+.directory
+._*
+*.DS_Store
 *.old
-*.zip
-*.pem
+*.log
+*.tmp
+
+# caches
+.cache
+*.cache
 *~
+
+# distribution
+dist
+
+# IDE Project Configurations
+# --------------------------
+.idea
+.project
+.settings
+.zed
+*.sublime-*
+
+# AI Agents
+# --------------------------
+.agents
+.agent-rules.md
+.antigravitycli
+.augment
+.cursor
+.gemini
+.github/copilot-instructions.md
+conductor
+CLAUDE.md
+GEMINI.md
+opencode.json
 
 # Developments
 # --------------------------
 .env.*
 .env
 .vite-ssg-temp
-dist
+.tool-versions
 node_modules
 src/auto-imports.d.ts
 src/components.d.ts
