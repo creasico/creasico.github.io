@@ -3,11 +3,13 @@ import { createGtm } from '@gtm-support/vue-gtm'
 
 // https://github.com/antfu/vite-plugin-pwa#automatic-reload-when-new-content-available
 export const install: UserModule = ({ app, router }) => {
-  if (!import.meta.env.SSR && !import.meta.env.VITE_GTM_ID)
+  const gtmId = import.meta.env.VITE_GTM_ID || ''
+
+  if (!import.meta.env.SSR || gtmId.length === 0)
     return
 
   const gtm = createGtm({
-    id: import.meta.env.VITE_GTM_ID,
+    id: gtmId,
     vueRouter: router,
     debug: import.meta.env.DEV,
   })

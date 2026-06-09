@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { useGtm } from '@gtm-support/vue-gtm'
 
-// const { t } = useI18n()
 const route = useRoute()
 
 useGtm()?.trackEvent({
@@ -22,7 +21,7 @@ useGtm()?.trackEvent({
 </template>
 
 <route lang="yaml">
-name: 404
+name: '404'
 meta:
   layout: errors
 </route>

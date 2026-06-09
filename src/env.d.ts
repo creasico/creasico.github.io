@@ -7,8 +7,8 @@
 /// <reference types="vue/ref-macros" />
 
 interface ImportMetaEnv {
-  VITE_GTM_ID: string
-  VITE_PROJECT_ID: string
+  VITE_GTM_ID?: string
+  VITE_PROJECT_ID?: string
 }
 
 declare interface Window {

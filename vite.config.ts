@@ -107,6 +107,14 @@ export default defineConfig(({ command, mode }) => {
     },
 
     plugins: [
+      /**
+       * @see https://router.vuejs.org/file-based-routing/configuration.html
+       */
+      router({
+        dts: './src/route-map.d.ts',
+        extensions: ['.vue', '.md'],
+      }),
+
       vue({
         include: [/\.vue$/, /\.md$/],
       }),
@@ -120,14 +128,6 @@ export default defineConfig(({ command, mode }) => {
        * @see https://unhead.unjs.io
        */
       unhead(),
-
-      /**
-       * @see https://router.vuejs.org/file-based-routing/configuration.html
-       */
-      router({
-        dts: './src/route-map.d.ts',
-        extensions: ['.vue', '.md'],
-      }),
 
       tailwindcss(),
 
