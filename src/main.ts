@@ -1,13 +1,13 @@
-import { ViteSSG } from 'vite-ssg'
-import { routes } from 'vue-router/auto-routes'
+import type { UserModule } from './types'
 import { setupLayouts } from 'virtual:generated-layouts'
+import { ViteSSG } from 'vite-ssg'
+
+import { routes } from 'vue-router/auto-routes'
+import App from './app.vue'
 
 import 'virtual:windi-devtools'
 import 'virtual:windi.css'
-
 import './style.css'
-import App from './app.vue'
-import type { UserModule } from './types'
 
 export const createApp = ViteSSG(
   App,

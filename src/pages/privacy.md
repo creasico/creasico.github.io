@@ -102,7 +102,7 @@ Untuk melindungi data Anda, kami selalu berusaha meningkatkan keamanan data Anda
 
 <h2>Kontak</h2>
 
-Apabila Anda ingin mengajukan keluhan tentang data Anda atau Anda memiliki pertanyaan lain mengenai privasi atau keamanan data Anda silahkan menghubungi Kami melalui email: [policy@creasi.co](mailto:policy@creasi.co) 
+Apabila Anda ingin mengajukan keluhan tentang data Anda atau Anda memiliki pertanyaan lain mengenai privasi atau keamanan data Anda silahkan menghubungi Kami melalui email: [policy@creasi.co](mailto:policy@creasi.co)
 
 <h2>Perubahan Kebijakan</h2>
 

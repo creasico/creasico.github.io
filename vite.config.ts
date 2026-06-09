@@ -1,22 +1,22 @@
 import { resolve } from 'node:path'
-import { defineConfig, loadEnv } from 'vite'
-import vue from '@vitejs/plugin-vue'
 import i18n from '@intlify/unplugin-vue-i18n/vite'
 import unhead from '@unhead/addons/vite'
-import { SchemaOrgResolver, schemaAutoImports } from '@unhead/schema-org/vue'
+import { schemaAutoImports, SchemaOrgResolver } from '@unhead/schema-org/vue'
 import { unheadVueComposablesImports } from '@unhead/vue'
-import sitemap from 'vite-ssg-sitemap'
-import windicss from 'vite-plugin-windicss'
-import autoImport from 'unplugin-auto-import/vite'
-import components from 'unplugin-vue-components/vite'
-import markdown from 'unplugin-vue-markdown/vite'
-import { VitePWA as pwa } from 'vite-plugin-pwa'
-import layouts from 'vite-plugin-vue-layouts'
-import { VueRouterAutoImports } from 'vue-router/unplugin'
-import router from 'vue-router/vite'
+import vue from '@vitejs/plugin-vue'
 import mdAnchor from 'markdown-it-anchor'
 import mdLinkAttr from 'markdown-it-link-attributes'
 import mdPrism from 'markdown-it-prism'
+import autoImport from 'unplugin-auto-import/vite'
+import components from 'unplugin-vue-components/vite'
+import markdown from 'unplugin-vue-markdown/vite'
+import { defineConfig, loadEnv } from 'vite'
+import { VitePWA as pwa } from 'vite-plugin-pwa'
+import layouts from 'vite-plugin-vue-layouts'
+import windicss from 'vite-plugin-windicss'
+import sitemap from 'vite-ssg-sitemap'
+import { VueRouterAutoImports } from 'vue-router/unplugin'
+import router from 'vue-router/vite'
 
 /**
  * @see https://vitejs.dev/config/
@@ -208,7 +208,7 @@ export default defineConfig(({ command, mode }) => {
           })
 
           md.use(mdLinkAttr, {
-            matcher: (link: string) => /^(https?:\/\/|\/\/)/.test(link),
+            matcher: (link: string) => link.match(/^(https?:\/\/|\/\/)/),
             attrs: {
               target: '_blank',
               rel: 'noopener',

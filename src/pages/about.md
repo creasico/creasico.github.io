@@ -17,5 +17,5 @@ Menjadi perusahaan jasa layanan teknologi informasi yang terintegrasi
 
 <h3>Misi</h3>
 
-* Menyajikan solusi layanan bisnis menyeluruh dan terintegrasi melalui teknologi informasi
-* Menjadi mitra terpercaya dalam menghadirkan solusi tata kelola digital sebagai bagian dari perkembangan usaha
+- Menyajikan solusi layanan bisnis menyeluruh dan terintegrasi melalui teknologi informasi
+- Menjadi mitra terpercaya dalam menghadirkan solusi tata kelola digital sebagai bagian dari perkembangan usaha

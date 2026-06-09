@@ -1,6 +1,6 @@
 import type { FirebaseOptions } from 'firebase/app'
-import { AppLocale } from './types'
-import { RouterLinkProps } from 'vue-router'
+import type { RouterLinkProps } from 'vue-router'
+import type { AppLocale } from './types'
 
 export {}
 

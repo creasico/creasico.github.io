@@ -37,7 +37,10 @@ const classList = {
     visibility: hidden;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     scroll-margin-top: 80px;
     position: relative;
 
