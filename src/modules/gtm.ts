@@ -2,8 +2,8 @@ import type { UserModule } from '~/types'
 import { createGtm } from '@gtm-support/vue-gtm'
 
 // https://github.com/antfu/vite-plugin-pwa#automatic-reload-when-new-content-available
-export const install: UserModule = ({ app, isClient, router }) => {
-  if (!isClient && !import.meta.env.VITE_GTM_ID)
+export const install: UserModule = ({ app, router }) => {
+  if (!import.meta.env.SSR && !import.meta.env.VITE_GTM_ID)
     return
 
   const gtm = createGtm({
