@@ -11,9 +11,9 @@ import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import markdown from 'unplugin-vue-markdown/vite'
 import { VitePWA as pwa } from 'vite-plugin-pwa'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
-import router from 'unplugin-vue-router/vite'
 import layouts from 'vite-plugin-vue-layouts'
+import { VueRouterAutoImports } from 'vue-router/unplugin'
+import router from 'vue-router/vite'
 import mdAnchor from 'markdown-it-anchor'
 import mdLinkAttr from 'markdown-it-link-attributes'
 import mdPrism from 'markdown-it-prism'
@@ -103,7 +103,7 @@ export default defineConfig(({ command, mode }) => {
        * TODO: workaround until they support native ESM
        * @link https://github.com/antfu/vite-ssg/issues/286#issuecomment-1285885878
        */
-      noExternal: [/vue-i18n/],
+      noExternal: mode === 'development' ? ['vue-router', /vue-i18n/] : [],
     },
 
     plugins: [
@@ -164,10 +164,10 @@ export default defineConfig(({ command, mode }) => {
       unhead(),
 
       /**
-       * @see https://github.com/posva/unplugin-vue-router
+       * @see https://router.vuejs.org/file-based-routing/configuration.html
        */
       router({
-        dts: 'src/typed-router.d.ts',
+        dts: 'src/route-map.d.ts',
         extensions: ['.vue', '.md'],
       }),
 

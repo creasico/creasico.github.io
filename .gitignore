@@ -49,7 +49,7 @@ opencode.json
 node_modules
 src/auto-imports.d.ts
 src/components.d.ts
-src/typed-router.d.ts
+src/route-map.d.ts
 
 # But Keep these
 # --------------------------
