@@ -1,6 +1,5 @@
 /// <reference lib="DOM" />
 /// <reference types="@intlify/unplugin-vue-i18n/messages" />
-/// <reference types="unplugin-vue-router/client" />
 /// <reference types="vite/client" />
 /// <reference types="vite-plugin-pwa/client" />
 /// <reference types="vite-plugin-vue-layouts/client" />
