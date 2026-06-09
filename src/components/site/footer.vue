@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import links from '~/assets/nav-links.json'
+import { sitePreference } from '~/composables/general'
 
 const { t, locale, availableLocales } = useI18n()
 const year = new Date().getFullYear()

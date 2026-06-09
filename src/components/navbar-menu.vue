@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue'
 import links from '~/assets/nav-links.json'
+import { sitePreference } from '~/composables/general'
 
 interface MenuLink {
   name: string
