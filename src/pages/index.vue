@@ -5,7 +5,7 @@ const { t } = useI18n()
 <template>
   <section-heading :title="t('title')" :description="t('description')">
     <template #default="{ description }">
-      <h1 class="leading-tight font-heading font-bold text-6xl text-gray-800" v-html="description" />
+      <h1 class="leading-tight font-bold text-6xl text-gray-800" v-html="description" />
     </template>
   </section-heading>
 

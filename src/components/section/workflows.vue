@@ -11,7 +11,7 @@
       <div class="w-full lg:w-2/3 flex flex-col px-5 lg:px-10 pb-20">
         <div>
           <div class="flex items-center">
-            <div class="h-1 w-8 lg:w-12 bg-black rounded-full mr-5"></div>
+            <div class="h-1 w-8 lg:w-12 bg-black rounded-full mr-5" />
             <div class="text-xl lg:text-2xl font-bold">
               Discovery & Analysis
             </div>
@@ -22,7 +22,7 @@
         </div>
         <div class="mt-12">
           <div class="flex items-center">
-            <div class="h-1 w-8 lg:w-12 bg-black rounded-full mr-5"></div>
+            <div class="h-1 w-8 lg:w-12 bg-black rounded-full mr-5" />
             <div class="text-xl lg:text-2xl font-bold">
               Proposal & Deal
             </div>
@@ -33,7 +33,7 @@
         </div>
         <div class="mt-12">
           <div class="flex items-center">
-            <div class="h-1 w-8 lg:w-12 bg-black rounded-full mr-5"></div>
+            <div class="h-1 w-8 lg:w-12 bg-black rounded-full mr-5" />
             <div class="text-xl lg:text-2xl font-bold">
               Design & Development
             </div>
@@ -45,7 +45,7 @@
         </div>
         <div class="mt-12">
           <div class="flex items-center">
-            <div class="h-1 w-8 lg:w-12 bg-black rounded-full mr-5"></div>
+            <div class="h-1 w-8 lg:w-12 bg-black rounded-full mr-5" />
             <div class="text-xl lg:text-2xl font-bold">
               Review & Evaluation
             </div>

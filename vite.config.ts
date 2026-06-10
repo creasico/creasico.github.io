@@ -1,22 +1,22 @@
 import { resolve } from 'node:path'
-import { defineConfig, loadEnv } from 'vite'
-import vue from '@vitejs/plugin-vue'
 import i18n from '@intlify/unplugin-vue-i18n/vite'
-import unhead from '@unhead/addons/vite'
-import { SchemaOrgResolver, schemaAutoImports } from '@unhead/schema-org/vue'
+import tailwindcss from '@tailwindcss/vite'
+import { SchemaOrgResolver } from '@unhead/schema-org/vue'
 import { unheadVueComposablesImports } from '@unhead/vue'
-import sitemap from 'vite-ssg-sitemap'
-import windicss from 'vite-plugin-windicss'
-import autoImport from 'unplugin-auto-import/vite'
-import components from 'unplugin-vue-components/vite'
-import markdown from 'unplugin-vue-markdown/vite'
-import { VitePWA as pwa } from 'vite-plugin-pwa'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
-import router from 'unplugin-vue-router/vite'
-import layouts from 'vite-plugin-vue-layouts'
+import { Unhead as unhead } from '@unhead/vue/vite'
+import vue from '@vitejs/plugin-vue'
 import mdAnchor from 'markdown-it-anchor'
 import mdLinkAttr from 'markdown-it-link-attributes'
 import mdPrism from 'markdown-it-prism'
+import autoImport from 'unplugin-auto-import/vite'
+import components from 'unplugin-vue-components/vite'
+import markdown from 'unplugin-vue-markdown/vite'
+import { defineConfig, loadEnv } from 'vite'
+import { VitePWA as pwa } from 'vite-plugin-pwa'
+import layouts from 'vite-plugin-vue-layouts'
+import sitemap from 'vite-ssg-sitemap'
+import { VueRouterAutoImports } from 'vue-router/unplugin'
+import router from 'vue-router/vite'
 
 /**
  * @see https://vitejs.dev/config/
@@ -103,16 +103,36 @@ export default defineConfig(({ command, mode }) => {
        * TODO: workaround until they support native ESM
        * @link https://github.com/antfu/vite-ssg/issues/286#issuecomment-1285885878
        */
-      noExternal: [/vue-i18n/],
+      noExternal: mode === 'development' ? ['vue-router'] : [/vue-i18n/],
     },
 
     plugins: [
+      /**
+       * @see https://router.vuejs.org/file-based-routing/configuration.html
+       */
+      router({
+        dts: './src/route-map.d.ts',
+        extensions: ['.vue', '.md'],
+      }),
+
       vue({
         include: [/\.vue$/, /\.md$/],
       }),
 
       /**
-       * @see https://github.com/antfu/unplugin-auto-import
+       * @see https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+       */
+      layouts(),
+
+      /**
+       * @see https://unhead.unjs.io
+       */
+      unhead(),
+
+      tailwindcss(),
+
+      /**
+       * @see https://unplugin.unjs.io/showcase/unplugin-auto-import.html
        */
       autoImport({
         dts: 'src/auto-imports.d.ts',
@@ -126,9 +146,6 @@ export default defineConfig(({ command, mode }) => {
           unheadVueComposablesImports,
           VueRouterAutoImports,
           {
-            '@unhead/schema-org': schemaAutoImports,
-          },
-          {
             // add any other imports you were relying on
             'vue-router/auto': ['useLink'],
           },
@@ -139,7 +156,7 @@ export default defineConfig(({ command, mode }) => {
       }),
 
       /**
-       * @see https://github.com/antfu/unplugin-vue-components
+       * @see https://unplugin.unjs.io/showcase/unplugin-vue-components.html
        */
       components({
         dts: 'src/components.d.ts',
@@ -154,35 +171,7 @@ export default defineConfig(({ command, mode }) => {
       }),
 
       /**
-       * @see https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-       */
-      layouts(),
-
-      /**
-       * @see https://unhead.unjs.io
-       */
-      unhead(),
-
-      /**
-       * @see https://github.com/posva/unplugin-vue-router
-       */
-      router({
-        dts: 'src/typed-router.d.ts',
-        extensions: ['.vue', '.md'],
-      }),
-
-      /**
-       * @see https://github.com/antfu/vite-plugin-windicss
-       */
-      windicss({
-        safelist: 'prose prose-sm m-auto text-left',
-        preflight: {
-          enableAll: true,
-        },
-      }),
-
-      /**
-       * @see https://github.com/unplugin/unplugin-vue-markdown
+       * @see https://unplugin.unjs.io/showcase/unplugin-vue-markdown.html
        */
       markdown({
         wrapperComponent: 'site-content',
@@ -208,7 +197,7 @@ export default defineConfig(({ command, mode }) => {
           })
 
           md.use(mdLinkAttr, {
-            matcher: (link: string) => /^(https?:\/\/|\/\/)/.test(link),
+            matcher: (link: string) => /^(?:https?:\/\/|\/\/)/.test(link),
             attrs: {
               target: '_blank',
               rel: 'noopener',
@@ -218,7 +207,7 @@ export default defineConfig(({ command, mode }) => {
       }),
 
       /**
-       * @see https://github.com/antfu/vite-plugin-pwa
+       * @see https://github.com/vite-pwa/vite-plugin-pwa
        */
       pwa({
         registerType: 'autoUpdate',

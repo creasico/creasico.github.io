@@ -6,3 +6,108 @@
 @import '@fontsource/work-sans/latin-300-italic.css';
 @import '@fontsource/work-sans/latin-700.css';
 @import '@fontsource/work-sans/latin-700-italic.css';
+
+@import 'tailwindcss' source('.');
+@source inline('max-w-none');
+
+@theme {
+  --default-font-family: 'Nunito';
+  --font-heading: 'Work Sans', sans-serif;
+
+  --color-primary: #388370;
+  --color-primary-light-1: #b9c6c3;
+  --color-primary-light-2: #bfbfbf;
+  --color-secondary: #839f98;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-semibold;
+  }
+}
+
+@layer components {
+  .hero {
+    > * {
+      @apply relative;
+    }
+
+    &::before {
+      content: '';
+      @apply absolute transition-all rounded-[150px] bg-primary-light-1 w-75 lg:w-125 h-250 right-[-10%] -top-full lg:top-[-150%] transform rotate-45;
+      z-index: 0;
+    }
+  }
+
+  .card {
+    @apply p-6 lg:pt-4 xl:p-8 xl:pt-6 flex xl:flex-col gap-4 rounded-lg shadow-md;
+
+    .card-icon {
+      @apply flex-none text-primary;
+    }
+
+    .card-body {
+      @apply flex flex-col gap-2;
+    }
+  }
+
+  .prose {
+    z-index: inherit;
+
+    .header-anchor {
+      @apply text-gray-400 inline-block;
+      text-decoration: none;
+      left: -2rem;
+      line-height: inherit;
+      visibility: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      @apply mb-4;
+
+      scroll-margin-top: 80px;
+      position: relative;
+
+      &:hover .header-anchor {
+        /* display: block; */
+        visibility: visible;
+      }
+    }
+
+    h1 {
+      @apply text-4xl;
+    }
+
+    h2 {
+      @apply text-2xl;
+    }
+
+    h3 {
+      @apply text-xl;
+    }
+
+    p {
+      @apply text-base/7 mb-5;
+    }
+
+    ol {
+      @apply list-decimal list-inside;
+    }
+
+    ul {
+      @apply list-disc list-inside;
+    }
+
+    li {
+      @apply text-base/7;
+    }
+  }
+}

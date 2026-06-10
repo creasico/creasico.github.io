@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { useGtm } from '@gtm-support/vue-gtm'
 
-// const { t } = useI18n()
 const route = useRoute()
 
 useGtm()?.trackEvent({
@@ -13,7 +12,7 @@ useGtm()?.trackEvent({
 
 <template>
   <div>
-    <h1 class="font-heading font-light text-7xl leading-relaxed">
+    <h1 class="font-light text-7xl leading-relaxed">
       {{ $t('errors.not-found.title') }}
     </h1>
 
@@ -22,7 +21,7 @@ useGtm()?.trackEvent({
 </template>
 
 <route lang="yaml">
-name: 404
+name: '404'
 meta:
   layout: errors
 </route>

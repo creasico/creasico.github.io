@@ -1,7 +1,7 @@
 <template>
   <section-base class="px-4 bg-primary-light-1">
     <div class="flex items-center mb-5">
-      <div class="w-12 lg:w-28 h-1 mr-5 bg-white rounded-full"></div>
+      <div class="w-12 lg:w-28 h-1 mr-5 bg-white rounded-full" />
       <div class="font-extrabold text-white text-2xl lg:text-3xl">
         We Believes
       </div>

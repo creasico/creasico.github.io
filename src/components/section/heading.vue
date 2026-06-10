@@ -22,11 +22,11 @@ useHead({ title, meta })
 
 <template>
   <section id="heading" class="bg-gray-50">
-    <div class="hero container mx-auto min-h-xs px-4 <lg:py-12 flex gap-4 items-center <lg:flex-col relative z-10">
-      <div class="flex flex-col flex-grow text-center lg:text-left">
+    <div class="hero container mx-auto min-h-96 px-4 max-lg:py-12 flex gap-4 items-center max-lg:flex-col relative z-10">
+      <div class="flex flex-col grow text-center lg:text-left">
         <slot :title="title" :description="description" :date="date">
           <span v-if="!!date">Last updated on {{ date }}</span>
-          <h1 class="leading-tight font-heading font-bold text-5xl text-gray-900" v-html="title" />
+          <h1 class="leading-tight font-bold text-5xl text-gray-900" v-html="title" />
           <p v-if="!!description" class="mt-3 max-w-3xl text-lg leading-7 text-gray-500" v-html="description" />
         </slot>
       </div>
@@ -39,17 +39,3 @@ useHead({ title, meta })
     </div>
   </section>
 </template>
-
-<style lang="postcss">
-  .hero {
-    > * {
-      @apply relative;
-    }
-
-    &::before {
-      content: '';
-      @apply absolute transition-all rounded-[150px] bg-primary-light-1 w-[300px] lg:w-[500px] h-[1000px] -right-[10%] -top-[100%] lg:-top-[150%] transform rotate-45;
-      z-index: 0;
-    }
-  }
-</style>

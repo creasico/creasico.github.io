@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { sitePreference } from './composables/general'
+
 const router = useRouter()
 const { locale } = useI18n()
 const menuOpened = toRef(sitePreference.value, 'menuOpened', false)
@@ -20,7 +22,7 @@ if (locale.value !== sitePreference.value.locale)
   locale.value = sitePreference.value.locale
 
 useHead({
-  titleTemplate: '%s - %site.name',
+  titleTemplate: '%s - Creasi.CO',
   templateParams: {
     schemaOrg: {
       host: import.meta.env.BASE_URL,
