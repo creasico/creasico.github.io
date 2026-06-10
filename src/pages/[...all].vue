@@ -12,7 +12,7 @@ useGtm()?.trackEvent({
 
 <template>
   <div>
-    <h1 class="font-heading font-light text-7xl leading-relaxed">
+    <h1 class="font-light text-7xl leading-relaxed">
       {{ $t('errors.not-found.title') }}
     </h1>
 
