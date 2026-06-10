@@ -10,15 +10,49 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: monthly
+      interval: weekly
       timezone: Asia/Jakarta
-    versioning-strategy: lockfile-only
+    versioning-strategy: increase-if-necessary
+    ignore:
+      - dependency-name: '@types/node'
+      - dependency-name: typescript
     labels:
       - dependencies
     groups:
-      dependencies:
-        dependency-type: production
-        patterns: ['*']
-      dev-dependencies:
-        dependency-type: development
-        patterns: ['*']
+      build-utils:
+        patterns:
+          - '@iconify/*'
+          - '@intlify/*'
+          - '@rollup/*'
+          - '@tailwindcss/*'
+          - '@vitejs/*'
+          - '@unhead/*'
+          - '@vue/*'
+          - happy-dom
+          - rollup
+          - unplugin-*
+          - tailwindcss
+          - vite
+          - vite-*
+          - vitest
+          - vue-tsc
+          - workbox-*
+        update-types: [minor]
+      commitlint:
+        patterns: ['@commitlint/*']
+        update-types: [minor]
+      eslint:
+        patterns: [eslint, 'eslint-*', '@antfu/eslint-config']
+        update-types: [minor]
+      fontsource:
+        patterns: ['@fontsource/*']
+        update-types: [minor]
+      markdown:
+        patterns:
+          - '@types/markdown-it'
+          - '@types/markdown-it-*'
+          - gray-matter
+          - markdown-it
+          - markdown-it-*
+          - prismjs
+        update-types: [minor]
