@@ -82,7 +82,7 @@
     "pre-commit": "pnpm exec lint-staged --allow-empty"
   },
   "lint-staged": {
-    "*": [
+    "*.{js,mjs,ts,tsx,vue,json,md,yml,yaml}": [
       "eslint --fix"
     ]
   }

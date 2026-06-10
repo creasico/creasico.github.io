@@ -1,3 +1,3 @@
 # Scripts Directory
 
-This directory should only contains shared utilities that consumed while development.
+This directory should only contain shared utilities used during development.

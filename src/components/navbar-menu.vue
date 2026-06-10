@@ -25,7 +25,7 @@ const menuLinks = links.filter(l => l.locations.includes('top-menu')).map(link =
 <template>
   <div class="flex grow justify-end relative transition duration-300 ease-out">
     <nav
-      class="fixed lg:static top-20 left-0 lg:flex w-full lg:w-auto gap-8 <lg:border-t-1 border-gray-300"
+      class="fixed lg:static top-20 left-0 lg:flex w-full lg:w-auto gap-8 max-lg:border-t border-gray-300"
       :class="{ hidden: !menuOpened }" :aria-expanded="menuOpened"
     >
       <!-- loop menus -->
@@ -33,7 +33,7 @@ const menuLinks = links.filter(l => l.locations.includes('top-menu')).map(link =
         <router-link v-if="link.enable" v-slot="{ href, isActive, navigate }" :to="link.path" custom>
           <div
             v-if="link.enable"
-            class="select-none <lg:container <lg:mx-auto box-border relative border-b[1px] lg:border-b-2 border-gray-300 lg:border-transparent hover:border-black"
+            class="select-none max-lg:container max-lg:mx-auto box-border relative border-b lg:border-b-2 border-gray-300 lg:border-transparent hover:border-black"
             :class="{ 'lg:border-primary': isActive }"
           >
             <a

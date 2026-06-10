@@ -8,7 +8,7 @@ const { icon } = defineProps<{
 
 <template>
   <div class="card">
-    <Icon v-if="!!icon" :id="`icon-${key}`" :icon="icon" width="46" class="card-icon" />
+    <Icon v-if="!!icon" :icon="icon" width="46" class="card-icon" />
 
     <div class="card-body">
       <slot />

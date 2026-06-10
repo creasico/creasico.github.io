@@ -39,15 +39,15 @@ function toggleLocale(lang: string) {
       </div>
     </section>
 
-    <section class="container transition-all mx-auto py-8 <lg:pb-3 px-0 lg:px-4 text-sm text-gray-400 flex <lg:flex-col font-bold">
-      <div class="grow <lg:text-center">
+    <section class="container transition-all mx-auto py-8 max-lg:pb-3 px-0 lg:px-4 text-sm text-gray-400 flex max-lg:flex-col font-bold">
+      <div class="grow max-lg:text-center">
         <p v-html="$t('copyright', { year })" />
       </div>
 
       <div class="flex lg:gap-3 justify-center">
         <button
           v-for="(lang, i) in availableLocales" :key="i"
-          class="font-bold <lg:h-11 <lg:w-11 leading-none" :class="{ 'text-gray-300': locale === lang }"
+          class="font-bold max-lg:h-11 max-lg:w-11 leading-none" :class="{ 'text-gray-300': locale === lang }"
           :aria-label="$t('button.choose-locale', { lang })"
           @click="toggleLocale(lang)"
         >

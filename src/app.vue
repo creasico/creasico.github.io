@@ -22,7 +22,7 @@ if (locale.value !== sitePreference.value.locale)
   locale.value = sitePreference.value.locale
 
 useHead({
-  titleTemplate: '%s - %site.name',
+  titleTemplate: '%s - Creasi.CO',
   templateParams: {
     schemaOrg: {
       host: import.meta.env.BASE_URL,

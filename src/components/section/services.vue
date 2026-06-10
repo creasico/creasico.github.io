@@ -11,7 +11,7 @@ const services = {
 
 <template>
   <section-base :title="$t('sections.we-do.title')">
-    <div class="flex <lg:flex-col gap-9">
+    <div class="flex max-lg:flex-col gap-9">
       <div class="lg:w-[30%] flex-none">
         <p class="text-xl">
           {{ $t('sections.we-do.description') }}

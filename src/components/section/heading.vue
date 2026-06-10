@@ -22,7 +22,7 @@ useHead({ title, meta })
 
 <template>
   <section id="heading" class="bg-gray-50">
-    <div class="hero container mx-auto min-h-96 px-4 <lg:py-12 flex gap-4 items-center <lg:flex-col relative z-10">
+    <div class="hero container mx-auto min-h-96 px-4 max-lg:py-12 flex gap-4 items-center max-lg:flex-col relative z-10">
       <div class="flex flex-col grow text-center lg:text-left">
         <slot :title="title" :description="description" :date="date">
           <span v-if="!!date">Last updated on {{ date }}</span>
