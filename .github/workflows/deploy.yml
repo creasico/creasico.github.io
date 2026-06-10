@@ -27,6 +27,20 @@ jobs:
       pages: write
 
     steps:
+      - name: Set up
+        id: dist
+        uses: actions/download-artifact@v8
+        with:
+          name: static-build
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      - name: Prepare
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ${{ steps.dist.outputs.download-path }}
+          include-hidden-files: true
+
       - name: Deploy
         id: deployed
         uses: actions/deploy-pages@v5

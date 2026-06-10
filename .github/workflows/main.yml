@@ -44,7 +44,8 @@ jobs:
           pnpm build
 
       - name: Store
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
+          overwrite: true
+          name: static-build
           path: dist
-          include-hidden-files: true
