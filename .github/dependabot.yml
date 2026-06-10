@@ -37,16 +37,16 @@ updates:
           - vitest
           - vue-tsc
           - workbox-*
-        update-types: [minor]
+        update-types: [minor, patch]
       commitlint:
         patterns: ['@commitlint/*']
-        update-types: [minor]
+        update-types: [minor, patch]
       eslint:
         patterns: [eslint, 'eslint-*', '@antfu/eslint-config']
-        update-types: [minor]
+        update-types: [minor, patch]
       fontsource:
         patterns: ['@fontsource/*']
-        update-types: [minor]
+        update-types: [minor, patch]
       markdown:
         patterns:
           - '@types/markdown-it'
@@ -55,4 +55,4 @@ updates:
           - markdown-it
           - markdown-it-*
           - prismjs
-        update-types: [minor]
+        update-types: [minor, patch]
