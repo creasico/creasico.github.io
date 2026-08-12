@@ -35,10 +35,10 @@ importers:
         version: 21.2.0
       '@fontsource/nunito':
         specifier: ^5.2.7
-        version: 5.2.7
+        version: 5.3.0
       '@fontsource/work-sans':
         specifier: ^5.2.8
-        version: 5.2.8
+        version: 5.3.0
       '@gtm-support/vue-gtm':
         specifier: ^3.2.0
         version: 3.2.0(@vue/compiler-sfc@3.5.40)(rolldown@1.1.5)(rollup@4.62.3)(vite@8.1.5(@types/node@24.13.2)(jiti@2.7.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.39(typescript@6.0.3))
@@ -1202,11 +1202,11 @@ packages:
       '@noble/hashes':
         optional: true
 
-  '@fontsource/nunito@5.2.7':
-    resolution: {integrity: sha512-pmtBq0H9ex9nk+RtJYEJOD9pag393iHETnl/PVKleF4i06cd0ttngK5ZCTgYb5eOqR3Xdlrjtev8m7bmgYprew==}
+  '@fontsource/nunito@5.3.0':
+    resolution: {integrity: sha512-vw9TaTQJ/zpEpKrsODuPmOvaVjXgdda6B+xXA4YqjrdeJ62MLgVoDerdRXFQHyBnSCt2yQ2nHKCHPP/Pv7Xq4Q==}
 
-  '@fontsource/work-sans@5.2.8':
-    resolution: {integrity: sha512-6LaHjVVgts+rnrcqvEkP2+iUB/jw1oDSYsGO0+TltAhnWki9Hnf/UGpgMQh2jcm0GEH8VqCPnq4PpmHLFzxXtQ==}
+  '@fontsource/work-sans@5.3.0':
+    resolution: {integrity: sha512-3cKV28+bEiLGdyOl0VgEGCFWE1XdZJu/K+nH4Jt76XC3T//XrRtm2EF7jA61GSMIy8sYp6ZFTE01nD3lLaBV9A==}
 
   '@gtm-support/core@3.0.1':
     resolution: {integrity: sha512-SctcoqvvAbGAgZzOb7DZ4wjbZF3ZS7Las3qIEByv6g7mzPf4E9LpRXcQzjmywYLcUx2jys7PWJAa3s5slvj/0w==}
@@ -6622,9 +6622,9 @@ snapshots:
 
   '@exodus/bytes@1.15.1': {}
 
-  '@fontsource/nunito@5.2.7': {}
+  '@fontsource/nunito@5.3.0': {}
 
-  '@fontsource/work-sans@5.2.8': {}
+  '@fontsource/work-sans@5.3.0': {}
 
   '@gtm-support/core@3.0.1': {}
 
